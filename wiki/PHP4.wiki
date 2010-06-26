@@ -10,10 +10,10 @@ Ganon is designed for and written in PHP5, but there is also a PHP4 version avai
 
 Compared to the PHP5 version, there are a few things different in the PHP4 version that you have to take into account when using Ganon with PHP4.
 
- * PHP4 knows no class constants, so they are converted to global constants (using _define()_) and names are prepended with _"`GAN_`"_. For example, this means that HTML_Node::NODE_TEXT is converted to GAN_NODE_TEXT.
+ * PHP4 knows no class constants, so they are converted to global constants (using _define()_) and names are prepended with _"`GAN_`"_. For example, this means that _`HTML_Node::NODE_TEXT`_ is converted to _`GAN_NODE_TEXT`_.
  * PHP4 knows no private/protected class variables and methods. This means everything is public. and accessible.
  * PHP4 does not support static methods or variables in classes. This means everything is converted to a public method or variable.
- * PHP4 does not support magic methods, so you need to call them explicitly like $html->select('`*`') or $node->getAttribute('href'). The constructor does not need to be called explicitly.
+ * PHP4 does not support magic methods, so you need to call them explicitly like _$html->select('`*`')_ or _$node->getAttribute('href')_. The constructor does not need to be called explicitly.
    * *HTML_Formatter*
      * $n($node);  >>>  $n->format($node);
    * *HTML_Node*
@@ -22,10 +22,10 @@ Compared to the PHP5 version, there are a few things different in the PHP4 versi
      * $n->test = '123';  >>>  $n->setAttribute('test', '123');
      * isset($n->test);  >>>  $n->hasAttribute('test');
      * unset($n->test);  >>>  $n->deleteAttribute('test');
-     * $n('*');  >>>  $n->select('*');
+     * $n('`*`');  >>>  $n->select('`*`');
    * *HTML_Parser*
-     * $n('*');  >>>  $n->select('*');
+     * $n('`*`');  >>>  $n->select('`*`');
      * echo $n;  >>>  echo $n->root->getInnerText();
    * *HTML_Selector*
-     * $n('*');  >>>  $n->select('*');
+     * $n('`*`');  >>>  $n->select('`*`');
      * echo $n;  >>>  echo $n->query;
