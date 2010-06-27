@@ -1,0 +1,12 @@
+#summary How download and install Ganon.
+#labels Phase-Deploy
+
+= Downloading =
+
+There are several versions of Ganon available for [download http://code.google.com/p/ganon/downloads/list].
+  * *ZIP Archive* - Zipped version of the Ganon repository.
+  * *Single file PHP4* - If you want to use Ganon with PHP4, this is the version you want.
+  * *Single file PHP5* - A single file which combines all of Ganon's files into one. No comments and no third party libraries (this means no minification of Javascript).
+  * *SVN* - It is also possible to get the developers' version of Ganon. It it possible to  [browse http://code.google.com/p/ganon/source/browse/] the code online. Using a subversion client like [TortoiseSVN http://tortoisesvn.tigris.org/] you can download the repository.
+
+Most of the users probably want to download either the *ZIP archive* or the *Single file for PHP5*.
