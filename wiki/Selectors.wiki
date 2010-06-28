@@ -1,5 +1,5 @@
 #summary All the supported selectors and their use.
-#labels Phase-Implementation
+#labels Featured,Phase-Implementation
 
 = Introduction =
 
