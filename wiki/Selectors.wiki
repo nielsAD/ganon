@@ -45,7 +45,7 @@ Default CSS3 selector support:
 || E::after || generated content after an E element || no ||
 || E.warning || an E element whose class is "warning" (the document language specifies how class is determined). || *yes* ||
 || E#myid || an E element with ID equal to "myid". || *yes* ||
-|| E:not(s) || an E element that does not match simple selector s || *yes* ||
+|| E:not(s) || an E element that does not match selector s || *yes* ||
 || E F || an F element descendant of an E element || *yes* ||
 || E > F || an F element child of an E element || *yes* ||
 || E + F || an F element immediately preceded by an E element || *yes* ||
@@ -77,9 +77,9 @@ Added selectors:
 || E:not-empty || an E element that children (including text nodes) ||
 || E:has-text || an E element that has text nodes ||
 || E:no-text || an E element that has no text nodes ||
-|| E:contains(s) || an E element which contains the text of s ||
-|| E:has(f) || an E element which has children that match the f selector ||
-|| E:not(f) || an E element that does not match the f selector ||
+|| E:contains(t) || an E element which contains the text of t ||
+|| E:has(s) || an E element which has children that match the selector s ||
+|| E:not(s) || an E element that does not match the selector s ||
 || `*`:element || element is an element node (that means no text, comments, doctype, etc.) ||
 || `*`:text || element is a text node ||
 || `*`:comment || element is a comment node ||
