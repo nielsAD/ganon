@@ -10,3 +10,16 @@ There are several versions of Ganon available for [http://code.google.com/p/gano
   * *SVN* - It is also possible to get the developers' version of Ganon. It it possible to  [http://code.google.com/p/ganon/source/browse/ browse] the code online. Using a subversion client like [http://tortoisesvn.tigris.org/ TortoiseSVN] you can download the repository.
 
 Most of the users probably want to download either the *ZIP archive* or the *Single file for PHP5*.
+
+<br><br>
+
+= Installation =
+
+Installing Ganon is very easy. Once you have downloaded Ganon, just place the file(s) in your working directory. If you have downloaded the archive then you'll need to unzip it first. Before you can use Ganon in your project, you'll have to [http://php.net/manual/en/function.include.php include] it:
+
+ {{{
+ include('path/ganon.php');
+ }}}
+
+Replace "path" with the proper subfolder in which the Ganon files are located. If ganon.php is in the same folder as your project, then you can remove "path/". <br><br>
+*Now you are ready to use Ganon in your project!*
