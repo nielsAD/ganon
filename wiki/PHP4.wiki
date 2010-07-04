@@ -10,7 +10,7 @@ Ganon is designed for and written in PHP5, but there is also a PHP4 version avai
 
 Compared to the PHP5 version, there are a few things different in the PHP4 version that you have to take into account when using Ganon with PHP4.
 
- * The extension of the PHP4 version is ".php4", remember this when including the file.
+ * The extension of the PHP4 version is _".php4"_, remember this when including the file.
  * PHP4 knows no class constants, so they are converted to global constants (using _define()_) and names are prepended with _"`GAN_`"_. For example, this means that _`HTML_Node::NODE_TEXT`_ is converted to _`GAN_NODE_TEXT`_.
  * PHP4 knows no private/protected class variables and methods. This means everything is public. and accessible.
  * PHP4 does not support static methods or variables in classes. This means everything is converted to a public method or variable.
