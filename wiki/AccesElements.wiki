@@ -1,0 +1,124 @@
+#summary How to access DOM elements with Ganon
+
+= Introduction =
+
+Ganon has a powerful set of tools to access the DOM elements. The most important one, and the one you will probably use the most, is the CSS Selector support. Ganon can "select" nodes using CSS3 compliant queries. Ganon can also iterate over all childnodes and attributes, gives easy access to the parent/siblings and it gives easy access to the HTML code, inner text and plain text.
+
+ _*NOTE*: If you are using the PHP4 version of Ganon, please read [PHP4 this] first!_
+
+
+
+= Select =
+
+{{{
+// To use a CSS selector query on a node, you simply use the node as a function.
+// The result will be stored in an array (of nodes).
+$match_array = $node('.myclass');
+
+
+// To iterate the result, you can use foreach
+foreach($match_array as $element) {
+  echo $element, "<br>\n"; 
+}
+
+
+// The above can be shortened to the following
+foreach($node('.myclass') as $element) {
+  echo $element, "<br>\n"; 
+}
+
+
+// Because $element is also a node, you can also perform a query on that node
+// and nest queries
+foreach($node('.myclass') as $element) {
+  foreach($element('.myotherclass') as $new_element) {
+    echo $new_element, "<br>\n"; 
+  }
+}
+}}}
+
+Click [Selectors here] to learn more about the selectors that Ganon supports.
+
+
+
+= Near Nodes =
+
+Besides using selectors, you can also use other methods to access near nodes. You have access to the parent node, the child nodes and the node's siblings.
+{{{
+// Iterate over childnodes
+for ($i = 0; $i < $node->childCount(); $i++) {
+  echo $node->getChild($i);
+}
+
+
+// Get parent
+echo $node->parent;
+
+
+// Get Siblings
+$above = $node->getSibling(-1); //previous node
+$beneath = $node->getSibling(1); //next node
+}}}
+
+
+
+= Attributes =
+
+{{{
+// Attributes are very easy to access,
+// just access it as if it were an attribute of the object
+ $href = $node->href; 
+ $id = $node->id;
+
+
+// Iterate over attributes
+foreach($node->attributes as $attribute => $value) {
+  echo $attribute, ' = ', $value, "<br>\n"; 
+}
+}}}
+
+
+
+= Other =
+
+{{{
+// Full Tag
+echo $node->tag;
+
+
+// Tag Type (without namespace)
+echo $node->getTag();
+
+
+// Namespace
+echo $node->getNamespace();
+
+
+// Full HTML of node
+echo $node->html();
+
+
+// Inner Text
+echo $node->getInnerText();
+
+
+// Plain Text
+echo $node->getPlainText();
+
+
+// Index of node (in Parent)
+echo $node->index();
+
+
+// Indent
+echo $node->indent();
+
+
+// First/Last child
+echo $node->firstChild();
+echo $node->lastChild();
+
+
+//Get namespace of attribute
+echo $node->getAttributeNS('href');
+}}}
