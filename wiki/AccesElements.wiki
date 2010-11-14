@@ -1,4 +1,5 @@
 #summary How to access DOM elements with Ganon
+#labels Phase-Design,Featured
 
 === Introduction ===
 
