@@ -67,8 +67,8 @@ $beneath = $node->getSibling(1); //next node
 {{{
 // Attributes are very easy to access,
 // just access it as if it were an attribute of the object
- $href = $node->href; 
- $id = $node->id;
+$href = $node->href; 
+$id = $node->id;
 
 
 // Iterate over attributes
@@ -95,6 +95,14 @@ echo $node->getTag();
 echo $node->getNamespace();
 
 
+// Get namespace of attribute
+echo $node->getAttributeNS('href');
+
+
+// Location
+echo $node->dumpLocation();
+
+
 // Full HTML of node
 echo $node->html();
 
@@ -118,8 +126,4 @@ echo $node->indent();
 // First/Last child
 echo $node->firstChild();
 echo $node->lastChild();
-
-
-//Get namespace of attribute
-echo $node->getAttributeNS('href');
 }}}
