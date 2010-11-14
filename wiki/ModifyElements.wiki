@@ -1,4 +1,5 @@
 #summary How to modify DOM elements with Ganon
+#labels Phase-Design,Featured
 
 === Introduction ===
 
