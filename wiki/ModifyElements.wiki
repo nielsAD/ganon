@@ -1,0 +1,85 @@
+#summary How to modify DOM elements with Ganon
+
+=== Introduction ===
+
+Ganon has a powerful set of tools to modify the DOM elements. It gives easy access to the namespace/tag, attributes, index, etc.
+
+_*NOTE*: If you are using the PHP4 version of Ganon, please read [PHP4 this] first!_
+
+<br><br>
+
+=== Tag/Namespace ===
+
+ The tag type and namespace are easy to modify using Ganon:
+{{{
+//set tag without namespace
+$node->setTag('title');
+
+
+//set tag with namespace
+$node->setTag('abc:title', true);
+
+
+//set namespace
+$node->setNamespace('abc');
+
+
+//set namespace of attribute
+$node->setAttributeNS('href', 'abc');
+}}}
+
+<br><br>
+
+=== Attributes ===
+
+ Attributes are very easy to modify. They are not stored in separate objects, but rather in an array.
+{{{
+// Attributes are very easy to modify,
+// just set it as if it were an attribute of the object
+$node->id = 'myid'; 
+$node->class = 'myclass';
+
+
+//Add/Delete attributes
+$node->addAttribute('href', 'www.test.com');
+$node->href = 'www.test.com';
+$node->deleteAttribute('href');
+$node->href = null;
+}}}
+
+<br><br>
+
+=== Other ===
+
+ Here are some other useful functions of Ganon:
+{{{
+// Wrap node in new node
+$node->wrap('center');
+$node->wrap($otherNode);
+$node->wrapInner('center');
+$node->wrapInner($otherNode);
+
+
+// Delete child
+$node->deleteChild(2);
+
+
+// Change Parent
+$node->changeParent($otherNode);
+
+
+// Detach
+$node->detach();
+// Detach and move children level up
+$node->detach(true);
+
+
+// Clear
+$node->clear();
+
+
+// Change HTML
+$node->setOuterText('<a>New</a>');
+$node->setInnerText('<a>New</a>');
+$node->setPlainText('New Plain Text');
+}}}
