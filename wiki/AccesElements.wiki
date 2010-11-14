@@ -36,6 +36,12 @@ foreach($node('.myclass') as $element) {
     echo $new_element, "<br>\n"; 
   }
 }
+
+// If you know which element of the array you
+// are going to need, you can pass an index to the function
+$a = $node('a', 2);
+// A negative index will start counting from the end of the array
+$a = $node('a', -1);
 }}}
 
 <br><br>
