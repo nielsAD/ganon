@@ -1,15 +1,16 @@
 #summary How to access DOM elements with Ganon
 
-= Introduction =
+=== Introduction ===
 
 Ganon has a powerful set of tools to access the DOM elements. The most important one, and the one you will probably use the most, is the CSS Selector support. Ganon can "select" nodes using CSS3 compliant queries. Ganon can also iterate over all childnodes and attributes, gives easy access to the parent/siblings and it gives easy access to the HTML code, inner text and plain text.
 
- _*NOTE*: If you are using the PHP4 version of Ganon, please read [PHP4 this] first!_
+_*NOTE*: If you are using the PHP4 version of Ganon, please read [PHP4 this] first!_
 
+<br><br>
 
+=== Select ===
 
-= Select =
-
+ CSS select queries are easy to select specific nodes. Ganon [Selectors supports] most of the CCS3 selectors and has added some new ones.
 {{{
 // To use a CSS selector query on a node, you simply use the node as a function.
 // The result will be stored in an array (of nodes).
@@ -37,13 +38,11 @@ foreach($node('.myclass') as $element) {
 }
 }}}
 
-Click [Selectors here] to learn more about the selectors that Ganon supports.
+<br><br>
 
+=== Near Nodes ===
 
-
-= Near Nodes =
-
-Besides using selectors, you can also use other methods to access near nodes. You have access to the parent node, the child nodes and the node's siblings.
+ Besides using selectors, you can also use other methods to access near nodes. You have access to the parent node, the child nodes and the node's siblings.
 {{{
 // Iterate over childnodes
 for ($i = 0; $i < $node->childCount(); $i++) {
@@ -60,10 +59,11 @@ $above = $node->getSibling(-1); //previous node
 $beneath = $node->getSibling(1); //next node
 }}}
 
+<br><br>
 
+=== Attributes ===
 
-= Attributes =
-
+ Attributes are very easy to access. They are not stored in separate objects, but rather in an array.
 {{{
 // Attributes are very easy to access,
 // just access it as if it were an attribute of the object
@@ -77,10 +77,11 @@ foreach($node->attributes as $attribute => $value) {
 }
 }}}
 
+<br><br>
 
+=== Other ===
 
-= Other =
-
+ Here are some other useful functions of Ganon:
 {{{
 // Full Tag
 echo $node->tag;
