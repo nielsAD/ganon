@@ -1,0 +1,4900 @@
+<html>
+<head>
+<title>Docs For Class HTML_Node</title>
+<link rel="stylesheet" type="text/css" href="../media/style.css">
+</head>
+<body>
+
+<table border="0" cellspacing="0" cellpadding="0" height="48" width="100%">
+  <tr>
+    <td class="header_top">Ganon</td>
+  </tr>
+  <tr><td class="header_line"><img src="../media/empty.png" width="1" height="1" border="0" alt=""  /></td></tr>
+  <tr>
+    <td class="header_menu">
+        
+                                    
+                              		  [ <a href="../classtrees_Ganon.html" class="menu">class tree: Ganon</a> ]
+		  [ <a href="../elementindex_Ganon.html" class="menu">index: Ganon</a> ]
+		  	    [ <a href="../elementindex.html" class="menu">all elements</a> ]
+    </td>
+  </tr>
+  <tr><td class="header_line"><img src="../media/empty.png" width="1" height="1" border="0" alt=""  /></td></tr>
+</table>
+
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="200" class="menu">
+      <b>Packages:</b><br />
+              <a href="../li_Ganon.html">Ganon</a><br />
+            <br /><br />
+                        <b>Files:</b><br />
+      	  <div class="package">
+			<a href="../Ganon/_ganon.php.html">		ganon.php
+		</a><br>
+			<a href="../Ganon/_gan_formatter.php.html">		gan_formatter.php
+		</a><br>
+			<a href="../Ganon/_gan_node_html.php.html">		gan_node_html.php
+		</a><br>
+			<a href="../Ganon/_gan_parser_html.php.html">		gan_parser_html.php
+		</a><br>
+			<a href="../Ganon/_gan_selector_html.php.html">		gan_selector_html.php
+		</a><br>
+			<a href="../Ganon/_gan_tokenizer.php.html">		gan_tokenizer.php
+		</a><br>
+			<a href="../Ganon/_gan_xml2array.php.html">		gan_xml2array.php
+		</a><br>
+	  </div><br />
+      
+      
+            <b>Classes:</b><br />
+        <div class="package">
+		    		<a href="../Ganon/HTML_Formatter.html">HTML_Formatter</a><br />
+	    		<a href="../Ganon/HTML_Node.html">HTML_Node</a><br />
+	    		<a href="../Ganon/HTML_NODE_ASP.html">HTML_NODE_ASP</a><br />
+	    		<a href="../Ganon/HTML_NODE_CDATA.html">HTML_NODE_CDATA</a><br />
+	    		<a href="../Ganon/HTML_NODE_COMMENT.html">HTML_NODE_COMMENT</a><br />
+	    		<a href="../Ganon/HTML_NODE_CONDITIONAL.html">HTML_NODE_CONDITIONAL</a><br />
+	    		<a href="../Ganon/HTML_NODE_DOCTYPE.html">HTML_NODE_DOCTYPE</a><br />
+	    		<a href="../Ganon/HTML_NODE_EMBEDDED.html">HTML_NODE_EMBEDDED</a><br />
+	    		<a href="../Ganon/HTML_NODE_TEXT.html">HTML_NODE_TEXT</a><br />
+	    		<a href="../Ganon/HTML_NODE_XML.html">HTML_NODE_XML</a><br />
+	    		<a href="../Ganon/HTML_Parser.html">HTML_Parser</a><br />
+	    		<a href="../Ganon/HTML_Parser_Base.html">HTML_Parser_Base</a><br />
+	    		<a href="../Ganon/HTML_Parser_HTML5.html">HTML_Parser_HTML5</a><br />
+	    		<a href="../Ganon/HTML_Selector.html">HTML_Selector</a><br />
+	    		<a href="../Ganon/Tokenizer_Base.html">Tokenizer_Base</a><br />
+	    		<a href="../Ganon/Tokenizer_CSSQuery.html">Tokenizer_CSSQuery</a><br />
+	    		<a href="../Ganon/XML_Parser_Array.html">XML_Parser_Array</a><br />
+	  </div>
+                </td>
+    <td>
+      <table cellpadding="10" cellspacing="0" width="100%" border="0"><tr><td valign="top">
+
+<h1>Class: HTML_Node</h1>
+Source Location: /gan_node_html.php<br /><br />
+
+
+<table width="100%" border="0">
+<tr><td valign="top">
+
+<h3><a href="#class_details">Class Overview</a></h3>
+<pre></pre><br />
+<div class="description">Holds (x)html/xml tag information like tag name, attributes,  parent, children, self close, etc.</div><br /><br />
+
+
+
+
+
+
+        
+</td>
+
+<td valign="top">
+<h3><a href="#class_vars">Variables</a></h3>
+<ul>
+    <li><a href="../Ganon/HTML_Node.html#var$attributes">$attributes</a></li>
+    <li><a href="../Ganon/HTML_Node.html#var$attributes_ns">$attributes_ns</a></li>
+    <li><a href="../Ganon/HTML_Node.html#var$attribute_shorttag">$attribute_shorttag</a></li>
+    <li><a href="../Ganon/HTML_Node.html#var$childClass">$childClass</a></li>
+    <li><a href="../Ganon/HTML_Node.html#var$childClass_ASP">$childClass_ASP</a></li>
+    <li><a href="../Ganon/HTML_Node.html#var$childClass_CDATA">$childClass_CDATA</a></li>
+    <li><a href="../Ganon/HTML_Node.html#var$childClass_Comment">$childClass_Comment</a></li>
+    <li><a href="../Ganon/HTML_Node.html#var$childClass_Conditional">$childClass_Conditional</a></li>
+    <li><a href="../Ganon/HTML_Node.html#var$childClass_Doctype">$childClass_Doctype</a></li>
+    <li><a href="../Ganon/HTML_Node.html#var$childClass_Text">$childClass_Text</a></li>
+    <li><a href="../Ganon/HTML_Node.html#var$childClass_XML">$childClass_XML</a></li>
+    <li><a href="../Ganon/HTML_Node.html#var$children">$children</a></li>
+    <li><a href="../Ganon/HTML_Node.html#var$filter_map">$filter_map</a></li>
+    <li><a href="../Ganon/HTML_Node.html#var$parent">$parent</a></li>
+    <li><a href="../Ganon/HTML_Node.html#var$parserClass">$parserClass</a></li>
+    <li><a href="../Ganon/HTML_Node.html#var$selectClass">$selectClass</a></li>
+    <li><a href="../Ganon/HTML_Node.html#var$self_close">$self_close</a></li>
+    <li><a href="../Ganon/HTML_Node.html#var$self_close_str">$self_close_str</a></li>
+    <li><a href="../Ganon/HTML_Node.html#var$tag">$tag</a></li>
+    <li><a href="../Ganon/HTML_Node.html#var$tag_ns">$tag_ns</a></li>
+  </ul>
+</td>
+
+<td valign="top">
+<h3><a href="#class_consts">Constants</a></h3>
+<ul>
+    <li><a href="../Ganon/HTML_Node.html#constNODE_ASP">NODE_ASP</a></li>
+    <li><a href="../Ganon/HTML_Node.html#constNODE_CDATA">NODE_CDATA</a></li>
+    <li><a href="../Ganon/HTML_Node.html#constNODE_COMMENT">NODE_COMMENT</a></li>
+    <li><a href="../Ganon/HTML_Node.html#constNODE_CONDITIONAL">NODE_CONDITIONAL</a></li>
+    <li><a href="../Ganon/HTML_Node.html#constNODE_DOCTYPE">NODE_DOCTYPE</a></li>
+    <li><a href="../Ganon/HTML_Node.html#constNODE_ELEMENT">NODE_ELEMENT</a></li>
+    <li><a href="../Ganon/HTML_Node.html#constNODE_TEXT">NODE_TEXT</a></li>
+    <li><a href="../Ganon/HTML_Node.html#constNODE_TYPE">NODE_TYPE</a></li>
+    <li><a href="../Ganon/HTML_Node.html#constNODE_XML">NODE_XML</a></li>
+  </ul>
+</td>
+
+<td valign="top">
+<h3><a href="#class_methods">Methods</a></h3>
+<ul>
+    <li><a href="../Ganon/HTML_Node.html#method__construct">__construct</a></li>
+    <li><a href="../Ganon/HTML_Node.html#method__destruct">__destruct</a></li>
+    <li><a href="../Ganon/HTML_Node.html#methodaddASP">addASP</a></li>
+    <li><a href="../Ganon/HTML_Node.html#methodaddAttribute">addAttribute</a></li>
+    <li><a href="../Ganon/HTML_Node.html#methodaddCDATA">addCDATA</a></li>
+    <li><a href="../Ganon/HTML_Node.html#methodaddChild">addChild</a></li>
+    <li><a href="../Ganon/HTML_Node.html#methodaddClass">addClass</a></li>
+    <li><a href="../Ganon/HTML_Node.html#methodaddComment">addComment</a></li>
+    <li><a href="../Ganon/HTML_Node.html#methodaddConditional">addConditional</a></li>
+    <li><a href="../Ganon/HTML_Node.html#methodaddDoctype">addDoctype</a></li>
+    <li><a href="../Ganon/HTML_Node.html#methodaddText">addText</a></li>
+    <li><a href="../Ganon/HTML_Node.html#methodaddXML">addXML</a></li>
+    <li><a href="../Ganon/HTML_Node.html#methodattributeCount">attributeCount</a></li>
+    <li><a href="../Ganon/HTML_Node.html#methodchangeParent">changeParent</a></li>
+    <li><a href="../Ganon/HTML_Node.html#methodchildCount">childCount</a></li>
+    <li><a href="../Ganon/HTML_Node.html#methodclear">clear</a></li>
+    <li><a href="../Ganon/HTML_Node.html#methoddelete">delete</a></li>
+    <li><a href="../Ganon/HTML_Node.html#methoddeleteAttribute">deleteAttribute</a></li>
+    <li><a href="../Ganon/HTML_Node.html#methoddeleteChild">deleteChild</a></li>
+    <li><a href="../Ganon/HTML_Node.html#methoddetach">detach</a></li>
+    <li><a href="../Ganon/HTML_Node.html#methoddumpLocation">dumpLocation</a></li>
+    <li><a href="../Ganon/HTML_Node.html#methodfilter_comment">filter_comment</a></li>
+    <li><a href="../Ganon/HTML_Node.html#methodfilter_contains">filter_contains</a></li>
+    <li><a href="../Ganon/HTML_Node.html#methodfilter_element">filter_element</a></li>
+    <li><a href="../Ganon/HTML_Node.html#methodfilter_empty">filter_empty</a></li>
+    <li><a href="../Ganon/HTML_Node.html#methodfilter_even">filter_even</a></li>
+    <li><a href="../Ganon/HTML_Node.html#methodfilter_every">filter_every</a></li>
+    <li><a href="../Ganon/HTML_Node.html#methodfilter_first">filter_first</a></li>
+    <li><a href="../Ganon/HTML_Node.html#methodfilter_firsttype">filter_firsttype</a></li>
+    <li><a href="../Ganon/HTML_Node.html#methodfilter_gt">filter_gt</a></li>
+    <li><a href="../Ganon/HTML_Node.html#methodfilter_has">filter_has</a></li>
+    <li><a href="../Ganon/HTML_Node.html#methodfilter_hastext">filter_hastext</a></li>
+    <li><a href="../Ganon/HTML_Node.html#methodfilter_lang">filter_lang</a></li>
+    <li><a href="../Ganon/HTML_Node.html#methodfilter_last">filter_last</a></li>
+    <li><a href="../Ganon/HTML_Node.html#methodfilter_lasttype">filter_lasttype</a></li>
+    <li><a href="../Ganon/HTML_Node.html#methodfilter_lt">filter_lt</a></li>
+    <li><a href="../Ganon/HTML_Node.html#methodfilter_nchild">filter_nchild</a></li>
+    <li><a href="../Ganon/HTML_Node.html#methodfilter_nlastchild">filter_nlastchild</a></li>
+    <li><a href="../Ganon/HTML_Node.html#methodfilter_nlastype">filter_nlastype</a></li>
+    <li><a href="../Ganon/HTML_Node.html#methodfilter_not">filter_not</a></li>
+    <li><a href="../Ganon/HTML_Node.html#methodfilter_notempty">filter_notempty</a></li>
+    <li><a href="../Ganon/HTML_Node.html#methodfilter_notext">filter_notext</a></li>
+    <li><a href="../Ganon/HTML_Node.html#methodfilter_ntype">filter_ntype</a></li>
+    <li><a href="../Ganon/HTML_Node.html#methodfilter_odd">filter_odd</a></li>
+    <li><a href="../Ganon/HTML_Node.html#methodfilter_onlychild">filter_onlychild</a></li>
+    <li><a href="../Ganon/HTML_Node.html#methodfilter_onlytype">filter_onlytype</a></li>
+    <li><a href="../Ganon/HTML_Node.html#methodfilter_root">filter_root</a></li>
+    <li><a href="../Ganon/HTML_Node.html#methodfilter_text">filter_text</a></li>
+    <li><a href="../Ganon/HTML_Node.html#methodfindAttribute">findAttribute</a></li>
+    <li><a href="../Ganon/HTML_Node.html#methodfindChild">findChild</a></li>
+    <li><a href="../Ganon/HTML_Node.html#methodfirstChild">firstChild</a></li>
+    <li><a href="../Ganon/HTML_Node.html#methodgetAttribute">getAttribute</a></li>
+    <li><a href="../Ganon/HTML_Node.html#methodgetAttributeNS">getAttributeNS</a></li>
+    <li><a href="../Ganon/HTML_Node.html#methodgetChild">getChild</a></li>
+    <li><a href="../Ganon/HTML_Node.html#methodgetChildrenByAttribute">getChildrenByAttribute</a></li>
+    <li><a href="../Ganon/HTML_Node.html#methodgetChildrenByCallback">getChildrenByCallback</a></li>
+    <li><a href="../Ganon/HTML_Node.html#methodgetChildrenByClass">getChildrenByClass</a></li>
+    <li><a href="../Ganon/HTML_Node.html#methodgetChildrenByID">getChildrenByID</a></li>
+    <li><a href="../Ganon/HTML_Node.html#methodgetChildrenByName">getChildrenByName</a></li>
+    <li><a href="../Ganon/HTML_Node.html#methodgetChildrenByTag">getChildrenByTag</a></li>
+    <li><a href="../Ganon/HTML_Node.html#methodgetInnerText">getInnerText</a></li>
+    <li><a href="../Ganon/HTML_Node.html#methodgetNamespace">getNamespace</a></li>
+    <li><a href="../Ganon/HTML_Node.html#methodgetNextSibling">getNextSibling</a></li>
+    <li><a href="../Ganon/HTML_Node.html#methodgetOuterText">getOuterText</a></li>
+    <li><a href="../Ganon/HTML_Node.html#methodgetPlainText">getPlainText</a></li>
+    <li><a href="../Ganon/HTML_Node.html#methodgetPreviousSibling">getPreviousSibling</a></li>
+    <li><a href="../Ganon/HTML_Node.html#methodgetSibling">getSibling</a></li>
+    <li><a href="../Ganon/HTML_Node.html#methodgetTag">getTag</a></li>
+    <li><a href="../Ganon/HTML_Node.html#methodhasAttribute">hasAttribute</a></li>
+    <li><a href="../Ganon/HTML_Node.html#methodhasChild">hasChild</a></li>
+    <li><a href="../Ganon/HTML_Node.html#methodhasClass">hasClass</a></li>
+    <li><a href="../Ganon/HTML_Node.html#methodhasParent">hasParent</a></li>
+    <li><a href="../Ganon/HTML_Node.html#methodhtml">html</a></li>
+    <li><a href="../Ganon/HTML_Node.html#methodindent">indent</a></li>
+    <li><a href="../Ganon/HTML_Node.html#methodindex">index</a></li>
+    <li><a href="../Ganon/HTML_Node.html#methodinsertChild">insertChild</a></li>
+    <li><a href="../Ganon/HTML_Node.html#methodisComment">isComment</a></li>
+    <li><a href="../Ganon/HTML_Node.html#methodisParent">isParent</a></li>
+    <li><a href="../Ganon/HTML_Node.html#methodisText">isText</a></li>
+    <li><a href="../Ganon/HTML_Node.html#methodisTextOrComment">isTextOrComment</a></li>
+    <li><a href="../Ganon/HTML_Node.html#methodlastChild">lastChild</a></li>
+    <li><a href="../Ganon/HTML_Node.html#methodmatch">match</a></li>
+    <li><a href="../Ganon/HTML_Node.html#methodmatch_attributes">match_attributes</a></li>
+    <li><a href="../Ganon/HTML_Node.html#methodmatch_filters">match_filters</a></li>
+    <li><a href="../Ganon/HTML_Node.html#methodmatch_tags">match_tags</a></li>
+    <li><a href="../Ganon/HTML_Node.html#methodmove">move</a></li>
+    <li><a href="../Ganon/HTML_Node.html#methodmoveChildren">moveChildren</a></li>
+    <li><a href="../Ganon/HTML_Node.html#methodremoveClass">removeClass</a></li>
+    <li><a href="../Ganon/HTML_Node.html#methodselect">select</a></li>
+    <li><a href="../Ganon/HTML_Node.html#methodsetAttribute">setAttribute</a></li>
+    <li><a href="../Ganon/HTML_Node.html#methodsetAttributeNS">setAttributeNS</a></li>
+    <li><a href="../Ganon/HTML_Node.html#methodsetIndex">setIndex</a></li>
+    <li><a href="../Ganon/HTML_Node.html#methodsetInnerText">setInnerText</a></li>
+    <li><a href="../Ganon/HTML_Node.html#methodsetNamespace">setNamespace</a></li>
+    <li><a href="../Ganon/HTML_Node.html#methodsetOuterText">setOuterText</a></li>
+    <li><a href="../Ganon/HTML_Node.html#methodsetPlainText">setPlainText</a></li>
+    <li><a href="../Ganon/HTML_Node.html#methodsetTag">setTag</a></li>
+    <li><a href="../Ganon/HTML_Node.html#methodtoString">toString</a></li>
+    <li><a href="../Ganon/HTML_Node.html#methodtoString_attributes">toString_attributes</a></li>
+    <li><a href="../Ganon/HTML_Node.html#methodtoString_content">toString_content</a></li>
+    <li><a href="../Ganon/HTML_Node.html#methodtypeIndex">typeIndex</a></li>
+    <li><a href="../Ganon/HTML_Node.html#methodwrap">wrap</a></li>
+    <li><a href="../Ganon/HTML_Node.html#methodwrapInner">wrapInner</a></li>
+    <li><a href="../Ganon/HTML_Node.html#method__get">__get</a></li>
+    <li><a href="../Ganon/HTML_Node.html#method__invoke">__invoke</a></li>
+    <li><a href="../Ganon/HTML_Node.html#method__isset">__isset</a></li>
+    <li><a href="../Ganon/HTML_Node.html#method__set">__set</a></li>
+    <li><a href="../Ganon/HTML_Node.html#method__toString">__toString</a></li>
+    <li><a href="../Ganon/HTML_Node.html#method__unset">__unset</a></li>
+  </ul>
+</td>
+
+</tr></table>
+<hr />
+
+<table width="100%" border="0"><tr>
+
+
+<td valign="top">
+<h3>Child classes:</h3>
+<div class="tags">
+<dl>
+<dt><a href="../Ganon/HTML_NODE_TEXT.html">HTML_NODE_TEXT</a></dt>
+	<dd>Node subclass for text</dd>
+</dl>
+<dl>
+<dt><a href="../Ganon/HTML_NODE_COMMENT.html">HTML_NODE_COMMENT</a></dt>
+	<dd>Node subclass for comments</dd>
+</dl>
+<dl>
+<dt><a href="../Ganon/HTML_NODE_CONDITIONAL.html">HTML_NODE_CONDITIONAL</a></dt>
+	<dd>Node subclass for conditional tags</dd>
+</dl>
+<dl>
+<dt><a href="../Ganon/HTML_NODE_CDATA.html">HTML_NODE_CDATA</a></dt>
+	<dd>Node subclass for CDATA tags</dd>
+</dl>
+<dl>
+<dt><a href="../Ganon/HTML_NODE_DOCTYPE.html">HTML_NODE_DOCTYPE</a></dt>
+	<dd>Node subclass for doctype tags</dd>
+</dl>
+<dl>
+<dt><a href="../Ganon/HTML_NODE_EMBEDDED.html">HTML_NODE_EMBEDDED</a></dt>
+	<dd>Node subclass for embedded tags like xml, php and asp</dd>
+</dl>
+</div>
+</td>
+
+
+
+
+</tr></table>
+<hr />
+
+<a name="class_details"></a>
+<h3>Class Details</h3>
+<div class="tags">
+[line <a href="../__filesource/fsource_Ganon__gan_node_html.php.html#a20">20</a>]<br />
+Holds (x)html/xml tag information like tag name, attributes,  parent, children, self close, etc.<br /><br /></div><br /><br />
+<div class="top">[ <a href="#top">Top</a> ]</div><br />
+
+<hr />
+<a name="class_vars"></a>
+<h3>Class Variables</h3>
+<div class="tags">
+	<a name="var$attributes"></a>
+	<p></p>
+	<h4>$attributes = <span class="value">array()</span></h4>
+	<p>[line <a href="../__filesource/fsource_Ganon__gan_node_html.php.html#a137">137</a>]</p>
+  Attributes of node<br /><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>see:</b>&nbsp;&nbsp;</td><td><a href="../Ganon/HTML_Node.html#methodsetAttribute">HTML_Node::setAttribute()</a></td>
+  </tr>
+  <tr>
+    <td><b>see:</b>&nbsp;&nbsp;</td><td><a href="../Ganon/HTML_Node.html#methodgetAttribute">HTML_Node::getAttribute()</a></td>
+  </tr>
+  <tr>
+    <td><b>internal:</b>&nbsp;&nbsp;</td><td>Public for faster access!</td>
+  </tr>
+  <tr>
+    <td><b>internal:</b>&nbsp;&nbsp;</td><td>array('attribute' =&gt; 'value')</td>
+  </tr>
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>private</td>
+  </tr>
+</table>
+</div>
+
+  <br />
+	<div class="tags">
+  <table border="0" cellspacing="0" cellpadding="0">
+    <tr>
+      <td><b>Type:</b>&nbsp;&nbsp;</td>
+      <td>array</td>
+    </tr>
+      </table>
+	</div><br /><br />
+	<div class="top">[ <a href="#top">Top</a> ]</div><br />
+	<a name="var$attributes_ns"></a>
+	<p></p>
+	<h4>$attributes_ns = <span class="value">&nbsp;null</span></h4>
+	<p>[line <a href="../__filesource/fsource_Ganon__gan_node_html.php.html#a147">147</a>]</p>
+  Namespace info for attributes<br /><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>see:</b>&nbsp;&nbsp;</td><td><a href="../Ganon/HTML_Node.html#methodfindAttribute">HTML_Node::findAttribute()</a></td>
+  </tr>
+  <tr>
+    <td><b>internal:</b>&nbsp;&nbsp;</td><td>array('tag' =&gt; array(array('ns', 'tag', 'ns:tag', index)))</td>
+  </tr>
+  <tr>
+    <td><b>internal:</b>&nbsp;&nbsp;</td><td>Public for easy outside modifications!</td>
+  </tr>
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>private</td>
+  </tr>
+</table>
+</div>
+
+  <br />
+	<div class="tags">
+  <table border="0" cellspacing="0" cellpadding="0">
+    <tr>
+      <td><b>Type:</b>&nbsp;&nbsp;</td>
+      <td>array</td>
+    </tr>
+      </table>
+	</div><br /><br />
+	<div class="top">[ <a href="#top">Top</a> ]</div><br />
+	<a name="var$attribute_shorttag"></a>
+	<p></p>
+	<h4>$attribute_shorttag = <span class="value">&nbsp;true</span></h4>
+	<p>[line <a href="../__filesource/fsource_Ganon__gan_node_html.php.html#a197">197</a>]</p>
+  Use shorttags for attributes? If true, then attributes  with values equal to the attribute name will not output  the value, e.g. selected=&quot;selected&quot; will be selected.<br /><br />
+  <br />
+	<div class="tags">
+  <table border="0" cellspacing="0" cellpadding="0">
+    <tr>
+      <td><b>Type:</b>&nbsp;&nbsp;</td>
+      <td>bool</td>
+    </tr>
+      </table>
+	</div><br /><br />
+	<div class="top">[ <a href="#top">Top</a> ]</div><br />
+	<a name="var$childClass"></a>
+	<p></p>
+	<h4>$childClass = <span class="value">&nbsp;__CLASS__</span></h4>
+	<p>[line <a href="../__filesource/fsource_Ganon__gan_node_html.php.html#a84">84</a>]</p>
+  Name of the class used for addChild()<br /><br />
+  <br />
+	<div class="tags">
+  <table border="0" cellspacing="0" cellpadding="0">
+    <tr>
+      <td><b>Type:</b>&nbsp;&nbsp;</td>
+      <td>string</td>
+    </tr>
+      </table>
+	</div><br /><br />
+	<div class="top">[ <a href="#top">Top</a> ]</div><br />
+	<a name="var$childClass_ASP"></a>
+	<p></p>
+	<h4>$childClass_ASP = <span class="value">&nbsp;'HTML_Node_ASP'</span></h4>
+	<p>[line <a href="../__filesource/fsource_Ganon__gan_node_html.php.html#a119">119</a>]</p>
+  Name of the class used for addASP()<br /><br />
+  <br />
+	<div class="tags">
+  <table border="0" cellspacing="0" cellpadding="0">
+    <tr>
+      <td><b>Type:</b>&nbsp;&nbsp;</td>
+      <td>string</td>
+    </tr>
+      </table>
+	</div><br /><br />
+	<div class="top">[ <a href="#top">Top</a> ]</div><br />
+	<a name="var$childClass_CDATA"></a>
+	<p></p>
+	<h4>$childClass_CDATA = <span class="value">&nbsp;'HTML_Node_CDATA'</span></h4>
+	<p>[line <a href="../__filesource/fsource_Ganon__gan_node_html.php.html#a104">104</a>]</p>
+  Name of the class used for addCDATA()<br /><br />
+  <br />
+	<div class="tags">
+  <table border="0" cellspacing="0" cellpadding="0">
+    <tr>
+      <td><b>Type:</b>&nbsp;&nbsp;</td>
+      <td>string</td>
+    </tr>
+      </table>
+	</div><br /><br />
+	<div class="top">[ <a href="#top">Top</a> ]</div><br />
+	<a name="var$childClass_Comment"></a>
+	<p></p>
+	<h4>$childClass_Comment = <span class="value">&nbsp;'HTML_Node_COMMENT'</span></h4>
+	<p>[line <a href="../__filesource/fsource_Ganon__gan_node_html.php.html#a94">94</a>]</p>
+  Name of the class used for addComment()<br /><br />
+  <br />
+	<div class="tags">
+  <table border="0" cellspacing="0" cellpadding="0">
+    <tr>
+      <td><b>Type:</b>&nbsp;&nbsp;</td>
+      <td>string</td>
+    </tr>
+      </table>
+	</div><br /><br />
+	<div class="top">[ <a href="#top">Top</a> ]</div><br />
+	<a name="var$childClass_Conditional"></a>
+	<p></p>
+	<h4>$childClass_Conditional = <span class="value">&nbsp;'HTML_Node_CONDITIONAL'</span></h4>
+	<p>[line <a href="../__filesource/fsource_Ganon__gan_node_html.php.html#a99">99</a>]</p>
+  Name of the class used for addContional()<br /><br />
+  <br />
+	<div class="tags">
+  <table border="0" cellspacing="0" cellpadding="0">
+    <tr>
+      <td><b>Type:</b>&nbsp;&nbsp;</td>
+      <td>string</td>
+    </tr>
+      </table>
+	</div><br /><br />
+	<div class="top">[ <a href="#top">Top</a> ]</div><br />
+	<a name="var$childClass_Doctype"></a>
+	<p></p>
+	<h4>$childClass_Doctype = <span class="value">&nbsp;'HTML_Node_DOCTYPE'</span></h4>
+	<p>[line <a href="../__filesource/fsource_Ganon__gan_node_html.php.html#a109">109</a>]</p>
+  Name of the class used for addDoctype()<br /><br />
+  <br />
+	<div class="tags">
+  <table border="0" cellspacing="0" cellpadding="0">
+    <tr>
+      <td><b>Type:</b>&nbsp;&nbsp;</td>
+      <td>string</td>
+    </tr>
+      </table>
+	</div><br /><br />
+	<div class="top">[ <a href="#top">Top</a> ]</div><br />
+	<a name="var$childClass_Text"></a>
+	<p></p>
+	<h4>$childClass_Text = <span class="value">&nbsp;'HTML_Node_TEXT'</span></h4>
+	<p>[line <a href="../__filesource/fsource_Ganon__gan_node_html.php.html#a89">89</a>]</p>
+  Name of the class used for addText()<br /><br />
+  <br />
+	<div class="tags">
+  <table border="0" cellspacing="0" cellpadding="0">
+    <tr>
+      <td><b>Type:</b>&nbsp;&nbsp;</td>
+      <td>string</td>
+    </tr>
+      </table>
+	</div><br /><br />
+	<div class="top">[ <a href="#top">Top</a> ]</div><br />
+	<a name="var$childClass_XML"></a>
+	<p></p>
+	<h4>$childClass_XML = <span class="value">&nbsp;'HTML_Node_XML'</span></h4>
+	<p>[line <a href="../__filesource/fsource_Ganon__gan_node_html.php.html#a114">114</a>]</p>
+  Name of the class used for addXML()<br /><br />
+  <br />
+	<div class="tags">
+  <table border="0" cellspacing="0" cellpadding="0">
+    <tr>
+      <td><b>Type:</b>&nbsp;&nbsp;</td>
+      <td>string</td>
+    </tr>
+      </table>
+	</div><br /><br />
+	<div class="top">[ <a href="#top">Top</a> ]</div><br />
+	<a name="var$children"></a>
+	<p></p>
+	<h4>$children = <span class="value">array()</span></h4>
+	<p>[line <a href="../__filesource/fsource_Ganon__gan_node_html.php.html#a159">159</a>]</p>
+  Array of childnodes<br /><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>see:</b>&nbsp;&nbsp;</td><td><a href="../Ganon/HTML_Node.html#methoddeleteChild">HTML_Node::deleteChild()</a></td>
+  </tr>
+  <tr>
+    <td><b>see:</b>&nbsp;&nbsp;</td><td><a href="../Ganon/HTML_Node.html#methodaddChild">HTML_Node::addChild()</a></td>
+  </tr>
+  <tr>
+    <td><b>see:</b>&nbsp;&nbsp;</td><td><a href="../Ganon/HTML_Node.html#methodgetChild">HTML_Node::getChild()</a></td>
+  </tr>
+  <tr>
+    <td><b>see:</b>&nbsp;&nbsp;</td><td><a href="../Ganon/HTML_Node.html#methodchildCount">HTML_Node::childCount()</a></td>
+  </tr>
+  <tr>
+    <td><b>internal:</b>&nbsp;&nbsp;</td><td>Public for faster access!</td>
+  </tr>
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>private</td>
+  </tr>
+</table>
+</div>
+
+  <br />
+	<div class="tags">
+  <table border="0" cellspacing="0" cellpadding="0">
+    <tr>
+      <td><b>Type:</b>&nbsp;&nbsp;</td>
+      <td>array</td>
+    </tr>
+      </table>
+	</div><br /><br />
+	<div class="top">[ <a href="#top">Top</a> ]</div><br />
+	<a name="var$filter_map"></a>
+	<p></p>
+	<h4>$filter_map = <span class="value">array(<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'root'&nbsp;=&gt;&nbsp;'filter_root',<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'nth-child'&nbsp;=&gt;&nbsp;'filter_nchild',<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'eq'&nbsp;=&gt;&nbsp;'filter_nchild',&nbsp;//jquery&nbsp;(naming)&nbsp;compatibility<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'gt'&nbsp;=&gt;&nbsp;'filter_gt',<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'lt'&nbsp;=&gt;&nbsp;'filter_lt',<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'nth-last-child'&nbsp;=&gt;&nbsp;'filter_nlastchild',<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'nth-of-type'&nbsp;=&gt;&nbsp;'filter_ntype',<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'nth-last-of-type'&nbsp;=&gt;&nbsp;'filter_nlastype',<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'odd'&nbsp;=&gt;&nbsp;'filter_odd',<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'even'&nbsp;=&gt;&nbsp;'filter_even',<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'every'&nbsp;=&gt;&nbsp;'filter_every',<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'first-child'&nbsp;=&gt;&nbsp;'filter_first',<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'last-child'&nbsp;=&gt;&nbsp;'filter_last',<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'first-of-type'&nbsp;=&gt;&nbsp;'filter_firsttype',<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'last-of-type'&nbsp;=&gt;&nbsp;'filter_lasttype',<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'only-child'&nbsp;=&gt;&nbsp;'filter_onlychild',<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'only-of-type'&nbsp;=&gt;&nbsp;'filter_onlytype',<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'empty'&nbsp;=&gt;&nbsp;'filter_empty',<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'not-empty'&nbsp;=&gt;&nbsp;'filter_notempty',<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'has-text'&nbsp;=&gt;&nbsp;'filter_hastext',<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'no-text'&nbsp;=&gt;&nbsp;'filter_notext',<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'lang'&nbsp;=&gt;&nbsp;'filter_lang',<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'contains'&nbsp;=&gt;&nbsp;'filter_contains',<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'has'&nbsp;=&gt;&nbsp;'filter_has',<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'not'&nbsp;=&gt;&nbsp;'filter_not',<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'element'&nbsp;=&gt;&nbsp;'filter_element',<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'text'&nbsp;=&gt;&nbsp;'filter_text',<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'comment'&nbsp;=&gt;&nbsp;'filter_comment'<br>
+&nbsp;&nbsp;&nbsp;)</span></h4>
+	<p>[line <a href="../__filesource/fsource_Ganon__gan_node_html.php.html#a206">206</a>]</p>
+  Function map used for the selector filter<br /><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>internal:</b>&nbsp;&nbsp;</td><td>array('root' =&gt; 'filter_root') will cause the  selector to call $this-&gt;filter_root at :root</td>
+  </tr>
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>private</td>
+  </tr>
+</table>
+</div>
+
+  <br />
+	<div class="tags">
+  <table border="0" cellspacing="0" cellpadding="0">
+    <tr>
+      <td><b>Type:</b>&nbsp;&nbsp;</td>
+      <td>array</td>
+    </tr>
+      </table>
+	</div><br /><br />
+	<div class="top">[ <a href="#top">Top</a> ]</div><br />
+	<a name="var$parent"></a>
+	<p></p>
+	<h4>$parent = <span class="value">&nbsp;null</span></h4>
+	<p>[line <a href="../__filesource/fsource_Ganon__gan_node_html.php.html#a126">126</a>]</p>
+  Parent node, null if none<br /><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>see:</b>&nbsp;&nbsp;</td><td><a href="../Ganon/HTML_Node.html#methodchangeParent">HTML_Node::changeParent()</a></td>
+  </tr>
+</table>
+</div>
+
+  <br />
+	<div class="tags">
+  <table border="0" cellspacing="0" cellpadding="0">
+    <tr>
+      <td><b>Type:</b>&nbsp;&nbsp;</td>
+      <td><a href="../Ganon/HTML_Node.html">HTML_Node</a></td>
+    </tr>
+      </table>
+	</div><br /><br />
+	<div class="top">[ <a href="#top">Top</a> ]</div><br />
+	<a name="var$parserClass"></a>
+	<p></p>
+	<h4>$parserClass = <span class="value">&nbsp;'HTML_Parser_HTML5'</span></h4>
+	<p>[line <a href="../__filesource/fsource_Ganon__gan_node_html.php.html#a78">78</a>]</p>
+  Name of the parser class<br /><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>see:</b>&nbsp;&nbsp;</td><td><a href="../Ganon/HTML_Node.html#methodsetInnerText">HTML_Node::setInnerText()</a></td>
+  </tr>
+  <tr>
+    <td><b>see:</b>&nbsp;&nbsp;</td><td><a href="../Ganon/HTML_Node.html#methodsetOuterText">HTML_Node::setOuterText()</a></td>
+  </tr>
+</table>
+</div>
+
+  <br />
+	<div class="tags">
+  <table border="0" cellspacing="0" cellpadding="0">
+    <tr>
+      <td><b>Type:</b>&nbsp;&nbsp;</td>
+      <td>string</td>
+    </tr>
+      </table>
+	</div><br /><br />
+	<div class="top">[ <a href="#top">Top</a> ]</div><br />
+	<a name="var$selectClass"></a>
+	<p></p>
+	<h4>$selectClass = <span class="value">&nbsp;'HTML_Selector'</span></h4>
+	<p>[line <a href="../__filesource/fsource_Ganon__gan_node_html.php.html#a71">71</a>]</p>
+  Name of the selector class<br /><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>see:</b>&nbsp;&nbsp;</td><td><a href="../Ganon/HTML_Node.html#methodselect">HTML_Node::select()</a></td>
+  </tr>
+</table>
+</div>
+
+  <br />
+	<div class="tags">
+  <table border="0" cellspacing="0" cellpadding="0">
+    <tr>
+      <td><b>Type:</b>&nbsp;&nbsp;</td>
+      <td>string</td>
+    </tr>
+      </table>
+	</div><br /><br />
+	<div class="top">[ <a href="#top">Top</a> ]</div><br />
+	<a name="var$self_close"></a>
+	<p></p>
+	<h4>$self_close = <span class="value">&nbsp;false</span></h4>
+	<p>[line <a href="../__filesource/fsource_Ganon__gan_node_html.php.html#a182">182</a>]</p>
+  Is node a self closing node? No closing tag if true.<br /><br />
+  <br />
+	<div class="tags">
+  <table border="0" cellspacing="0" cellpadding="0">
+    <tr>
+      <td><b>Type:</b>&nbsp;&nbsp;</td>
+      <td>bool</td>
+    </tr>
+      </table>
+	</div><br /><br />
+	<div class="top">[ <a href="#top">Top</a> ]</div><br />
+	<a name="var$self_close_str"></a>
+	<p></p>
+	<h4>$self_close_str = <span class="value">&nbsp;'&nbsp;/'</span></h4>
+	<p>[line <a href="../__filesource/fsource_Ganon__gan_node_html.php.html#a189">189</a>]</p>
+  If self close, then this will be used to close the tag<br /><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>see:</b>&nbsp;&nbsp;</td><td><a href="../Ganon/HTML_Node.html#var$self_close">HTML_Node::$self_close</a></td>
+  </tr>
+</table>
+</div>
+
+  <br />
+	<div class="tags">
+  <table border="0" cellspacing="0" cellpadding="0">
+    <tr>
+      <td><b>Type:</b>&nbsp;&nbsp;</td>
+      <td>string</td>
+    </tr>
+      </table>
+	</div><br /><br />
+	<div class="top">[ <a href="#top">Top</a> ]</div><br />
+	<a name="var$tag"></a>
+	<p></p>
+	<h4>$tag = <span class="value">&nbsp;''</span></h4>
+	<p>[line <a href="../__filesource/fsource_Ganon__gan_node_html.php.html#a167">167</a>]</p>
+  Full tag name (including namespace)<br /><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>see:</b>&nbsp;&nbsp;</td><td><a href="../Ganon/HTML_Node.html#methodgetNamespace">HTML_Node::getNamespace()</a></td>
+  </tr>
+  <tr>
+    <td><b>see:</b>&nbsp;&nbsp;</td><td>getTagName()</td>
+  </tr>
+</table>
+</div>
+
+  <br />
+	<div class="tags">
+  <table border="0" cellspacing="0" cellpadding="0">
+    <tr>
+      <td><b>Type:</b>&nbsp;&nbsp;</td>
+      <td>string</td>
+    </tr>
+      </table>
+	</div><br /><br />
+	<div class="top">[ <a href="#top">Top</a> ]</div><br />
+	<a name="var$tag_ns"></a>
+	<p></p>
+	<h4>$tag_ns = <span class="value">&nbsp;null</span></h4>
+	<p>[line <a href="../__filesource/fsource_Ganon__gan_node_html.php.html#a176">176</a>]</p>
+  Namespace info for tag<br /><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>internal:</b>&nbsp;&nbsp;</td><td>Public for easy outside modifications!</td>
+  </tr>
+  <tr>
+    <td><b>internal:</b>&nbsp;&nbsp;</td><td>array('namespace', 'tag')</td>
+  </tr>
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>private</td>
+  </tr>
+</table>
+</div>
+
+  <br />
+	<div class="tags">
+  <table border="0" cellspacing="0" cellpadding="0">
+    <tr>
+      <td><b>Type:</b>&nbsp;&nbsp;</td>
+      <td>array</td>
+    </tr>
+      </table>
+	</div><br /><br />
+	<div class="top">[ <a href="#top">Top</a> ]</div><br />
+</div><br />
+
+<hr />
+<a name="class_methods"></a>
+<h3>Class Methods</h3>
+<div class="tags">
+
+  <hr />
+	<a name="method__construct"></a>
+	<h3>constructor __construct <span class="smalllinenumber">[line <a href="../__filesource/fsource_Ganon__gan_node_html.php.html#a245">245</a>]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>HTML_Node __construct(
+string|array
+$tag, <a href="../Ganon/HTML_Node.html">HTML_Node</a>
+$parent)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		Class constructor<br /><br /><br /><br />
+
+	<p>Overridden in child classes as:<br />
+		<dl>
+	<dt><a href="../Ganon/HTML_NODE_TEXT.html#method__construct">HTML_NODE_TEXT::__construct()</a></dt>
+		<dd>Class constructor</dd>
+	</dl>
+		<dl>
+	<dt><a href="../Ganon/HTML_NODE_COMMENT.html#method__construct">HTML_NODE_COMMENT::__construct()</a></dt>
+		<dd>Class constructor</dd>
+	</dl>
+		<dl>
+	<dt><a href="../Ganon/HTML_NODE_CONDITIONAL.html#method__construct">HTML_NODE_CONDITIONAL::__construct()</a></dt>
+		<dd>Class constructor</dd>
+	</dl>
+		<dl>
+	<dt><a href="../Ganon/HTML_NODE_CDATA.html#method__construct">HTML_NODE_CDATA::__construct()</a></dt>
+		<dd>Class constructor</dd>
+	</dl>
+		<dl>
+	<dt><a href="../Ganon/HTML_NODE_DOCTYPE.html#method__construct">HTML_NODE_DOCTYPE::__construct()</a></dt>
+		<dd>Class constructor</dd>
+	</dl>
+		<dl>
+	<dt><a href="../Ganon/HTML_NODE_EMBEDDED.html#method__construct">HTML_NODE_EMBEDDED::__construct()</a></dt>
+		<dd>Class constructor</dd>
+	</dl>
+		<dl>
+	<dt><a href="../Ganon/HTML_NODE_XML.html#method__construct">HTML_NODE_XML::__construct()</a></dt>
+		<dd>Class constructor</dd>
+	</dl>
+		<dl>
+	<dt><a href="../Ganon/HTML_NODE_ASP.html#method__construct">HTML_NODE_ASP::__construct()</a></dt>
+		<dd>Class constructor</dd>
+	</dl>
+	</p>
+	
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type">string|array&nbsp;&nbsp;</td>
+        <td><b>$tag</b>&nbsp;&nbsp;</td>
+        <td>Name of the tag, or array with taginfo (array(     'tag_name' =&gt; 'tag',     'self_close' =&gt; false,     'attributes' =&gt; array('attribute' =&gt; 'value')))</td>
+      </tr>
+          <tr>
+        <td class="type"><a href="../Ganon/HTML_Node.html">HTML_Node</a>&nbsp;&nbsp;</td>
+        <td><b>$parent</b>&nbsp;&nbsp;</td>
+        <td>Parent of node, null if none</td>
+      </tr>
+        </table>
+    </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="method__destruct"></a>
+	<h3>destructor __destruct <span class="smalllinenumber">[line <a href="../__filesource/fsource_Ganon__gan_node_html.php.html#a265">265</a>]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>void __destruct(
+)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		Class destructor<br /><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>private</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodaddASP"></a>
+	<h3>method addASP <span class="smalllinenumber">[line <a href="../__filesource/fsource_Ganon__gan_node_html.php.html#a1087">1087</a>]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code><a href="../Ganon/HTML_Node.html">HTML_Node</a> &amp;addASP(
+[string
+$tag = ''], [string
+$text = ''], [array
+$attributes = array()], [
+&$offset = null], int
+$offset)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		Add ASP node<br /><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>return:</b>&nbsp;&nbsp;</td><td>Added node</td>
+  </tr>
+  <tr>
+    <td><b>see:</b>&nbsp;&nbsp;</td><td>addChild();</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$tag</b>&nbsp;&nbsp;</td>
+        <td>Tagname after &quot;%&quot;</td>
+      </tr>
+          <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$text</b>&nbsp;&nbsp;</td>
+        <td></td>
+      </tr>
+          <tr>
+        <td class="type">array&nbsp;&nbsp;</td>
+        <td><b>$attributes</b>&nbsp;&nbsp;</td>
+        <td>Array of attributes (array('attribute' =&gt; 'value'))</td>
+      </tr>
+          <tr>
+        <td class="type">int&nbsp;&nbsp;</td>
+        <td><b>$offset</b>&nbsp;&nbsp;</td>
+        <td>Position to insert node, negative to count from end, null to append</td>
+      </tr>
+          <tr>
+        <td class="type">&nbsp;&nbsp;</td>
+        <td><b>&$offset</b>&nbsp;&nbsp;</td>
+        <td></td>
+      </tr>
+        </table>
+    </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodaddAttribute"></a>
+	<h3>method addAttribute <span class="smalllinenumber">[line <a href="../__filesource/fsource_Ganon__gan_node_html.php.html#a1364">1364</a>]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>void addAttribute(
+string
+$attr, string
+$val)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		Add new attribute<br /><br /><br /><br />
+
+	
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$attr</b>&nbsp;&nbsp;</td>
+        <td></td>
+      </tr>
+          <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$val</b>&nbsp;&nbsp;</td>
+        <td></td>
+      </tr>
+        </table>
+    </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodaddCDATA"></a>
+	<h3>method addCDATA <span class="smalllinenumber">[line <a href="../__filesource/fsource_Ganon__gan_node_html.php.html#a1035">1035</a>]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code><a href="../Ganon/HTML_Node.html">HTML_Node</a> &amp;addCDATA(
+string
+$text, [
+&$offset = null], int
+$offset)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		Add CDATA node<br /><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>return:</b>&nbsp;&nbsp;</td><td>Added node</td>
+  </tr>
+  <tr>
+    <td><b>see:</b>&nbsp;&nbsp;</td><td>addChild();</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$text</b>&nbsp;&nbsp;</td>
+        <td></td>
+      </tr>
+          <tr>
+        <td class="type">int&nbsp;&nbsp;</td>
+        <td><b>$offset</b>&nbsp;&nbsp;</td>
+        <td>Position to insert node, negative to count from end, null to append</td>
+      </tr>
+          <tr>
+        <td class="type">&nbsp;&nbsp;</td>
+        <td><b>&$offset</b>&nbsp;&nbsp;</td>
+        <td></td>
+      </tr>
+        </table>
+    </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodaddChild"></a>
+	<h3>method addChild <span class="smalllinenumber">[line <a href="../__filesource/fsource_Ganon__gan_node_html.php.html#a925">925</a>]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code><a href="../Ganon/HTML_Node.html">HTML_Node</a> &amp;addChild(
+string|<a href="../Ganon/HTML_Node.html">HTML_Node</a>
+$tag, [
+&$offset = null], int
+$offset)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		Add childnode<br /><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>return:</b>&nbsp;&nbsp;</td><td>Added node</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type">string|<a href="../Ganon/HTML_Node.html">HTML_Node</a>&nbsp;&nbsp;</td>
+        <td><b>$tag</b>&nbsp;&nbsp;</td>
+        <td>Tagname or object</td>
+      </tr>
+          <tr>
+        <td class="type">int&nbsp;&nbsp;</td>
+        <td><b>$offset</b>&nbsp;&nbsp;</td>
+        <td>Position to insert node, negative to count from end, null to append</td>
+      </tr>
+          <tr>
+        <td class="type">&nbsp;&nbsp;</td>
+        <td><b>&$offset</b>&nbsp;&nbsp;</td>
+        <td></td>
+      </tr>
+        </table>
+    </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodaddClass"></a>
+	<h3>method addClass <span class="smalllinenumber">[line <a href="../__filesource/fsource_Ganon__gan_node_html.php.html#a1399">1399</a>]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>void addClass(
+string|array
+$className)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		Add new class(es)<br /><br /><br /><br />
+
+	
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type">string|array&nbsp;&nbsp;</td>
+        <td><b>$className</b>&nbsp;&nbsp;</td>
+        <td></td>
+      </tr>
+        </table>
+    </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodaddComment"></a>
+	<h3>method addComment <span class="smalllinenumber">[line <a href="../__filesource/fsource_Ganon__gan_node_html.php.html#a1002">1002</a>]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code><a href="../Ganon/HTML_Node.html">HTML_Node</a> &amp;addComment(
+string
+$text, [
+&$offset = null], int
+$offset)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		Add comment node<br /><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>return:</b>&nbsp;&nbsp;</td><td>Added node</td>
+  </tr>
+  <tr>
+    <td><b>see:</b>&nbsp;&nbsp;</td><td>addChild();</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$text</b>&nbsp;&nbsp;</td>
+        <td></td>
+      </tr>
+          <tr>
+        <td class="type">int&nbsp;&nbsp;</td>
+        <td><b>$offset</b>&nbsp;&nbsp;</td>
+        <td>Position to insert node, negative to count from end, null to append</td>
+      </tr>
+          <tr>
+        <td class="type">&nbsp;&nbsp;</td>
+        <td><b>&$offset</b>&nbsp;&nbsp;</td>
+        <td></td>
+      </tr>
+        </table>
+    </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodaddConditional"></a>
+	<h3>method addConditional <span class="smalllinenumber">[line <a href="../__filesource/fsource_Ganon__gan_node_html.php.html#a1019">1019</a>]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code><a href="../Ganon/HTML_Node.html">HTML_Node</a> &amp;addConditional(
+string
+$condition, [bool
+$hidden = true], [
+&$offset = null], int
+$offset)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		Add conditional node<br /><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>return:</b>&nbsp;&nbsp;</td><td>Added node</td>
+  </tr>
+  <tr>
+    <td><b>see:</b>&nbsp;&nbsp;</td><td>addChild();</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$condition</b>&nbsp;&nbsp;</td>
+        <td></td>
+      </tr>
+          <tr>
+        <td class="type">int&nbsp;&nbsp;</td>
+        <td><b>$offset</b>&nbsp;&nbsp;</td>
+        <td>Position to insert node, negative to count from end, null to append</td>
+      </tr>
+          <tr>
+        <td class="type">bool&nbsp;&nbsp;</td>
+        <td><b>$hidden</b>&nbsp;&nbsp;</td>
+        <td>True for &lt;!--[if, false for &lt;![if</td>
+      </tr>
+          <tr>
+        <td class="type">&nbsp;&nbsp;</td>
+        <td><b>&$offset</b>&nbsp;&nbsp;</td>
+        <td></td>
+      </tr>
+        </table>
+    </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodaddDoctype"></a>
+	<h3>method addDoctype <span class="smalllinenumber">[line <a href="../__filesource/fsource_Ganon__gan_node_html.php.html#a1051">1051</a>]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code><a href="../Ganon/HTML_Node.html">HTML_Node</a> &amp;addDoctype(
+string
+$dtd, [
+&$offset = null], int
+$offset)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		Add doctype node<br /><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>return:</b>&nbsp;&nbsp;</td><td>Added node</td>
+  </tr>
+  <tr>
+    <td><b>see:</b>&nbsp;&nbsp;</td><td>addChild();</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$dtd</b>&nbsp;&nbsp;</td>
+        <td></td>
+      </tr>
+          <tr>
+        <td class="type">int&nbsp;&nbsp;</td>
+        <td><b>$offset</b>&nbsp;&nbsp;</td>
+        <td>Position to insert node, negative to count from end, null to append</td>
+      </tr>
+          <tr>
+        <td class="type">&nbsp;&nbsp;</td>
+        <td><b>&$offset</b>&nbsp;&nbsp;</td>
+        <td></td>
+      </tr>
+        </table>
+    </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodaddText"></a>
+	<h3>method addText <span class="smalllinenumber">[line <a href="../__filesource/fsource_Ganon__gan_node_html.php.html#a986">986</a>]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code><a href="../Ganon/HTML_Node.html">HTML_Node</a> &amp;addText(
+string
+$text, [
+&$offset = null], int
+$offset)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		Add textnode<br /><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>return:</b>&nbsp;&nbsp;</td><td>Added node</td>
+  </tr>
+  <tr>
+    <td><b>see:</b>&nbsp;&nbsp;</td><td>addChild();</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$text</b>&nbsp;&nbsp;</td>
+        <td></td>
+      </tr>
+          <tr>
+        <td class="type">int&nbsp;&nbsp;</td>
+        <td><b>$offset</b>&nbsp;&nbsp;</td>
+        <td>Position to insert node, negative to count from end, null to append</td>
+      </tr>
+          <tr>
+        <td class="type">&nbsp;&nbsp;</td>
+        <td><b>&$offset</b>&nbsp;&nbsp;</td>
+        <td></td>
+      </tr>
+        </table>
+    </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodaddXML"></a>
+	<h3>method addXML <span class="smalllinenumber">[line <a href="../__filesource/fsource_Ganon__gan_node_html.php.html#a1069">1069</a>]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code><a href="../Ganon/HTML_Node.html">HTML_Node</a> &amp;addXML(
+[string
+$tag = 'xml'], [string
+$text = ''], [array
+$attributes = array()], [
+&$offset = null], int
+$offset)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		Add xml node<br /><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>return:</b>&nbsp;&nbsp;</td><td>Added node</td>
+  </tr>
+  <tr>
+    <td><b>see:</b>&nbsp;&nbsp;</td><td>addChild();</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$tag</b>&nbsp;&nbsp;</td>
+        <td>Tagname after &quot;?&quot;, e.g. &quot;php&quot; or &quot;xml&quot;</td>
+      </tr>
+          <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$text</b>&nbsp;&nbsp;</td>
+        <td></td>
+      </tr>
+          <tr>
+        <td class="type">array&nbsp;&nbsp;</td>
+        <td><b>$attributes</b>&nbsp;&nbsp;</td>
+        <td>Array of attributes (array('attribute' =&gt; 'value'))</td>
+      </tr>
+          <tr>
+        <td class="type">int&nbsp;&nbsp;</td>
+        <td><b>$offset</b>&nbsp;&nbsp;</td>
+        <td>Position to insert node, negative to count from end, null to append</td>
+      </tr>
+          <tr>
+        <td class="type">&nbsp;&nbsp;</td>
+        <td><b>&$offset</b>&nbsp;&nbsp;</td>
+        <td></td>
+      </tr>
+        </table>
+    </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodattributeCount"></a>
+	<h3>method attributeCount <span class="smalllinenumber">[line <a href="../__filesource/fsource_Ganon__gan_node_html.php.html#a1167">1167</a>]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>int attributeCount(
+)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		Number of attributes<br /><br /><br /><br />
+
+	
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodchangeParent"></a>
+	<h3>method changeParent <span class="smalllinenumber">[line <a href="../__filesource/fsource_Ganon__gan_node_html.php.html#a530">530</a>]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>void changeParent(
+<a href="../Ganon/HTML_Node.html">HTML_Node</a>
+$to, [
+&$index = null], int
+$index)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		Change parent<br /><br /><br /><br />
+
+	
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type"><a href="../Ganon/HTML_Node.html">HTML_Node</a>&nbsp;&nbsp;</td>
+        <td><b>$to</b>&nbsp;&nbsp;</td>
+        <td>New parent, null if none</td>
+      </tr>
+          <tr>
+        <td class="type">int&nbsp;&nbsp;</td>
+        <td><b>$index</b>&nbsp;&nbsp;</td>
+        <td>Add child to parent if not present at index, false to not add, negative to cound from end, null to append</td>
+      </tr>
+          <tr>
+        <td class="type">&nbsp;&nbsp;</td>
+        <td><b>&$index</b>&nbsp;&nbsp;</td>
+        <td></td>
+      </tr>
+        </table>
+    </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodchildCount"></a>
+	<h3>method childCount <span class="smalllinenumber">[line <a href="../__filesource/fsource_Ganon__gan_node_html.php.html#a838">838</a>]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>int childCount(
+[bool
+$ignore_text_comments = false])</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		Number of children in node<br /><br /><br /><br />
+
+	
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type">bool&nbsp;&nbsp;</td>
+        <td><b>$ignore_text_comments</b>&nbsp;&nbsp;</td>
+        <td>Ignore text/comments with calculation</td>
+      </tr>
+        </table>
+    </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodclear"></a>
+	<h3>method clear <span class="smalllinenumber">[line <a href="../__filesource/fsource_Ganon__gan_node_html.php.html#a514">514</a>]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>void clear(
+)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		Deletes all child nodes from node<br /><br /><br /><br />
+
+	
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methoddelete"></a>
+	<h3>method delete <span class="smalllinenumber">[line <a href="../__filesource/fsource_Ganon__gan_node_html.php.html#a481">481</a>]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>void delete(
+)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		Delete node from parent and clear node<br /><br /><br /><br />
+
+	
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methoddeleteAttribute"></a>
+	<h3>method deleteAttribute <span class="smalllinenumber">[line <a href="../__filesource/fsource_Ganon__gan_node_html.php.html#a1374">1374</a>]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>void deleteAttribute(
+string|int
+$attr, [string
+$compare = 'total'], [bool
+$case_sensitive = false])</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		Delete attribute(s)<br /><br /><br /><br />
+
+	
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type">string|int&nbsp;&nbsp;</td>
+        <td><b>$attr</b>&nbsp;&nbsp;</td>
+        <td>Negative int to count from end</td>
+      </tr>
+          <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$compare</b>&nbsp;&nbsp;</td>
+        <td>Find node using &quot;namespace&quot;, &quot;name&quot; or &quot;total&quot;</td>
+      </tr>
+          <tr>
+        <td class="type">bool&nbsp;&nbsp;</td>
+        <td><b>$case_sensitive</b>&nbsp;&nbsp;</td>
+        <td>Compare with case sensitivity</td>
+      </tr>
+        </table>
+    </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methoddeleteChild"></a>
+	<h3>method deleteChild <span class="smalllinenumber">[line <a href="../__filesource/fsource_Ganon__gan_node_html.php.html#a1097">1097</a>]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>void deleteChild(
+int|<a href="../Ganon/HTML_Node.html">HTML_Node</a>
+$child, [bool
+$soft_delete = false])</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		Delete a childnode<br /><br /><br /><br />
+
+	
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type">int|<a href="../Ganon/HTML_Node.html">HTML_Node</a>&nbsp;&nbsp;</td>
+        <td><b>$child</b>&nbsp;&nbsp;</td>
+        <td>Child(index) to delete, negative to count from end</td>
+      </tr>
+          <tr>
+        <td class="type">bool&nbsp;&nbsp;</td>
+        <td><b>$soft_delete</b>&nbsp;&nbsp;</td>
+        <td>False to call <a href="../Ganon/HTML_Node.html#methoddelete">delete()</a> from child</td>
+      </tr>
+        </table>
+    </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methoddetach"></a>
+	<h3>method detach <span class="smalllinenumber">[line <a href="../__filesource/fsource_Ganon__gan_node_html.php.html#a496">496</a>]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>void detach(
+[bool
+$move_children_up = false])</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		Detach node from parent<br /><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>see:</b>&nbsp;&nbsp;</td><td><a href="../Ganon/HTML_Node.html#methoddelete">HTML_Node::delete()</a></td>
+  </tr>
+  <tr>
+    <td><b>internal:</b>&nbsp;&nbsp;</td><td>jquery (naming) compatibility</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type">bool&nbsp;&nbsp;</td>
+        <td><b>$move_children_up</b>&nbsp;&nbsp;</td>
+        <td>Only detach current node and replace it with childnodes</td>
+      </tr>
+        </table>
+    </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methoddumpLocation"></a>
+	<h3>method dumpLocation <span class="smalllinenumber">[line <a href="../__filesource/fsource_Ganon__gan_node_html.php.html#a325">325</a>]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>string dumpLocation(
+)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		Returns place in document<br /><br /><br /><br />
+
+	
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodfilter_comment"></a>
+	<h3>method filter_comment <span class="smalllinenumber">[line <a href="../__filesource/fsource_Ganon__gan_node_html.php.html#a2166">2166</a>]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>bool filter_comment(
+)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		Checks if node matches css query filter &quot;:comment&quot;<br /><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>see:</b>&nbsp;&nbsp;</td><td><a href="../Ganon/HTML_Node.html#methodmatch">HTML_Node::match()</a></td>
+  </tr>
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>protected</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	<p>Overridden in child classes as:<br />
+		<dl>
+	<dt><a href="../Ganon/HTML_NODE_COMMENT.html#methodfilter_comment">HTML_NODE_COMMENT::filter_comment()</a></dt>
+		<dd></dd>
+	</dl>
+	</p>
+	
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodfilter_contains"></a>
+	<h3>method filter_contains <span class="smalllinenumber">[line <a href="../__filesource/fsource_Ganon__gan_node_html.php.html#a2112">2112</a>]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>bool filter_contains(
+string
+$text)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		Checks if node matches css query filter &quot;:contains(s)&quot;<br /><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>see:</b>&nbsp;&nbsp;</td><td><a href="../Ganon/HTML_Node.html#methodmatch">HTML_Node::match()</a></td>
+  </tr>
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>protected</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$text</b>&nbsp;&nbsp;</td>
+        <td></td>
+      </tr>
+        </table>
+    </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodfilter_element"></a>
+	<h3>method filter_element <span class="smalllinenumber">[line <a href="../__filesource/fsource_Ganon__gan_node_html.php.html#a2146">2146</a>]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>bool filter_element(
+)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		Checks if node matches css query filter &quot;:element&quot;<br /><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>see:</b>&nbsp;&nbsp;</td><td><a href="../Ganon/HTML_Node.html#methodmatch">HTML_Node::match()</a></td>
+  </tr>
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>protected</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	<p>Overridden in child classes as:<br />
+		<dl>
+	<dt><a href="../Ganon/HTML_NODE_TEXT.html#methodfilter_element">HTML_NODE_TEXT::filter_element()</a></dt>
+		<dd></dd>
+	</dl>
+		<dl>
+	<dt><a href="../Ganon/HTML_NODE_COMMENT.html#methodfilter_element">HTML_NODE_COMMENT::filter_element()</a></dt>
+		<dd></dd>
+	</dl>
+		<dl>
+	<dt><a href="../Ganon/HTML_NODE_CONDITIONAL.html#methodfilter_element">HTML_NODE_CONDITIONAL::filter_element()</a></dt>
+		<dd></dd>
+	</dl>
+		<dl>
+	<dt><a href="../Ganon/HTML_NODE_CDATA.html#methodfilter_element">HTML_NODE_CDATA::filter_element()</a></dt>
+		<dd></dd>
+	</dl>
+		<dl>
+	<dt><a href="../Ganon/HTML_NODE_DOCTYPE.html#methodfilter_element">HTML_NODE_DOCTYPE::filter_element()</a></dt>
+		<dd></dd>
+	</dl>
+		<dl>
+	<dt><a href="../Ganon/HTML_NODE_EMBEDDED.html#methodfilter_element">HTML_NODE_EMBEDDED::filter_element()</a></dt>
+		<dd></dd>
+	</dl>
+	</p>
+	
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodfilter_empty"></a>
+	<h3>method filter_empty <span class="smalllinenumber">[line <a href="../__filesource/fsource_Ganon__gan_node_html.php.html#a2060">2060</a>]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>bool filter_empty(
+)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		Checks if node matches css query filter &quot;:empty&quot;<br /><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>see:</b>&nbsp;&nbsp;</td><td><a href="../Ganon/HTML_Node.html#methodmatch">HTML_Node::match()</a></td>
+  </tr>
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>protected</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodfilter_even"></a>
+	<h3>method filter_even <span class="smalllinenumber">[line <a href="../__filesource/fsource_Ganon__gan_node_html.php.html#a1964">1964</a>]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>bool filter_even(
+)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		Checks if node matches css query filter &quot;:even&quot;<br /><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>see:</b>&nbsp;&nbsp;</td><td><a href="../Ganon/HTML_Node.html#methodmatch">HTML_Node::match()</a></td>
+  </tr>
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>protected</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodfilter_every"></a>
+	<h3>method filter_every <span class="smalllinenumber">[line <a href="../__filesource/fsource_Ganon__gan_node_html.php.html#a1974">1974</a>]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>bool filter_every(
+
+$n)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		Checks if node matches css query filter &quot;:every(n)&quot;<br /><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>see:</b>&nbsp;&nbsp;</td><td><a href="../Ganon/HTML_Node.html#methodmatch">HTML_Node::match()</a></td>
+  </tr>
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>protected</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type">&nbsp;&nbsp;</td>
+        <td><b>$n</b>&nbsp;&nbsp;</td>
+        <td></td>
+      </tr>
+        </table>
+    </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodfilter_first"></a>
+	<h3>method filter_first <span class="smalllinenumber">[line <a href="../__filesource/fsource_Ganon__gan_node_html.php.html#a1984">1984</a>]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>bool filter_first(
+)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		Checks if node matches css query filter &quot;:first&quot;<br /><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>see:</b>&nbsp;&nbsp;</td><td><a href="../Ganon/HTML_Node.html#methodmatch">HTML_Node::match()</a></td>
+  </tr>
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>protected</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodfilter_firsttype"></a>
+	<h3>method filter_firsttype <span class="smalllinenumber">[line <a href="../__filesource/fsource_Ganon__gan_node_html.php.html#a2008">2008</a>]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>bool filter_firsttype(
+)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		Checks if node matches css query filter &quot;:first-of-type&quot;<br /><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>see:</b>&nbsp;&nbsp;</td><td><a href="../Ganon/HTML_Node.html#methodmatch">HTML_Node::match()</a></td>
+  </tr>
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>protected</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodfilter_gt"></a>
+	<h3>method filter_gt <span class="smalllinenumber">[line <a href="../__filesource/fsource_Ganon__gan_node_html.php.html#a1892">1892</a>]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>bool filter_gt(
+string
+$n)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		Checks if node matches css query filter &quot;:gt(n)&quot;<br /><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>see:</b>&nbsp;&nbsp;</td><td><a href="../Ganon/HTML_Node.html#methodmatch">HTML_Node::match()</a></td>
+  </tr>
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>protected</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$n</b>&nbsp;&nbsp;</td>
+        <td></td>
+      </tr>
+        </table>
+    </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodfilter_has"></a>
+	<h3>method filter_has <span class="smalllinenumber">[line <a href="../__filesource/fsource_Ganon__gan_node_html.php.html#a2123">2123</a>]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>bool filter_has(
+string
+$selector)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		Checks if node matches css query filter &quot;:has(s)&quot;<br /><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>see:</b>&nbsp;&nbsp;</td><td><a href="../Ganon/HTML_Node.html#methodmatch">HTML_Node::match()</a></td>
+  </tr>
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>protected</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$selector</b>&nbsp;&nbsp;</td>
+        <td></td>
+      </tr>
+        </table>
+    </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodfilter_hastext"></a>
+	<h3>method filter_hastext <span class="smalllinenumber">[line <a href="../__filesource/fsource_Ganon__gan_node_html.php.html#a2080">2080</a>]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>bool filter_hastext(
+)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		Checks if node matches css query filter &quot;:has-text&quot;<br /><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>see:</b>&nbsp;&nbsp;</td><td><a href="../Ganon/HTML_Node.html#methodmatch">HTML_Node::match()</a></td>
+  </tr>
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>protected</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodfilter_lang"></a>
+	<h3>method filter_lang <span class="smalllinenumber">[line <a href="../__filesource/fsource_Ganon__gan_node_html.php.html#a2101">2101</a>]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>bool filter_lang(
+string
+$lang)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		Checks if node matches css query filter &quot;:lang(s)&quot;<br /><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>see:</b>&nbsp;&nbsp;</td><td><a href="../Ganon/HTML_Node.html#methodmatch">HTML_Node::match()</a></td>
+  </tr>
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>protected</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$lang</b>&nbsp;&nbsp;</td>
+        <td></td>
+      </tr>
+        </table>
+    </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodfilter_last"></a>
+	<h3>method filter_last <span class="smalllinenumber">[line <a href="../__filesource/fsource_Ganon__gan_node_html.php.html#a1994">1994</a>]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>bool filter_last(
+)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		Checks if node matches css query filter &quot;:last&quot;<br /><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>see:</b>&nbsp;&nbsp;</td><td><a href="../Ganon/HTML_Node.html#methodmatch">HTML_Node::match()</a></td>
+  </tr>
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>protected</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodfilter_lasttype"></a>
+	<h3>method filter_lasttype <span class="smalllinenumber">[line <a href="../__filesource/fsource_Ganon__gan_node_html.php.html#a2018">2018</a>]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>bool filter_lasttype(
+)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		Checks if node matches css query filter &quot;:last-of-type&quot;<br /><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>see:</b>&nbsp;&nbsp;</td><td><a href="../Ganon/HTML_Node.html#methodmatch">HTML_Node::match()</a></td>
+  </tr>
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>protected</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodfilter_lt"></a>
+	<h3>method filter_lt <span class="smalllinenumber">[line <a href="../__filesource/fsource_Ganon__gan_node_html.php.html#a1903">1903</a>]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>bool filter_lt(
+string
+$n)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		Checks if node matches css query filter &quot;:lt(n)&quot;<br /><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>see:</b>&nbsp;&nbsp;</td><td><a href="../Ganon/HTML_Node.html#methodmatch">HTML_Node::match()</a></td>
+  </tr>
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>protected</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$n</b>&nbsp;&nbsp;</td>
+        <td></td>
+      </tr>
+        </table>
+    </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodfilter_nchild"></a>
+	<h3>method filter_nchild <span class="smalllinenumber">[line <a href="../__filesource/fsource_Ganon__gan_node_html.php.html#a1881">1881</a>]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>bool filter_nchild(
+string
+$n)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		Checks if node matches css query filter &quot;:nth-child(n)&quot;<br /><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>see:</b>&nbsp;&nbsp;</td><td><a href="../Ganon/HTML_Node.html#methodmatch">HTML_Node::match()</a></td>
+  </tr>
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>protected</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$n</b>&nbsp;&nbsp;</td>
+        <td></td>
+      </tr>
+        </table>
+    </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodfilter_nlastchild"></a>
+	<h3>method filter_nlastchild <span class="smalllinenumber">[line <a href="../__filesource/fsource_Ganon__gan_node_html.php.html#a1914">1914</a>]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>bool filter_nlastchild(
+string
+$n)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		Checks if node matches css query filter &quot;:nth-last-child(n)&quot;<br /><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>see:</b>&nbsp;&nbsp;</td><td><a href="../Ganon/HTML_Node.html#methodmatch">HTML_Node::match()</a></td>
+  </tr>
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>protected</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$n</b>&nbsp;&nbsp;</td>
+        <td></td>
+      </tr>
+        </table>
+    </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodfilter_nlastype"></a>
+	<h3>method filter_nlastype <span class="smalllinenumber">[line <a href="../__filesource/fsource_Ganon__gan_node_html.php.html#a1940">1940</a>]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>bool filter_nlastype(
+string
+$n)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		Checks if node matches css query filter &quot;:nth-;ast-of-type(n)&quot;<br /><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>see:</b>&nbsp;&nbsp;</td><td><a href="../Ganon/HTML_Node.html#methodmatch">HTML_Node::match()</a></td>
+  </tr>
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>protected</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$n</b>&nbsp;&nbsp;</td>
+        <td></td>
+      </tr>
+        </table>
+    </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodfilter_not"></a>
+	<h3>method filter_not <span class="smalllinenumber">[line <a href="../__filesource/fsource_Ganon__gan_node_html.php.html#a2135">2135</a>]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>bool filter_not(
+string
+$selector)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		Checks if node matches css query filter &quot;:not(s)&quot;<br /><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>see:</b>&nbsp;&nbsp;</td><td><a href="../Ganon/HTML_Node.html#methodmatch">HTML_Node::match()</a></td>
+  </tr>
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>protected</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$selector</b>&nbsp;&nbsp;</td>
+        <td></td>
+      </tr>
+        </table>
+    </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodfilter_notempty"></a>
+	<h3>method filter_notempty <span class="smalllinenumber">[line <a href="../__filesource/fsource_Ganon__gan_node_html.php.html#a2070">2070</a>]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>bool filter_notempty(
+)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		Checks if node matches css query filter &quot;:not-empty&quot;<br /><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>see:</b>&nbsp;&nbsp;</td><td><a href="../Ganon/HTML_Node.html#methodmatch">HTML_Node::match()</a></td>
+  </tr>
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>protected</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodfilter_notext"></a>
+	<h3>method filter_notext <span class="smalllinenumber">[line <a href="../__filesource/fsource_Ganon__gan_node_html.php.html#a2090">2090</a>]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>bool filter_notext(
+)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		Checks if node matches css query filter &quot;:no-text&quot;<br /><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>see:</b>&nbsp;&nbsp;</td><td><a href="../Ganon/HTML_Node.html#methodmatch">HTML_Node::match()</a></td>
+  </tr>
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>protected</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodfilter_ntype"></a>
+	<h3>method filter_ntype <span class="smalllinenumber">[line <a href="../__filesource/fsource_Ganon__gan_node_html.php.html#a1929">1929</a>]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>bool filter_ntype(
+string
+$n)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		Checks if node matches css query filter &quot;:nth-of-type(n)&quot;<br /><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>see:</b>&nbsp;&nbsp;</td><td><a href="../Ganon/HTML_Node.html#methodmatch">HTML_Node::match()</a></td>
+  </tr>
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>protected</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$n</b>&nbsp;&nbsp;</td>
+        <td></td>
+      </tr>
+        </table>
+    </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodfilter_odd"></a>
+	<h3>method filter_odd <span class="smalllinenumber">[line <a href="../__filesource/fsource_Ganon__gan_node_html.php.html#a1954">1954</a>]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>bool filter_odd(
+)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		Checks if node matches css query filter &quot;:odd&quot;<br /><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>see:</b>&nbsp;&nbsp;</td><td><a href="../Ganon/HTML_Node.html#methodmatch">HTML_Node::match()</a></td>
+  </tr>
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>protected</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodfilter_onlychild"></a>
+	<h3>method filter_onlychild <span class="smalllinenumber">[line <a href="../__filesource/fsource_Ganon__gan_node_html.php.html#a2032">2032</a>]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>bool filter_onlychild(
+)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		Checks if node matches css query filter &quot;:only-child&quot;<br /><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>see:</b>&nbsp;&nbsp;</td><td><a href="../Ganon/HTML_Node.html#methodmatch">HTML_Node::match()</a></td>
+  </tr>
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>protected</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodfilter_onlytype"></a>
+	<h3>method filter_onlytype <span class="smalllinenumber">[line <a href="../__filesource/fsource_Ganon__gan_node_html.php.html#a2046">2046</a>]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>bool filter_onlytype(
+)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		Checks if node matches css query filter &quot;:only-of-type&quot;<br /><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>see:</b>&nbsp;&nbsp;</td><td><a href="../Ganon/HTML_Node.html#methodmatch">HTML_Node::match()</a></td>
+  </tr>
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>protected</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodfilter_root"></a>
+	<h3>method filter_root <span class="smalllinenumber">[line <a href="../__filesource/fsource_Ganon__gan_node_html.php.html#a1870">1870</a>]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>bool filter_root(
+)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		Checks if node matches css query filter &quot;:root&quot;<br /><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>see:</b>&nbsp;&nbsp;</td><td><a href="../Ganon/HTML_Node.html#methodmatch">HTML_Node::match()</a></td>
+  </tr>
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>protected</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodfilter_text"></a>
+	<h3>method filter_text <span class="smalllinenumber">[line <a href="../__filesource/fsource_Ganon__gan_node_html.php.html#a2156">2156</a>]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>bool filter_text(
+)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		Checks if node matches css query filter &quot;:text&quot;<br /><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>see:</b>&nbsp;&nbsp;</td><td><a href="../Ganon/HTML_Node.html#methodmatch">HTML_Node::match()</a></td>
+  </tr>
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>protected</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	<p>Overridden in child classes as:<br />
+		<dl>
+	<dt><a href="../Ganon/HTML_NODE_TEXT.html#methodfilter_text">HTML_NODE_TEXT::filter_text()</a></dt>
+		<dd></dd>
+	</dl>
+	</p>
+	
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodfindAttribute"></a>
+	<h3>method findAttribute <span class="smalllinenumber">[line <a href="../__filesource/fsource_Ganon__gan_node_html.php.html#a1179">1179</a>]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>array findAttribute(
+string|int
+$attr, [string
+$compare = 'total'], [bool
+$case_sensitive = false])</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		Find attribute using namespace, name or both<br /><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>return:</b>&nbsp;&nbsp;</td><td>array('ns', 'attr', 'ns:attr', index)</td>
+  </tr>
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>protected</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type">string|int&nbsp;&nbsp;</td>
+        <td><b>$attr</b>&nbsp;&nbsp;</td>
+        <td>Negative int to count from end</td>
+      </tr>
+          <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$compare</b>&nbsp;&nbsp;</td>
+        <td>&quot;namespace&quot;, &quot;name&quot; or &quot;total&quot;</td>
+      </tr>
+          <tr>
+        <td class="type">bool&nbsp;&nbsp;</td>
+        <td><b>$case_sensitive</b>&nbsp;&nbsp;</td>
+        <td>Compare with case sensitivity</td>
+      </tr>
+        </table>
+    </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodfindChild"></a>
+	<h3>method findChild <span class="smalllinenumber">[line <a href="../__filesource/fsource_Ganon__gan_node_html.php.html#a863">863</a>]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>int findChild(
+<a href="../Ganon/HTML_Node.html">HTML_Node</a>
+$child)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		Find node in children<br /><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>return:</b>&nbsp;&nbsp;</td><td>False if not found</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type"><a href="../Ganon/HTML_Node.html">HTML_Node</a>&nbsp;&nbsp;</td>
+        <td><b>$child</b>&nbsp;&nbsp;</td>
+        <td></td>
+      </tr>
+        </table>
+    </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodfirstChild"></a>
+	<h3>method firstChild <span class="smalllinenumber">[line <a href="../__filesource/fsource_Ganon__gan_node_html.php.html#a951">951</a>]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code><a href="../Ganon/HTML_Node.html">HTML_Node</a> &amp;firstChild(
+[bool
+$ignore_text_comments = false])</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		First child node<br /><br /><br /><br />
+
+	
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type">bool&nbsp;&nbsp;</td>
+        <td><b>$ignore_text_comments</b>&nbsp;&nbsp;</td>
+        <td>Ignore text/comments with index calculation</td>
+      </tr>
+        </table>
+    </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodgetAttribute"></a>
+	<h3>method getAttribute <span class="smalllinenumber">[line <a href="../__filesource/fsource_Ganon__gan_node_html.php.html#a1321">1321</a>]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>string|array getAttribute(
+string|int
+$attr, [string
+$compare = 'total'], [bool
+$case_sensitive = false])</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		Gets value(s) of attribute(s)<br /><br /><br /><br />
+
+	
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type">string|int&nbsp;&nbsp;</td>
+        <td><b>$attr</b>&nbsp;&nbsp;</td>
+        <td>Negative int to count from end</td>
+      </tr>
+          <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$compare</b>&nbsp;&nbsp;</td>
+        <td>Find node using &quot;namespace&quot;, &quot;name&quot; or &quot;total&quot;</td>
+      </tr>
+          <tr>
+        <td class="type">bool&nbsp;&nbsp;</td>
+        <td><b>$case_sensitive</b>&nbsp;&nbsp;</td>
+        <td>Compare with case sensitivity</td>
+      </tr>
+        </table>
+    </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodgetAttributeNS"></a>
+	<h3>method getAttributeNS <span class="smalllinenumber">[line <a href="../__filesource/fsource_Ganon__gan_node_html.php.html#a1271">1271</a>]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>string|array getAttributeNS(
+string|int
+$attr, [string
+$compare = 'name'], [bool
+$case_sensitive = false])</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		Gets namespace of attribute(s)<br /><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>return:</b>&nbsp;&nbsp;</td><td>False if not found</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type">string|int&nbsp;&nbsp;</td>
+        <td><b>$attr</b>&nbsp;&nbsp;</td>
+        <td>Negative int to count from end</td>
+      </tr>
+          <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$compare</b>&nbsp;&nbsp;</td>
+        <td>Find node using &quot;namespace&quot;, &quot;name&quot; or &quot;total&quot;</td>
+      </tr>
+          <tr>
+        <td class="type">bool&nbsp;&nbsp;</td>
+        <td><b>$case_sensitive</b>&nbsp;&nbsp;</td>
+        <td>Compare with case sensitivity</td>
+      </tr>
+        </table>
+    </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodgetChild"></a>
+	<h3>method getChild <span class="smalllinenumber">[line <a href="../__filesource/fsource_Ganon__gan_node_html.php.html#a882">882</a>]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code><a href="../Ganon/HTML_Node.html">HTML_Node</a> &amp;getChild(
+int|<a href="../Ganon/HTML_Node.html">HTML_Node</a>
+$child, [bool
+$ignore_text_comments = false])</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		Get childnode<br /><br /><br /><br />
+
+	
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type">int|<a href="../Ganon/HTML_Node.html">HTML_Node</a>&nbsp;&nbsp;</td>
+        <td><b>$child</b>&nbsp;&nbsp;</td>
+        <td>Index, negative to count from end</td>
+      </tr>
+          <tr>
+        <td class="type">bool&nbsp;&nbsp;</td>
+        <td><b>$ignore_text_comments</b>&nbsp;&nbsp;</td>
+        <td>Ignore text/comments with index calculation</td>
+      </tr>
+        </table>
+    </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodgetChildrenByAttribute"></a>
+	<h3>method getChildrenByAttribute <span class="smalllinenumber">[line <a href="../__filesource/fsource_Ganon__gan_node_html.php.html#a1739">1739</a>]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>array getChildrenByAttribute(
+string
+$attribute, string
+$value, [string
+$mode = 'equals'], [string
+$compare = 'total'], [bool|int
+$recursive = true])</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		Finds children that match a certain attribute<br /><br /><br /><br />
+
+	
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$attribute</b>&nbsp;&nbsp;</td>
+        <td></td>
+      </tr>
+          <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$value</b>&nbsp;&nbsp;</td>
+        <td></td>
+      </tr>
+          <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$mode</b>&nbsp;&nbsp;</td>
+        <td>Compare mode, &quot;equals&quot;, &quot;|=&quot;, &quot;contains_regex&quot;, etc.</td>
+      </tr>
+          <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$compare</b>&nbsp;&nbsp;</td>
+        <td>&quot;total&quot;/&quot;namespace&quot;/&quot;name&quot;</td>
+      </tr>
+          <tr>
+        <td class="type">bool|int&nbsp;&nbsp;</td>
+        <td><b>$recursive</b>&nbsp;&nbsp;</td>
+        <td></td>
+      </tr>
+        </table>
+    </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodgetChildrenByCallback"></a>
+	<h3>method getChildrenByCallback <span class="smalllinenumber">[line <a href="../__filesource/fsource_Ganon__gan_node_html.php.html#a1438">1438</a>]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>array getChildrenByCallback(
+function
+$callback, [bool|int
+$recursive = true], [bool
+$check_self = false])</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		Finds children using a callback function<br /><br /><br /><br />
+
+	
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type">function&nbsp;&nbsp;</td>
+        <td><b>$callback</b>&nbsp;&nbsp;</td>
+        <td>Function($node) that returns a bool</td>
+      </tr>
+          <tr>
+        <td class="type">bool|int&nbsp;&nbsp;</td>
+        <td><b>$recursive</b>&nbsp;&nbsp;</td>
+        <td>Check recursively</td>
+      </tr>
+          <tr>
+        <td class="type">bool&nbsp;&nbsp;</td>
+        <td><b>$check_self</b>&nbsp;&nbsp;</td>
+        <td>Include this node in search?</td>
+      </tr>
+        </table>
+    </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodgetChildrenByClass"></a>
+	<h3>method getChildrenByClass <span class="smalllinenumber">[line <a href="../__filesource/fsource_Ganon__gan_node_html.php.html#a1825">1825</a>]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>array getChildrenByClass(
+string
+$class, [bool|int
+$recursive = true])</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		Finds all children using class attribute<br /><br /><br /><br />
+
+	
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$class</b>&nbsp;&nbsp;</td>
+        <td></td>
+      </tr>
+          <tr>
+        <td class="type">bool|int&nbsp;&nbsp;</td>
+        <td><b>$recursive</b>&nbsp;&nbsp;</td>
+        <td></td>
+      </tr>
+        </table>
+    </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodgetChildrenByID"></a>
+	<h3>method getChildrenByID <span class="smalllinenumber">[line <a href="../__filesource/fsource_Ganon__gan_node_html.php.html#a1815">1815</a>]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>array getChildrenByID(
+string
+$id, [bool|int
+$recursive = true])</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		Finds all children using ID attribute<br /><br /><br /><br />
+
+	
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$id</b>&nbsp;&nbsp;</td>
+        <td></td>
+      </tr>
+          <tr>
+        <td class="type">bool|int&nbsp;&nbsp;</td>
+        <td><b>$recursive</b>&nbsp;&nbsp;</td>
+        <td></td>
+      </tr>
+        </table>
+    </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodgetChildrenByName"></a>
+	<h3>method getChildrenByName <span class="smalllinenumber">[line <a href="../__filesource/fsource_Ganon__gan_node_html.php.html#a1835">1835</a>]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>array getChildrenByName(
+string
+$name, [bool|int
+$recursive = true])</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		Finds all children using name attribute<br /><br /><br /><br />
+
+	
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$name</b>&nbsp;&nbsp;</td>
+        <td></td>
+      </tr>
+          <tr>
+        <td class="type">bool|int&nbsp;&nbsp;</td>
+        <td><b>$recursive</b>&nbsp;&nbsp;</td>
+        <td></td>
+      </tr>
+        </table>
+    </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodgetChildrenByTag"></a>
+	<h3>method getChildrenByTag <span class="smalllinenumber">[line <a href="../__filesource/fsource_Ganon__gan_node_html.php.html#a1779">1779</a>]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>array getChildrenByTag(
+string
+$tag, [string
+$compare = 'total'], [bool|int
+$recursive = true])</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		Finds children that match a certain tag<br /><br /><br /><br />
+
+	
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$tag</b>&nbsp;&nbsp;</td>
+        <td></td>
+      </tr>
+          <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$compare</b>&nbsp;&nbsp;</td>
+        <td>&quot;total&quot;/&quot;namespace&quot;/&quot;name&quot;</td>
+      </tr>
+          <tr>
+        <td class="type">bool|int&nbsp;&nbsp;</td>
+        <td><b>$recursive</b>&nbsp;&nbsp;</td>
+        <td></td>
+      </tr>
+        </table>
+    </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodgetInnerText"></a>
+	<h3>method getInnerText <span class="smalllinenumber">[line <a href="../__filesource/fsource_Ganon__gan_node_html.php.html#a436">436</a>]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>string getInnerText(
+)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		Similar to JavaScript innerText, will return (html formatted) content<br /><br /><br /><br />
+
+	
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodgetNamespace"></a>
+	<h3>method getNamespace <span class="smalllinenumber">[line <a href="../__filesource/fsource_Ganon__gan_node_html.php.html#a779">779</a>]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>string getNamespace(
+)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		Get namespace of node<br /><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>see:</b>&nbsp;&nbsp;</td><td><a href="../Ganon/HTML_Node.html#methodsetNamespace">HTML_Node::setNamespace()</a></td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodgetNextSibling"></a>
+	<h3>method getNextSibling <span class="smalllinenumber">[line <a href="../__filesource/fsource_Ganon__gan_node_html.php.html#a741">741</a>]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code><a href="../Ganon/HTML_Node.html">HTML_Node</a> getNextSibling(
+[bool
+$skip_text_comments = true])</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		Get node next to current<br /><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>return:</b>&nbsp;&nbsp;</td><td>Null if not found</td>
+  </tr>
+  <tr>
+    <td><b>see:</b>&nbsp;&nbsp;</td><td><a href="../Ganon/HTML_Node.html#methodgetPreviousSibling">HTML_Node::getPreviousSibling()</a></td>
+  </tr>
+  <tr>
+    <td><b>see:</b>&nbsp;&nbsp;</td><td><a href="../Ganon/HTML_Node.html#methodgetSibling">HTML_Node::getSibling()</a></td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type">bool&nbsp;&nbsp;</td>
+        <td><b>$skip_text_comments</b>&nbsp;&nbsp;</td>
+        <td></td>
+      </tr>
+        </table>
+    </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodgetOuterText"></a>
+	<h3>method getOuterText <span class="smalllinenumber">[line <a href="../__filesource/fsource_Ganon__gan_node_html.php.html#a393">393</a>]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>string getOuterText(
+)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		Similar to JavaScript outerText, will return full (html formatted) node<br /><br /><br /><br />
+
+	
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodgetPlainText"></a>
+	<h3>method getPlainText <span class="smalllinenumber">[line <a href="../__filesource/fsource_Ganon__gan_node_html.php.html#a463">463</a>]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>string getPlainText(
+)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		Similar to JavaScript plainText, will return text in node (and subnodes)<br /><br /><br /><br />
+
+	
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodgetPreviousSibling"></a>
+	<h3>method getPreviousSibling <span class="smalllinenumber">[line <a href="../__filesource/fsource_Ganon__gan_node_html.php.html#a761">761</a>]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code><a href="../Ganon/HTML_Node.html">HTML_Node</a> getPreviousSibling(
+[bool
+$skip_text_comments = true])</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		Get node previous to current<br /><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>return:</b>&nbsp;&nbsp;</td><td>Null if not found</td>
+  </tr>
+  <tr>
+    <td><b>see:</b>&nbsp;&nbsp;</td><td><a href="../Ganon/HTML_Node.html#methodgetNextSibling">HTML_Node::getNextSibling()</a></td>
+  </tr>
+  <tr>
+    <td><b>see:</b>&nbsp;&nbsp;</td><td><a href="../Ganon/HTML_Node.html#methodgetSibling">HTML_Node::getSibling()</a></td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type">bool&nbsp;&nbsp;</td>
+        <td><b>$skip_text_comments</b>&nbsp;&nbsp;</td>
+        <td></td>
+      </tr>
+        </table>
+    </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodgetSibling"></a>
+	<h3>method getSibling <span class="smalllinenumber">[line <a href="../__filesource/fsource_Ganon__gan_node_html.php.html#a725">725</a>]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code><a href="../Ganon/HTML_Node.html">HTML_Node</a> getSibling(
+[int
+$offset = 1])</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		Get sibling node<br /><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>return:</b>&nbsp;&nbsp;</td><td>Null if not found</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type">int&nbsp;&nbsp;</td>
+        <td><b>$offset</b>&nbsp;&nbsp;</td>
+        <td>Offset from current node</td>
+      </tr>
+        </table>
+    </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodgetTag"></a>
+	<h3>method getTag <span class="smalllinenumber">[line <a href="../__filesource/fsource_Ganon__gan_node_html.php.html#a809">809</a>]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>string getTag(
+)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		Get tagname of node (without namespace)<br /><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>see:</b>&nbsp;&nbsp;</td><td><a href="../Ganon/HTML_Node.html#methodsetTag">HTML_Node::setTag()</a></td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodhasAttribute"></a>
+	<h3>method hasAttribute <span class="smalllinenumber">[line <a href="../__filesource/fsource_Ganon__gan_node_html.php.html#a1260">1260</a>]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>bool hasAttribute(
+string|int$attr
+$attr, [string
+$compare = 'total'], [bool
+$case_sensitive = false])</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		Checks if node has attribute<br /><br /><br /><br />
+
+	
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$compare</b>&nbsp;&nbsp;</td>
+        <td>Find node using &quot;namespace&quot;, &quot;name&quot; or &quot;total&quot;</td>
+      </tr>
+          <tr>
+        <td class="type">bool&nbsp;&nbsp;</td>
+        <td><b>$case_sensitive</b>&nbsp;&nbsp;</td>
+        <td>Compare with case sensitivity</td>
+      </tr>
+          <tr>
+        <td class="type">string|int$attr&nbsp;&nbsp;</td>
+        <td><b>$attr</b>&nbsp;&nbsp;</td>
+        <td>Negative int to count from end</td>
+      </tr>
+        </table>
+    </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodhasChild"></a>
+	<h3>method hasChild <span class="smalllinenumber">[line <a href="../__filesource/fsource_Ganon__gan_node_html.php.html#a872">872</a>]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>bool hasChild(
+<a href="../Ganon/HTML_Node.html">HTML_Node</a>
+$child)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		Checks if node has another node as child<br /><br /><br /><br />
+
+	
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type"><a href="../Ganon/HTML_Node.html">HTML_Node</a>&nbsp;&nbsp;</td>
+        <td><b>$child</b>&nbsp;&nbsp;</td>
+        <td></td>
+      </tr>
+        </table>
+    </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodhasClass"></a>
+	<h3>method hasClass <span class="smalllinenumber">[line <a href="../__filesource/fsource_Ganon__gan_node_html.php.html#a1391">1391</a>]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>bool hasClass(
+string
+$className)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		Determine if node has a certain class<br /><br /><br /><br />
+
+	
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$className</b>&nbsp;&nbsp;</td>
+        <td></td>
+      </tr>
+        </table>
+    </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodhasParent"></a>
+	<h3>method hasParent <span class="smalllinenumber">[line <a href="../__filesource/fsource_Ganon__gan_node_html.php.html#a550">550</a>]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>bool hasParent(
+[<a href="../Ganon/HTML_Node.html">HTML_Node</a>|string
+$tag = null], [bool
+$recursive = false])</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		Find out if node has (a certain) parent<br /><br /><br /><br />
+
+	
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type"><a href="../Ganon/HTML_Node.html">HTML_Node</a>|string&nbsp;&nbsp;</td>
+        <td><b>$tag</b>&nbsp;&nbsp;</td>
+        <td>Match against parent, string to match tag, object to fully match node, null to return if node has parent</td>
+      </tr>
+          <tr>
+        <td class="type">bool&nbsp;&nbsp;</td>
+        <td><b>$recursive</b>&nbsp;&nbsp;</td>
+        <td></td>
+      </tr>
+        </table>
+    </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodhtml"></a>
+	<h3>method html <span class="smalllinenumber">[line <a href="../__filesource/fsource_Ganon__gan_node_html.php.html#a428">428</a>]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>string html(
+)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		Return html code of node<br /><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>see:</b>&nbsp;&nbsp;</td><td><a href="../Ganon/HTML_Node.html#methodgetOuterText">HTML_Node::getOuterText()</a></td>
+  </tr>
+  <tr>
+    <td><b>internal:</b>&nbsp;&nbsp;</td><td>jquery (naming) compatibility</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodindent"></a>
+	<h3>method indent <span class="smalllinenumber">[line <a href="../__filesource/fsource_Ganon__gan_node_html.php.html#a716">716</a>]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>int indent(
+)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		Calculate indent of node (number of parent tags - 1)<br /><br /><br /><br />
+
+	
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodindex"></a>
+	<h3>method index <span class="smalllinenumber">[line <a href="../__filesource/fsource_Ganon__gan_node_html.php.html#a640">640</a>]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>int index(
+[bool
+$count_all = true])</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		Index of node in parent<br /><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>return:</b>&nbsp;&nbsp;</td><td>-1 if not found</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type">bool&nbsp;&nbsp;</td>
+        <td><b>$count_all</b>&nbsp;&nbsp;</td>
+        <td>True to count all tags, false to ignore text and comments</td>
+      </tr>
+        </table>
+    </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodinsertChild"></a>
+	<h3>method insertChild <span class="smalllinenumber">[line <a href="../__filesource/fsource_Ganon__gan_node_html.php.html#a971">971</a>]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code><a href="../Ganon/HTML_Node.html">HTML_Node</a> &amp;insertChild(
+string|<a href="../Ganon/HTML_Node.html">HTML_Node</a>
+$tag, 
+$index, int
+$offset)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		Insert childnode<br /><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>return:</b>&nbsp;&nbsp;</td><td>Added node</td>
+  </tr>
+  <tr>
+    <td><b>see:</b>&nbsp;&nbsp;</td><td>addChild();</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type">string|<a href="../Ganon/HTML_Node.html">HTML_Node</a>&nbsp;&nbsp;</td>
+        <td><b>$tag</b>&nbsp;&nbsp;</td>
+        <td>Tagname or object</td>
+      </tr>
+          <tr>
+        <td class="type">int&nbsp;&nbsp;</td>
+        <td><b>$offset</b>&nbsp;&nbsp;</td>
+        <td>Position to insert node, negative to count from end, null to append</td>
+      </tr>
+          <tr>
+        <td class="type">&nbsp;&nbsp;</td>
+        <td><b>$index</b>&nbsp;&nbsp;</td>
+        <td></td>
+      </tr>
+        </table>
+    </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodisComment"></a>
+	<h3>method isComment <span class="smalllinenumber">[line <a href="../__filesource/fsource_Ganon__gan_node_html.php.html#a587">587</a>]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>bool isComment(
+)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		Find out if node is comment<br /><br /><br /><br />
+
+	<p>Overridden in child classes as:<br />
+		<dl>
+	<dt><a href="../Ganon/HTML_NODE_COMMENT.html#methodisComment">HTML_NODE_COMMENT::isComment()</a></dt>
+		<dd></dd>
+	</dl>
+	</p>
+	
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodisParent"></a>
+	<h3>method isParent <span class="smalllinenumber">[line <a href="../__filesource/fsource_Ganon__gan_node_html.php.html#a571">571</a>]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>bool isParent(
+<a href="../Ganon/HTML_Node.html">HTML_Node</a>|string
+$tag, [bool
+$recursive = false])</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		Find out if node has a certain parent<br /><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>see:</b>&nbsp;&nbsp;</td><td><a href="../Ganon/HTML_Node.html#methodhasParent">HTML_Node::hasParent()</a></td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type"><a href="../Ganon/HTML_Node.html">HTML_Node</a>|string&nbsp;&nbsp;</td>
+        <td><b>$tag</b>&nbsp;&nbsp;</td>
+        <td>Match against parent, string to match tag, object to fully match node</td>
+      </tr>
+          <tr>
+        <td class="type">bool&nbsp;&nbsp;</td>
+        <td><b>$recursive</b>&nbsp;&nbsp;</td>
+        <td></td>
+      </tr>
+        </table>
+    </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodisText"></a>
+	<h3>method isText <span class="smalllinenumber">[line <a href="../__filesource/fsource_Ganon__gan_node_html.php.html#a579">579</a>]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>bool isText(
+)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		Find out if node is text<br /><br /><br /><br />
+
+	<p>Overridden in child classes as:<br />
+		<dl>
+	<dt><a href="../Ganon/HTML_NODE_TEXT.html#methodisText">HTML_NODE_TEXT::isText()</a></dt>
+		<dd></dd>
+	</dl>
+	</p>
+	
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodisTextOrComment"></a>
+	<h3>method isTextOrComment <span class="smalllinenumber">[line <a href="../__filesource/fsource_Ganon__gan_node_html.php.html#a595">595</a>]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>bool isTextOrComment(
+)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		Find out if node is text or comment node<br /><br /><br /><br />
+
+	<p>Overridden in child classes as:<br />
+		<dl>
+	<dt><a href="../Ganon/HTML_NODE_TEXT.html#methodisTextOrComment">HTML_NODE_TEXT::isTextOrComment()</a></dt>
+		<dd></dd>
+	</dl>
+		<dl>
+	<dt><a href="../Ganon/HTML_NODE_COMMENT.html#methodisTextOrComment">HTML_NODE_COMMENT::isTextOrComment()</a></dt>
+		<dd></dd>
+	</dl>
+	</p>
+	
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodlastChild"></a>
+	<h3>method lastChild <span class="smalllinenumber">[line <a href="../__filesource/fsource_Ganon__gan_node_html.php.html#a960">960</a>]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code><a href="../Ganon/HTML_Node.html">HTML_Node</a> &amp;lastChild(
+[bool
+$ignore_text_comments = false])</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		Last child node<br /><br /><br /><br />
+
+	
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type">bool&nbsp;&nbsp;</td>
+        <td><b>$ignore_text_comments</b>&nbsp;&nbsp;</td>
+        <td>Ignore text/comments with index calculation</td>
+      </tr>
+        </table>
+    </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodmatch"></a>
+	<h3>method match <span class="smalllinenumber">[line <a href="../__filesource/fsource_Ganon__gan_node_html.php.html#a1698">1698</a>]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>bool match(
+
+$conditions, [array
+$match = true], [array
+$custom_filters = array()], array
+$tags)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		Checks if node matches certain conditions<br /><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>see:</b>&nbsp;&nbsp;</td><td>match_filters();</td>
+  </tr>
+  <tr>
+    <td><b>see:</b>&nbsp;&nbsp;</td><td>match_attributes();</td>
+  </tr>
+  <tr>
+    <td><b>see:</b>&nbsp;&nbsp;</td><td>match_tags();</td>
+  </tr>
+  <tr>
+    <td><b>internal:</b>&nbsp;&nbsp;</td><td>Used by selector class</td>
+  </tr>
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>private</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type">array&nbsp;&nbsp;</td>
+        <td><b>$tags</b>&nbsp;&nbsp;</td>
+        <td>array('tags' =&gt; array(tag_conditions), 'attributes' =&gt; array(attr_conditions), 'filters' =&gt; array(filter_conditions))</td>
+      </tr>
+          <tr>
+        <td class="type">array&nbsp;&nbsp;</td>
+        <td><b>$match</b>&nbsp;&nbsp;</td>
+        <td>Should conditions evaluate to true?</td>
+      </tr>
+          <tr>
+        <td class="type">array&nbsp;&nbsp;</td>
+        <td><b>$custom_filters</b>&nbsp;&nbsp;</td>
+        <td>Custom map next to (@link $filter_map)</td>
+      </tr>
+          <tr>
+        <td class="type">&nbsp;&nbsp;</td>
+        <td><b>$conditions</b>&nbsp;&nbsp;</td>
+        <td></td>
+      </tr>
+        </table>
+    </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodmatch_attributes"></a>
+	<h3>method match_attributes <span class="smalllinenumber">[line <a href="../__filesource/fsource_Ganon__gan_node_html.php.html#a1542">1542</a>]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>bool match_attributes(
+array
+$attributes)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		Checks if attributes match certain conditions<br /><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>see:</b>&nbsp;&nbsp;</td><td><a href="../Ganon/HTML_Node.html#methodmatch">HTML_Node::match()</a></td>
+  </tr>
+  <tr>
+    <td><b>internal:</b>&nbsp;&nbsp;</td><td>Used by selector class</td>
+  </tr>
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>protected</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type">array&nbsp;&nbsp;</td>
+        <td><b>$attributes</b>&nbsp;&nbsp;</td>
+        <td>array('attr' =&gt; 'val') or array(array(     'operator_value' =&gt; 'equals'/'='/'contains_regex'/etc     'attribute' =&gt; 'attr',     'value' =&gt; 'val',     'match' =&gt; true,     'operator_result' =&gt; 'or'/'and',     'compare' =&gt; 'total'/'namespace'/'name',     'case_sensitive' =&gt; true))</td>
+      </tr>
+        </table>
+    </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodmatch_filters"></a>
+	<h3>method match_filters <span class="smalllinenumber">[line <a href="../__filesource/fsource_Ganon__gan_node_html.php.html#a1666">1666</a>]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>bool match_filters(
+
+$conditions, [array
+$custom_filters = array()], array
+$tags)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		Checks if node matches certain filters<br /><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>see:</b>&nbsp;&nbsp;</td><td><a href="../Ganon/HTML_Node.html#methodmatch">HTML_Node::match()</a></td>
+  </tr>
+  <tr>
+    <td><b>internal:</b>&nbsp;&nbsp;</td><td>Used by selector class</td>
+  </tr>
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>protected</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type">array&nbsp;&nbsp;</td>
+        <td><b>$tags</b>&nbsp;&nbsp;</td>
+        <td>array(array(     'filter' =&gt; 'last-child',     'params' =&gt; '123'))</td>
+      </tr>
+          <tr>
+        <td class="type">array&nbsp;&nbsp;</td>
+        <td><b>$custom_filters</b>&nbsp;&nbsp;</td>
+        <td>Custom map next to (@link $filter_map)</td>
+      </tr>
+          <tr>
+        <td class="type">&nbsp;&nbsp;</td>
+        <td><b>$conditions</b>&nbsp;&nbsp;</td>
+        <td></td>
+      </tr>
+        </table>
+    </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodmatch_tags"></a>
+	<h3>method match_tags <span class="smalllinenumber">[line <a href="../__filesource/fsource_Ganon__gan_node_html.php.html#a1476">1476</a>]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>bool match_tags(
+array
+$tags)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		Checks if tag matches certain conditions<br /><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>see:</b>&nbsp;&nbsp;</td><td><a href="../Ganon/HTML_Node.html#methodmatch">HTML_Node::match()</a></td>
+  </tr>
+  <tr>
+    <td><b>internal:</b>&nbsp;&nbsp;</td><td>Used by selector class</td>
+  </tr>
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>protected</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type">array&nbsp;&nbsp;</td>
+        <td><b>$tags</b>&nbsp;&nbsp;</td>
+        <td>array('tag1', 'tag2') or array(array(     'tag' =&gt; 'tag1',     'operator' =&gt; 'or'/'and',     'compare' =&gt; 'total'/'namespace'/'name',      'case_sensitive' =&gt; true))</td>
+      </tr>
+        </table>
+    </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodmove"></a>
+	<h3>method move <span class="smalllinenumber">[line <a href="../__filesource/fsource_Ganon__gan_node_html.php.html#a609">609</a>]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>void move(
+<a href="../Ganon/HTML_Node.html">HTML_Node</a>
+$to, [
+&$new_index = -1], int
+$new_index)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		Move node to other node<br /><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>internal:</b>&nbsp;&nbsp;</td><td>Performs <a href="../Ganon/HTML_Node.html#methodchangeParent">changeParent()</a></td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type"><a href="../Ganon/HTML_Node.html">HTML_Node</a>&nbsp;&nbsp;</td>
+        <td><b>$to</b>&nbsp;&nbsp;</td>
+        <td>New parent, null if none</td>
+      </tr>
+          <tr>
+        <td class="type">int&nbsp;&nbsp;</td>
+        <td><b>$new_index</b>&nbsp;&nbsp;</td>
+        <td>Add child to parent at index if not present, null to not add, negative to cound from end</td>
+      </tr>
+          <tr>
+        <td class="type">&nbsp;&nbsp;</td>
+        <td><b>&$new_index</b>&nbsp;&nbsp;</td>
+        <td></td>
+      </tr>
+        </table>
+    </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodmoveChildren"></a>
+	<h3>method moveChildren <span class="smalllinenumber">[line <a href="../__filesource/fsource_Ganon__gan_node_html.php.html#a625">625</a>]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>void moveChildren(
+<a href="../Ganon/HTML_Node.html">HTML_Node</a>
+$to, [
+&$new_index = -1], [int
+$start = 0], [int
+$end = -1], int
+$new_index)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		Move childnodes to other node<br /><br /><br /><br />
+
+	
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type"><a href="../Ganon/HTML_Node.html">HTML_Node</a>&nbsp;&nbsp;</td>
+        <td><b>$to</b>&nbsp;&nbsp;</td>
+        <td>New parent, null if none</td>
+      </tr>
+          <tr>
+        <td class="type">int&nbsp;&nbsp;</td>
+        <td><b>$new_index</b>&nbsp;&nbsp;</td>
+        <td>Add child to new node at index if not present, null to not add, negative to cound from end</td>
+      </tr>
+          <tr>
+        <td class="type">int&nbsp;&nbsp;</td>
+        <td><b>$start</b>&nbsp;&nbsp;</td>
+        <td>Index from child node where to start wrapping, 0 for first element</td>
+      </tr>
+          <tr>
+        <td class="type">int&nbsp;&nbsp;</td>
+        <td><b>$end</b>&nbsp;&nbsp;</td>
+        <td>Index from child node where to end wrapping, -1 for last element</td>
+      </tr>
+          <tr>
+        <td class="type">&nbsp;&nbsp;</td>
+        <td><b>&$new_index</b>&nbsp;&nbsp;</td>
+        <td></td>
+      </tr>
+        </table>
+    </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodremoveClass"></a>
+	<h3>method removeClass <span class="smalllinenumber">[line <a href="../__filesource/fsource_Ganon__gan_node_html.php.html#a1416">1416</a>]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>void removeClass(
+string|array
+$className)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		Remove clas(ses)<br /><br /><br /><br />
+
+	
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type">string|array&nbsp;&nbsp;</td>
+        <td><b>$className</b>&nbsp;&nbsp;</td>
+        <td></td>
+      </tr>
+        </table>
+    </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodselect"></a>
+	<h3>method select <span class="smalllinenumber">[line <a href="../__filesource/fsource_Ganon__gan_node_html.php.html#a1848">1848</a>]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>array|<a href="../Ganon/HTML_Node.html">HTML_Node</a> select(
+[string
+$query = '*'], [int|bool
+$index = false], [bool|int
+$recursive = true], [bool
+$check_self = false])</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		Performs css query on node<br /><br /><br /><br />
+
+	
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$query</b>&nbsp;&nbsp;</td>
+        <td></td>
+      </tr>
+          <tr>
+        <td class="type">int|bool&nbsp;&nbsp;</td>
+        <td><b>$index</b>&nbsp;&nbsp;</td>
+        <td>True to return node instead of array if only 1 match,  false to return array, int to return match at index, negative int to count from end</td>
+      </tr>
+          <tr>
+        <td class="type">bool|int&nbsp;&nbsp;</td>
+        <td><b>$recursive</b>&nbsp;&nbsp;</td>
+        <td></td>
+      </tr>
+          <tr>
+        <td class="type">bool&nbsp;&nbsp;</td>
+        <td><b>$check_self</b>&nbsp;&nbsp;</td>
+        <td>Include this node in search or only search childnodes</td>
+      </tr>
+        </table>
+    </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodsetAttribute"></a>
+	<h3>method setAttribute <span class="smalllinenumber">[line <a href="../__filesource/fsource_Ganon__gan_node_html.php.html#a1344">1344</a>]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>void setAttribute(
+string|int
+$attr, 
+$val, [string
+$compare = 'total'], [bool
+$case_sensitive = false])</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		Sets value(s) of attribute(s)<br /><br /><br /><br />
+
+	
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type">string|int&nbsp;&nbsp;</td>
+        <td><b>$attr</b>&nbsp;&nbsp;</td>
+        <td>Negative int to count from end</td>
+      </tr>
+          <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$compare</b>&nbsp;&nbsp;</td>
+        <td>Find node using &quot;namespace&quot;, &quot;name&quot; or &quot;total&quot;</td>
+      </tr>
+          <tr>
+        <td class="type">bool&nbsp;&nbsp;</td>
+        <td><b>$case_sensitive</b>&nbsp;&nbsp;</td>
+        <td>Compare with case sensitivity</td>
+      </tr>
+          <tr>
+        <td class="type">&nbsp;&nbsp;</td>
+        <td><b>$val</b>&nbsp;&nbsp;</td>
+        <td></td>
+      </tr>
+        </table>
+    </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodsetAttributeNS"></a>
+	<h3>method setAttributeNS <span class="smalllinenumber">[line <a href="../__filesource/fsource_Ganon__gan_node_html.php.html#a1296">1296</a>]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>bool setAttributeNS(
+string|int
+$attr, string
+$namespace, [string
+$compare = 'name'], [bool
+$case_sensitive = false])</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		Sets namespace of attribute(s)<br /><br /><br /><br />
+
+	
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type">string|int&nbsp;&nbsp;</td>
+        <td><b>$attr</b>&nbsp;&nbsp;</td>
+        <td>Negative int to count from end</td>
+      </tr>
+          <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$namespace</b>&nbsp;&nbsp;</td>
+        <td></td>
+      </tr>
+          <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$compare</b>&nbsp;&nbsp;</td>
+        <td>Find node using &quot;namespace&quot;, &quot;name&quot; or &quot;total&quot;</td>
+      </tr>
+          <tr>
+        <td class="type">bool&nbsp;&nbsp;</td>
+        <td><b>$case_sensitive</b>&nbsp;&nbsp;</td>
+        <td>Compare with case sensitivity</td>
+      </tr>
+        </table>
+    </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodsetIndex"></a>
+	<h3>method setIndex <span class="smalllinenumber">[line <a href="../__filesource/fsource_Ganon__gan_node_html.php.html#a672">672</a>]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>void setIndex(
+int
+$index)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		Change index of node in parent<br /><br /><br /><br />
+
+	
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type">int&nbsp;&nbsp;</td>
+        <td><b>$index</b>&nbsp;&nbsp;</td>
+        <td>New index</td>
+      </tr>
+        </table>
+    </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodsetInnerText"></a>
+	<h3>method setInnerText <span class="smalllinenumber">[line <a href="../__filesource/fsource_Ganon__gan_node_html.php.html#a446">446</a>]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>bool|array setInnerText(
+string
+$text, [<a href="../Ganon/HTML_Parser_Base.html">HTML_Parser_Base</a>
+$parser = null])</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		Similar to JavaScript innerText, will replace childnodes with new text<br /><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>return:</b>&nbsp;&nbsp;</td><td>True on succeed, array with errors on failure</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$text</b>&nbsp;&nbsp;</td>
+        <td></td>
+      </tr>
+          <tr>
+        <td class="type"><a href="../Ganon/HTML_Parser_Base.html">HTML_Parser_Base</a>&nbsp;&nbsp;</td>
+        <td><b>$parser</b>&nbsp;&nbsp;</td>
+        <td>Null to auto create instance</td>
+      </tr>
+        </table>
+    </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodsetNamespace"></a>
+	<h3>method setNamespace <span class="smalllinenumber">[line <a href="../__filesource/fsource_Ganon__gan_node_html.php.html#a797">797</a>]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>void setNamespace(
+string
+$ns)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		Set namespace of node<br /><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>see:</b>&nbsp;&nbsp;</td><td><a href="../Ganon/HTML_Node.html#methodgetNamespace">HTML_Node::getNamespace()</a></td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$ns</b>&nbsp;&nbsp;</td>
+        <td></td>
+      </tr>
+        </table>
+    </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodsetOuterText"></a>
+	<h3>method setOuterText <span class="smalllinenumber">[line <a href="../__filesource/fsource_Ganon__gan_node_html.php.html#a403">403</a>]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>bool|array setOuterText(
+string
+$text, [<a href="../Ganon/HTML_Parser_Base.html">HTML_Parser_Base</a>
+$parser = null])</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		Similar to JavaScript outerText, will replace node (and childnodes) with new text<br /><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>return:</b>&nbsp;&nbsp;</td><td>True on succeed, array with errors on failure</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$text</b>&nbsp;&nbsp;</td>
+        <td></td>
+      </tr>
+          <tr>
+        <td class="type"><a href="../Ganon/HTML_Parser_Base.html">HTML_Parser_Base</a>&nbsp;&nbsp;</td>
+        <td><b>$parser</b>&nbsp;&nbsp;</td>
+        <td>Null to auto create instance</td>
+      </tr>
+        </table>
+    </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodsetPlainText"></a>
+	<h3>method setPlainText <span class="smalllinenumber">[line <a href="../__filesource/fsource_Ganon__gan_node_html.php.html#a471">471</a>]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>void setPlainText(
+string
+$text)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		Similar to JavaScript plainText, will replace childnodes with new text (literal)<br /><br /><br /><br />
+
+	
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$text</b>&nbsp;&nbsp;</td>
+        <td></td>
+      </tr>
+        </table>
+    </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodsetTag"></a>
+	<h3>method setTag <span class="smalllinenumber">[line <a href="../__filesource/fsource_Ganon__gan_node_html.php.html#a823">823</a>]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>void setTag(
+string
+$tag, [bool
+$with_ns = false])</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		Set tag (with or without namespace)<br /><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>see:</b>&nbsp;&nbsp;</td><td><a href="../Ganon/HTML_Node.html#methodgetTag">HTML_Node::getTag()</a></td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$tag</b>&nbsp;&nbsp;</td>
+        <td></td>
+      </tr>
+          <tr>
+        <td class="type">bool&nbsp;&nbsp;</td>
+        <td><b>$with_ns</b>&nbsp;&nbsp;</td>
+        <td>Does $tag include namespace?</td>
+      </tr>
+        </table>
+    </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodtoString"></a>
+	<h3>method toString <span class="smalllinenumber">[line <a href="../__filesource/fsource_Ganon__gan_node_html.php.html#a365">365</a>]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>string toString(
+[bool
+$attributes = true], [bool|int
+$recursive = true], [bool
+$content_only = false])</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		Returns the node as string<br /><br /><br /><br />
+
+	<p>Overridden in child classes as:<br />
+		<dl>
+	<dt><a href="../Ganon/HTML_NODE_TEXT.html#methodtoString">HTML_NODE_TEXT::toString()</a></dt>
+		<dd></dd>
+	</dl>
+		<dl>
+	<dt><a href="../Ganon/HTML_NODE_COMMENT.html#methodtoString">HTML_NODE_COMMENT::toString()</a></dt>
+		<dd></dd>
+	</dl>
+		<dl>
+	<dt><a href="../Ganon/HTML_NODE_CONDITIONAL.html#methodtoString">HTML_NODE_CONDITIONAL::toString()</a></dt>
+		<dd></dd>
+	</dl>
+		<dl>
+	<dt><a href="../Ganon/HTML_NODE_CDATA.html#methodtoString">HTML_NODE_CDATA::toString()</a></dt>
+		<dd></dd>
+	</dl>
+		<dl>
+	<dt><a href="../Ganon/HTML_NODE_DOCTYPE.html#methodtoString">HTML_NODE_DOCTYPE::toString()</a></dt>
+		<dd></dd>
+	</dl>
+		<dl>
+	<dt><a href="../Ganon/HTML_NODE_EMBEDDED.html#methodtoString">HTML_NODE_EMBEDDED::toString()</a></dt>
+		<dd></dd>
+	</dl>
+	</p>
+	
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type">bool&nbsp;&nbsp;</td>
+        <td><b>$attributes</b>&nbsp;&nbsp;</td>
+        <td>Print attributes (of child tags)</td>
+      </tr>
+          <tr>
+        <td class="type">bool|int&nbsp;&nbsp;</td>
+        <td><b>$recursive</b>&nbsp;&nbsp;</td>
+        <td>How many sublevels of childtags to print. True for all.</td>
+      </tr>
+          <tr>
+        <td class="type">bool&nbsp;&nbsp;</td>
+        <td><b>$content_only</b>&nbsp;&nbsp;</td>
+        <td>Only print text, false will print tags too.</td>
+      </tr>
+        </table>
+    </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodtoString_attributes"></a>
+	<h3>method toString_attributes <span class="smalllinenumber">[line <a href="../__filesource/fsource_Ganon__gan_node_html.php.html#a334">334</a>]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>string toString_attributes(
+)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		Returns all the attributes and their values<br /><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>protected</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	<p>Overridden in child classes as:<br />
+		<dl>
+	<dt><a href="../Ganon/HTML_NODE_TEXT.html#methodtoString_attributes">HTML_NODE_TEXT::toString_attributes()</a></dt>
+		<dd></dd>
+	</dl>
+		<dl>
+	<dt><a href="../Ganon/HTML_NODE_COMMENT.html#methodtoString_attributes">HTML_NODE_COMMENT::toString_attributes()</a></dt>
+		<dd></dd>
+	</dl>
+		<dl>
+	<dt><a href="../Ganon/HTML_NODE_CONDITIONAL.html#methodtoString_attributes">HTML_NODE_CONDITIONAL::toString_attributes()</a></dt>
+		<dd></dd>
+	</dl>
+		<dl>
+	<dt><a href="../Ganon/HTML_NODE_CDATA.html#methodtoString_attributes">HTML_NODE_CDATA::toString_attributes()</a></dt>
+		<dd></dd>
+	</dl>
+		<dl>
+	<dt><a href="../Ganon/HTML_NODE_DOCTYPE.html#methodtoString_attributes">HTML_NODE_DOCTYPE::toString_attributes()</a></dt>
+		<dd></dd>
+	</dl>
+	</p>
+	
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodtoString_content"></a>
+	<h3>method toString_content <span class="smalllinenumber">[line <a href="../__filesource/fsource_Ganon__gan_node_html.php.html#a350">350</a>]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>string toString_content(
+[bool
+$attributes = true], [bool|int
+$recursive = true], [bool
+$content_only = false])</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		Returns the content of the node (child tags and text)<br /><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>protected</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	<p>Overridden in child classes as:<br />
+		<dl>
+	<dt><a href="../Ganon/HTML_NODE_TEXT.html#methodtoString_content">HTML_NODE_TEXT::toString_content()</a></dt>
+		<dd></dd>
+	</dl>
+		<dl>
+	<dt><a href="../Ganon/HTML_NODE_COMMENT.html#methodtoString_content">HTML_NODE_COMMENT::toString_content()</a></dt>
+		<dd></dd>
+	</dl>
+		<dl>
+	<dt><a href="../Ganon/HTML_NODE_CDATA.html#methodtoString_content">HTML_NODE_CDATA::toString_content()</a></dt>
+		<dd></dd>
+	</dl>
+		<dl>
+	<dt><a href="../Ganon/HTML_NODE_DOCTYPE.html#methodtoString_content">HTML_NODE_DOCTYPE::toString_content()</a></dt>
+		<dd></dd>
+	</dl>
+	</p>
+	
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type">bool&nbsp;&nbsp;</td>
+        <td><b>$attributes</b>&nbsp;&nbsp;</td>
+        <td>Print attributes of child tags</td>
+      </tr>
+          <tr>
+        <td class="type">bool|int&nbsp;&nbsp;</td>
+        <td><b>$recursive</b>&nbsp;&nbsp;</td>
+        <td>How many sublevels of childtags to print. True for all.</td>
+      </tr>
+          <tr>
+        <td class="type">bool&nbsp;&nbsp;</td>
+        <td><b>$content_only</b>&nbsp;&nbsp;</td>
+        <td>Only print text, false will print tags too.</td>
+      </tr>
+        </table>
+    </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodtypeIndex"></a>
+	<h3>method typeIndex <span class="smalllinenumber">[line <a href="../__filesource/fsource_Ganon__gan_node_html.php.html#a686">686</a>]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>int typeIndex(
+)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		Index of all similar nodes in parent<br /><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>return:</b>&nbsp;&nbsp;</td><td>-1 if not found</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodwrap"></a>
+	<h3>method wrap <span class="smalllinenumber">[line <a href="../__filesource/fsource_Ganon__gan_node_html.php.html#a1128">1128</a>]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code><a href="../Ganon/HTML_Node.html">HTML_Node</a> wrap(
+string|<a href="../Ganon/HTML_Node.html">HTML_Node</a>
+$node, [int
+$index = -1], [int
+$child_index = -1])</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		Wrap node<br /><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>return:</b>&nbsp;&nbsp;</td><td>Wrapping node</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type">string|<a href="../Ganon/HTML_Node.html">HTML_Node</a>&nbsp;&nbsp;</td>
+        <td><b>$node</b>&nbsp;&nbsp;</td>
+        <td>Wrapping node, string to create new element node</td>
+      </tr>
+          <tr>
+        <td class="type">int&nbsp;&nbsp;</td>
+        <td><b>$index</b>&nbsp;&nbsp;</td>
+        <td>Index to insert wrapping node, -1 to append</td>
+      </tr>
+          <tr>
+        <td class="type">int&nbsp;&nbsp;</td>
+        <td><b>$child_index</b>&nbsp;&nbsp;</td>
+        <td>Index to insert current node in wrapping node, -1 to append</td>
+      </tr>
+        </table>
+    </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodwrapInner"></a>
+	<h3>method wrapInner <span class="smalllinenumber">[line <a href="../__filesource/fsource_Ganon__gan_node_html.php.html#a1148">1148</a>]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code><a href="../Ganon/HTML_Node.html">HTML_Node</a> wrapInner(
+string|<a href="../Ganon/HTML_Node.html">HTML_Node</a>
+$node, [int
+$start = 0], [int
+$end = -1], [int
+$index = -1], [int
+$child_index = -1])</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		Wrap childnodes<br /><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>return:</b>&nbsp;&nbsp;</td><td>Wrapping node</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type">string|<a href="../Ganon/HTML_Node.html">HTML_Node</a>&nbsp;&nbsp;</td>
+        <td><b>$node</b>&nbsp;&nbsp;</td>
+        <td>Wrapping node, string to create new element node</td>
+      </tr>
+          <tr>
+        <td class="type">int&nbsp;&nbsp;</td>
+        <td><b>$start</b>&nbsp;&nbsp;</td>
+        <td>Index from child node where to start wrapping, 0 for first element</td>
+      </tr>
+          <tr>
+        <td class="type">int&nbsp;&nbsp;</td>
+        <td><b>$end</b>&nbsp;&nbsp;</td>
+        <td>Index from child node where to end wrapping, -1 for last element</td>
+      </tr>
+          <tr>
+        <td class="type">int&nbsp;&nbsp;</td>
+        <td><b>$index</b>&nbsp;&nbsp;</td>
+        <td>Index to insert wrapping node, -1 to append</td>
+      </tr>
+          <tr>
+        <td class="type">int&nbsp;&nbsp;</td>
+        <td><b>$child_index</b>&nbsp;&nbsp;</td>
+        <td>Index to insert current node in wrapping node, -1 to append</td>
+      </tr>
+        </table>
+    </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="method__get"></a>
+	<h3>method __get <span class="smalllinenumber">[line <a href="../__filesource/fsource_Ganon__gan_node_html.php.html#a283">283</a>]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>string __get(
+
+$attribute)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		Class magic get method, outputs getAttribute()<br /><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>private</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type">&nbsp;&nbsp;</td>
+        <td><b>$attribute</b>&nbsp;&nbsp;</td>
+        <td></td>
+      </tr>
+        </table>
+    </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="method__invoke"></a>
+	<h3>method __invoke <span class="smalllinenumber">[line <a href="../__filesource/fsource_Ganon__gan_node_html.php.html#a317">317</a>]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>array __invoke(
+[
+$query = '*'], [
+$index = false], [
+$recursive = true], [
+$check_self = false])</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		Class magic invoke method, performs select()<br /><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>private</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type">&nbsp;&nbsp;</td>
+        <td><b>$query</b>&nbsp;&nbsp;</td>
+        <td></td>
+      </tr>
+          <tr>
+        <td class="type">&nbsp;&nbsp;</td>
+        <td><b>$index</b>&nbsp;&nbsp;</td>
+        <td></td>
+      </tr>
+          <tr>
+        <td class="type">&nbsp;&nbsp;</td>
+        <td><b>$recursive</b>&nbsp;&nbsp;</td>
+        <td></td>
+      </tr>
+          <tr>
+        <td class="type">&nbsp;&nbsp;</td>
+        <td><b>$check_self</b>&nbsp;&nbsp;</td>
+        <td></td>
+      </tr>
+        </table>
+    </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="method__isset"></a>
+	<h3>method __isset <span class="smalllinenumber">[line <a href="../__filesource/fsource_Ganon__gan_node_html.php.html#a300">300</a>]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>bool __isset(
+
+$attribute)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		Class magic isset method, returns hasAttribute()<br /><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>private</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type">&nbsp;&nbsp;</td>
+        <td><b>$attribute</b>&nbsp;&nbsp;</td>
+        <td></td>
+      </tr>
+        </table>
+    </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="method__set"></a>
+	<h3>method __set <span class="smalllinenumber">[line <a href="../__filesource/fsource_Ganon__gan_node_html.php.html#a291">291</a>]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>void __set(
+
+$attribute, 
+$value)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		Class magic set method, performs setAttribute()<br /><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>private</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type">&nbsp;&nbsp;</td>
+        <td><b>$attribute</b>&nbsp;&nbsp;</td>
+        <td></td>
+      </tr>
+          <tr>
+        <td class="type">&nbsp;&nbsp;</td>
+        <td><b>$value</b>&nbsp;&nbsp;</td>
+        <td></td>
+      </tr>
+        </table>
+    </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="method__toString"></a>
+	<h3>method __toString <span class="smalllinenumber">[line <a href="../__filesource/fsource_Ganon__gan_node_html.php.html#a274">274</a>]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>string __toString(
+)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		Class toString, outputs (@link $tag)<br /><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>private</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="method__unset"></a>
+	<h3>method __unset <span class="smalllinenumber">[line <a href="../__filesource/fsource_Ganon__gan_node_html.php.html#a308">308</a>]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>void __unset(
+
+$attribute)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		Class magic unset method, performs deleteAttribute()<br /><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>private</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type">&nbsp;&nbsp;</td>
+        <td><b>$attribute</b>&nbsp;&nbsp;</td>
+        <td></td>
+      </tr>
+        </table>
+    </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+</div><br />
+
+<hr />
+<a name="class_consts"></a>
+<h3>Class Constants</h3>
+<div class="tags">
+	<a name="constNODE_ASP"></a>
+	<p></p>
+	<h4>NODE_ASP = <span class="value">&nbsp;7</span></h4>
+	<p>[line <a href="../__filesource/fsource_Ganon__gan_node_html.php.html#a53">53</a>]</p>
+  ASP Node<br /><br />
+  <br />
+	<div class="top">[ <a href="#top">Top</a> ]</div><br />
+	<a name="constNODE_CDATA"></a>
+	<p></p>
+	<h4>NODE_CDATA = <span class="value">&nbsp;4</span></h4>
+	<p>[line <a href="../__filesource/fsource_Ganon__gan_node_html.php.html#a41">41</a>]</p>
+  CDATA Node (&lt;![CDATA[]]&gt;<br /><br />
+  <br />
+	<div class="top">[ <a href="#top">Top</a> ]</div><br />
+	<a name="constNODE_COMMENT"></a>
+	<p></p>
+	<h4>NODE_COMMENT = <span class="value">&nbsp;2</span></h4>
+	<p>[line <a href="../__filesource/fsource_Ganon__gan_node_html.php.html#a33">33</a>]</p>
+  Comment Node<br /><br />
+  <br />
+	<div class="top">[ <a href="#top">Top</a> ]</div><br />
+	<a name="constNODE_CONDITIONAL"></a>
+	<p></p>
+	<h4>NODE_CONDITIONAL = <span class="value">&nbsp;3</span></h4>
+	<p>[line <a href="../__filesource/fsource_Ganon__gan_node_html.php.html#a37">37</a>]</p>
+  Conditional Node (&lt;![if]&gt; &lt;![endif])<br /><br />
+  <br />
+	<div class="top">[ <a href="#top">Top</a> ]</div><br />
+	<a name="constNODE_DOCTYPE"></a>
+	<p></p>
+	<h4>NODE_DOCTYPE = <span class="value">&nbsp;5</span></h4>
+	<p>[line <a href="../__filesource/fsource_Ganon__gan_node_html.php.html#a45">45</a>]</p>
+  Doctype Node<br /><br />
+  <br />
+	<div class="top">[ <a href="#top">Top</a> ]</div><br />
+	<a name="constNODE_ELEMENT"></a>
+	<p></p>
+	<h4>NODE_ELEMENT = <span class="value">&nbsp;0</span></h4>
+	<p>[line <a href="../__filesource/fsource_Ganon__gan_node_html.php.html#a25">25</a>]</p>
+  Element Node, used for regular elements<br /><br />
+  <br />
+	<div class="top">[ <a href="#top">Top</a> ]</div><br />
+	<a name="constNODE_TEXT"></a>
+	<p></p>
+	<h4>NODE_TEXT = <span class="value">&nbsp;1</span></h4>
+	<p>[line <a href="../__filesource/fsource_Ganon__gan_node_html.php.html#a29">29</a>]</p>
+  Text Node<br /><br />
+  <br />
+	<div class="top">[ <a href="#top">Top</a> ]</div><br />
+	<a name="constNODE_TYPE"></a>
+	<p></p>
+	<h4>NODE_TYPE = <span class="value">&nbsp;self::NODE_ELEMENT</span></h4>
+	<p>[line <a href="../__filesource/fsource_Ganon__gan_node_html.php.html#a62">62</a>]</p>
+  Node type of class<br /><br />
+  <br />
+	<div class="top">[ <a href="#top">Top</a> ]</div><br />
+	<a name="constNODE_XML"></a>
+	<p></p>
+	<h4>NODE_XML = <span class="value">&nbsp;6</span></h4>
+	<p>[line <a href="../__filesource/fsource_Ganon__gan_node_html.php.html#a49">49</a>]</p>
+  XML Node, used for tags that start with ?, like &lt;?xml and &lt;?php<br /><br />
+  <br />
+	<div class="top">[ <a href="#top">Top</a> ]</div><br />
+</div><br />
+
+        <div class="credit">
+		    <hr />
+		    Documentation generated on Thu, 31 Mar 2011 10:25:55 +0200 by <a href="http://www.phpdoc.org">phpDocumentor 1.4.3</a>
+	      </div>
+      </td></tr></table>
+    </td>
+  </tr>
+</table>
+
+</body>
+</html>

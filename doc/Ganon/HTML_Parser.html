@@ -1,0 +1,1081 @@
+<html>
+<head>
+<title>Docs For Class HTML_Parser</title>
+<link rel="stylesheet" type="text/css" href="../media/style.css">
+</head>
+<body>
+
+<table border="0" cellspacing="0" cellpadding="0" height="48" width="100%">
+  <tr>
+    <td class="header_top">Ganon</td>
+  </tr>
+  <tr><td class="header_line"><img src="../media/empty.png" width="1" height="1" border="0" alt=""  /></td></tr>
+  <tr>
+    <td class="header_menu">
+        
+                                    
+                              		  [ <a href="../classtrees_Ganon.html" class="menu">class tree: Ganon</a> ]
+		  [ <a href="../elementindex_Ganon.html" class="menu">index: Ganon</a> ]
+		  	    [ <a href="../elementindex.html" class="menu">all elements</a> ]
+    </td>
+  </tr>
+  <tr><td class="header_line"><img src="../media/empty.png" width="1" height="1" border="0" alt=""  /></td></tr>
+</table>
+
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="200" class="menu">
+      <b>Packages:</b><br />
+              <a href="../li_Ganon.html">Ganon</a><br />
+            <br /><br />
+                        <b>Files:</b><br />
+      	  <div class="package">
+			<a href="../Ganon/_ganon.php.html">		ganon.php
+		</a><br>
+			<a href="../Ganon/_gan_formatter.php.html">		gan_formatter.php
+		</a><br>
+			<a href="../Ganon/_gan_node_html.php.html">		gan_node_html.php
+		</a><br>
+			<a href="../Ganon/_gan_parser_html.php.html">		gan_parser_html.php
+		</a><br>
+			<a href="../Ganon/_gan_selector_html.php.html">		gan_selector_html.php
+		</a><br>
+			<a href="../Ganon/_gan_tokenizer.php.html">		gan_tokenizer.php
+		</a><br>
+			<a href="../Ganon/_gan_xml2array.php.html">		gan_xml2array.php
+		</a><br>
+	  </div><br />
+      
+      
+            <b>Classes:</b><br />
+        <div class="package">
+		    		<a href="../Ganon/HTML_Formatter.html">HTML_Formatter</a><br />
+	    		<a href="../Ganon/HTML_Node.html">HTML_Node</a><br />
+	    		<a href="../Ganon/HTML_NODE_ASP.html">HTML_NODE_ASP</a><br />
+	    		<a href="../Ganon/HTML_NODE_CDATA.html">HTML_NODE_CDATA</a><br />
+	    		<a href="../Ganon/HTML_NODE_COMMENT.html">HTML_NODE_COMMENT</a><br />
+	    		<a href="../Ganon/HTML_NODE_CONDITIONAL.html">HTML_NODE_CONDITIONAL</a><br />
+	    		<a href="../Ganon/HTML_NODE_DOCTYPE.html">HTML_NODE_DOCTYPE</a><br />
+	    		<a href="../Ganon/HTML_NODE_EMBEDDED.html">HTML_NODE_EMBEDDED</a><br />
+	    		<a href="../Ganon/HTML_NODE_TEXT.html">HTML_NODE_TEXT</a><br />
+	    		<a href="../Ganon/HTML_NODE_XML.html">HTML_NODE_XML</a><br />
+	    		<a href="../Ganon/HTML_Parser.html">HTML_Parser</a><br />
+	    		<a href="../Ganon/HTML_Parser_Base.html">HTML_Parser_Base</a><br />
+	    		<a href="../Ganon/HTML_Parser_HTML5.html">HTML_Parser_HTML5</a><br />
+	    		<a href="../Ganon/HTML_Selector.html">HTML_Selector</a><br />
+	    		<a href="../Ganon/Tokenizer_Base.html">Tokenizer_Base</a><br />
+	    		<a href="../Ganon/Tokenizer_CSSQuery.html">Tokenizer_CSSQuery</a><br />
+	    		<a href="../Ganon/XML_Parser_Array.html">XML_Parser_Array</a><br />
+	  </div>
+                </td>
+    <td>
+      <table cellpadding="10" cellspacing="0" width="100%" border="0"><tr><td valign="top">
+
+<h1>Class: HTML_Parser</h1>
+Source Location: /gan_parser_html.php<br /><br />
+
+
+<table width="100%" border="0">
+<tr><td valign="top">
+
+<h3><a href="#class_details">Class Overview</a></h3>
+<pre><a href="../Ganon/Tokenizer_Base.html">Tokenizer_Base</a>
+   |
+   --<a href="../Ganon/HTML_Parser_Base.html">HTML_Parser_Base</a>
+      |
+      --HTML_Parser</pre><br />
+<div class="description">Parses a HTML document into a HTML DOM</div><br /><br />
+
+
+
+
+
+
+        
+</td>
+
+<td valign="top">
+<h3><a href="#class_vars">Variables</a></h3>
+<ul>
+    <li><a href="../Ganon/HTML_Parser.html#var$hierarchy">$hierarchy</a></li>
+    <li><a href="../Ganon/HTML_Parser.html#var$root">$root</a></li>
+    <li><a href="../Ganon/HTML_Parser.html#var$tags_selfclose">$tags_selfclose</a></li>
+  </ul>
+</td>
+
+
+<td valign="top">
+<h3><a href="#class_methods">Methods</a></h3>
+<ul>
+    <li><a href="../Ganon/HTML_Parser.html#method__construct">__construct</a></li>
+    <li><a href="../Ganon/HTML_Parser.html#method__destruct">__destruct</a></li>
+    <li><a href="../Ganon/HTML_Parser.html#methodparse_all">parse_all</a></li>
+    <li><a href="../Ganon/HTML_Parser.html#methodparse_asp">parse_asp</a></li>
+    <li><a href="../Ganon/HTML_Parser.html#methodparse_cdata">parse_cdata</a></li>
+    <li><a href="../Ganon/HTML_Parser.html#methodparse_comment">parse_comment</a></li>
+    <li><a href="../Ganon/HTML_Parser.html#methodparse_conditional">parse_conditional</a></li>
+    <li><a href="../Ganon/HTML_Parser.html#methodparse_doctype">parse_doctype</a></li>
+    <li><a href="../Ganon/HTML_Parser.html#methodparse_hierarchy">parse_hierarchy</a></li>
+    <li><a href="../Ganon/HTML_Parser.html#methodparse_php">parse_php</a></li>
+    <li><a href="../Ganon/HTML_Parser.html#methodparse_script">parse_script</a></li>
+    <li><a href="../Ganon/HTML_Parser.html#methodparse_style">parse_style</a></li>
+    <li><a href="../Ganon/HTML_Parser.html#methodparse_tag_default">parse_tag_default</a></li>
+    <li><a href="../Ganon/HTML_Parser.html#methodparse_text">parse_text</a></li>
+    <li><a href="../Ganon/HTML_Parser.html#methodselect">select</a></li>
+    <li><a href="../Ganon/HTML_Parser.html#method__invoke">__invoke</a></li>
+    <li><a href="../Ganon/HTML_Parser.html#method__toString">__toString</a></li>
+  </ul>
+</td>
+
+</tr></table>
+<hr />
+
+<table width="100%" border="0"><tr>
+
+
+<td valign="top">
+<h3>Child classes:</h3>
+<div class="tags">
+<dl>
+<dt><a href="../Ganon/HTML_Parser_HTML5.html">HTML_Parser_HTML5</a></dt>
+	<dd>HTML5 specific parser (adds support for omittable closing tags)</dd>
+</dl>
+</div>
+</td>
+
+<td valign="top">
+<h3>Inherited Constants</h3>
+<div class="tags">
+<h4>Class: <a href="../Ganon/HTML_Parser_Base.html">HTML_Parser_Base</a></h4>
+<dl>
+<dt>
+  <a href="../Ganon/HTML_Parser_Base.html#constTOK_EQUALS">HTML_Parser_Base::TOK_EQUALS</a>
+</dt>
+<dd>
+   
+</dd>
+<dt>
+  <a href="../Ganon/HTML_Parser_Base.html#constTOK_SLASH_BACKWARD">HTML_Parser_Base::TOK_SLASH_BACKWARD</a>
+</dt>
+<dd>
+   
+</dd>
+<dt>
+  <a href="../Ganon/HTML_Parser_Base.html#constTOK_SLASH_FORWARD">HTML_Parser_Base::TOK_SLASH_FORWARD</a>
+</dt>
+<dd>
+   
+</dd>
+<dt>
+  <a href="../Ganon/HTML_Parser_Base.html#constTOK_STRING">HTML_Parser_Base::TOK_STRING</a>
+</dt>
+<dd>
+   
+</dd>
+<dt>
+  <a href="../Ganon/HTML_Parser_Base.html#constTOK_TAG_CLOSE">HTML_Parser_Base::TOK_TAG_CLOSE</a>
+</dt>
+<dd>
+   
+</dd>
+<dt>
+  <a href="../Ganon/HTML_Parser_Base.html#constTOK_TAG_OPEN">HTML_Parser_Base::TOK_TAG_OPEN</a>
+</dt>
+<dd>
+   
+</dd>
+</dl>
+</div>
+<div class="tags">
+<h4>Class: <a href="../Ganon/Tokenizer_Base.html">Tokenizer_Base</a></h4>
+<dl>
+<dt>
+  <a href="../Ganon/Tokenizer_Base.html#constTOK_IDENTIFIER">Tokenizer_Base::TOK_IDENTIFIER</a>
+</dt>
+<dd>
+   
+</dd>
+<dt>
+  <a href="../Ganon/Tokenizer_Base.html#constTOK_NULL">Tokenizer_Base::TOK_NULL</a>
+</dt>
+<dd>
+   
+</dd>
+<dt>
+  <a href="../Ganon/Tokenizer_Base.html#constTOK_UNKNOWN">Tokenizer_Base::TOK_UNKNOWN</a>
+</dt>
+<dd>
+   
+</dd>
+<dt>
+  <a href="../Ganon/Tokenizer_Base.html#constTOK_WHITESPACE">Tokenizer_Base::TOK_WHITESPACE</a>
+</dt>
+<dd>
+   
+</dd>
+</dl>
+</div>
+</td>
+
+<td valign="top">
+<h3>Inherited Variables</h3>
+<div class="tags">
+<h4>Class: <a href="../Ganon/HTML_Parser_Base.html">HTML_Parser_Base</a></h4>
+<dl>
+<dt>
+  <a href="../Ganon/HTML_Parser_Base.html#var$custom_char_map">HTML_Parser_Base::$custom_char_map</a>
+  </dt>
+<dd>
+   
+</dd>
+<dt>
+  <a href="../Ganon/HTML_Parser_Base.html#var$identifiers">HTML_Parser_Base::$identifiers</a>
+  </dt>
+<dd>
+   
+</dd>
+<dt>
+  <a href="../Ganon/HTML_Parser_Base.html#var$status">HTML_Parser_Base::$status</a>
+  </dt>
+<dd>
+   
+</dd>
+<dt>
+  <a href="../Ganon/HTML_Parser_Base.html#var$tag_map">HTML_Parser_Base::$tag_map</a>
+  </dt>
+<dd>
+   
+</dd>
+</dl>
+</div>
+<div class="tags">
+<h4>Class: <a href="../Ganon/Tokenizer_Base.html">Tokenizer_Base</a></h4>
+<dl>
+<dt>
+  <a href="../Ganon/Tokenizer_Base.html#var$char_map">Tokenizer_Base::$char_map</a>
+  </dt>
+<dd>
+   
+</dd>
+<dt>
+  <a href="../Ganon/Tokenizer_Base.html#var$doc">Tokenizer_Base::$doc</a>
+  </dt>
+<dd>
+   
+</dd>
+<dt>
+  <a href="../Ganon/Tokenizer_Base.html#var$errors">Tokenizer_Base::$errors</a>
+  </dt>
+<dd>
+   
+</dd>
+<dt>
+  <a href="../Ganon/Tokenizer_Base.html#var$line_pos">Tokenizer_Base::$line_pos</a>
+  </dt>
+<dd>
+   
+</dd>
+<dt>
+  <a href="../Ganon/Tokenizer_Base.html#var$pos">Tokenizer_Base::$pos</a>
+  </dt>
+<dd>
+   
+</dd>
+<dt>
+  <a href="../Ganon/Tokenizer_Base.html#var$size">Tokenizer_Base::$size</a>
+  </dt>
+<dd>
+   
+</dd>
+<dt>
+  <a href="../Ganon/Tokenizer_Base.html#var$token">Tokenizer_Base::$token</a>
+  </dt>
+<dd>
+   
+</dd>
+<dt>
+  <a href="../Ganon/Tokenizer_Base.html#var$token_start">Tokenizer_Base::$token_start</a>
+  </dt>
+<dd>
+   
+</dd>
+<dt>
+  <a href="../Ganon/Tokenizer_Base.html#var$whitespace">Tokenizer_Base::$whitespace</a>
+  </dt>
+<dd>
+   
+</dd>
+</dl>
+</div>
+</td>
+
+<td valign="top">
+<h3>Inherited Methods</h3>
+<div class="tags">
+<h4>Class: <a href="../Ganon/HTML_Parser_Base.html">HTML_Parser_Base</a></h4>
+<dl>
+    <dt>
+    <a href="../Ganon/HTML_Parser_Base.html#method__construct">HTML_Parser_Base::__construct()</a>
+  </dt>
+  <dd>
+    
+  </dd>
+    <dt>
+    <a href="../Ganon/HTML_Parser_Base.html#methodparse_all">HTML_Parser_Base::parse_all()</a>
+  </dt>
+  <dd>
+    Parse full document
+  </dd>
+    <dt>
+    <a href="../Ganon/HTML_Parser_Base.html#methodparse_asp">HTML_Parser_Base::parse_asp()</a>
+  </dt>
+  <dd>
+    Parse asp tags
+  </dd>
+    <dt>
+    <a href="../Ganon/HTML_Parser_Base.html#methodparse_attributes">HTML_Parser_Base::parse_attributes()</a>
+  </dt>
+  <dd>
+    Parse attributes (names + value)
+  </dd>
+    <dt>
+    <a href="../Ganon/HTML_Parser_Base.html#methodparse_cdata">HTML_Parser_Base::parse_cdata()</a>
+  </dt>
+  <dd>
+    Parse cdata tag
+  </dd>
+    <dt>
+    <a href="../Ganon/HTML_Parser_Base.html#methodparse_comment">HTML_Parser_Base::parse_comment()</a>
+  </dt>
+  <dd>
+    Parse comment tags
+  </dd>
+    <dt>
+    <a href="../Ganon/HTML_Parser_Base.html#methodparse_conditional">HTML_Parser_Base::parse_conditional()</a>
+  </dt>
+  <dd>
+    Parse conditional tags (+ all conditional tags inside)
+  </dd>
+    <dt>
+    <a href="../Ganon/HTML_Parser_Base.html#methodparse_doctype">HTML_Parser_Base::parse_doctype()</a>
+  </dt>
+  <dd>
+    Parse doctype tag
+  </dd>
+    <dt>
+    <a href="../Ganon/HTML_Parser_Base.html#methodparse_php">HTML_Parser_Base::parse_php()</a>
+  </dt>
+  <dd>
+    Parse php tags
+  </dd>
+    <dt>
+    <a href="../Ganon/HTML_Parser_Base.html#methodparse_script">HTML_Parser_Base::parse_script()</a>
+  </dt>
+  <dd>
+    Parse script tags
+  </dd>
+    <dt>
+    <a href="../Ganon/HTML_Parser_Base.html#methodparse_string">HTML_Parser_Base::parse_string()</a>
+  </dt>
+  <dd>
+    Parse a HTML string (attributes)
+  </dd>
+    <dt>
+    <a href="../Ganon/HTML_Parser_Base.html#methodparse_style">HTML_Parser_Base::parse_style()</a>
+  </dt>
+  <dd>
+    Parse style tags
+  </dd>
+    <dt>
+    <a href="../Ganon/HTML_Parser_Base.html#methodparse_tag">HTML_Parser_Base::parse_tag()</a>
+  </dt>
+  <dd>
+    Parse tag
+  </dd>
+    <dt>
+    <a href="../Ganon/HTML_Parser_Base.html#methodparse_tag_default">HTML_Parser_Base::parse_tag_default()</a>
+  </dt>
+  <dd>
+    Default callback for tags
+  </dd>
+    <dt>
+    <a href="../Ganon/HTML_Parser_Base.html#methodparse_text">HTML_Parser_Base::parse_text()</a>
+  </dt>
+  <dd>
+    Parse text between tags
+  </dd>
+  </dl>
+<h4>Class: <a href="../Ganon/Tokenizer_Base.html">Tokenizer_Base</a></h4>
+<dl>
+    <dt>
+    <a href="../Ganon/Tokenizer_Base.html#method__construct">Tokenizer_Base::__construct()</a>
+  </dt>
+  <dd>
+    Class constructor
+  </dd>
+    <dt>
+    <a href="../Ganon/Tokenizer_Base.html#methodaddError">Tokenizer_Base::addError()</a>
+  </dt>
+  <dd>
+    Add error to the array and appends current position
+  </dd>
+    <dt>
+    <a href="../Ganon/Tokenizer_Base.html#methodbuildCharMap">Tokenizer_Base::buildCharMap()</a>
+  </dt>
+  <dd>
+    Builds the $map_char array
+  </dd>
+    <dt>
+    <a href="../Ganon/Tokenizer_Base.html#methodexpect">Tokenizer_Base::expect()</a>
+  </dt>
+  <dd>
+    Expect a specific token or character. Adds error if token doesn't match.
+  </dd>
+    <dt>
+    <a href="../Ganon/Tokenizer_Base.html#methodgetDoc">Tokenizer_Base::getDoc()</a>
+  </dt>
+  <dd>
+    Returns target document
+  </dd>
+    <dt>
+    <a href="../Ganon/Tokenizer_Base.html#methodgetIdentifiers">Tokenizer_Base::getIdentifiers()</a>
+  </dt>
+  <dd>
+    Returns identifier characters as string/array
+  </dd>
+    <dt>
+    <a href="../Ganon/Tokenizer_Base.html#methodgetLinePos">Tokenizer_Base::getLinePos()</a>
+  </dt>
+  <dd>
+    Returns current position in document (Line/Char)
+  </dd>
+    <dt>
+    <a href="../Ganon/Tokenizer_Base.html#methodgetPos">Tokenizer_Base::getPos()</a>
+  </dt>
+  <dd>
+    Returns current position in document (Index)
+  </dd>
+    <dt>
+    <a href="../Ganon/Tokenizer_Base.html#methodgetToken">Tokenizer_Base::getToken()</a>
+  </dt>
+  <dd>
+    Returns current token
+  </dd>
+    <dt>
+    <a href="../Ganon/Tokenizer_Base.html#methodgetTokenString">Tokenizer_Base::getTokenString()</a>
+  </dt>
+  <dd>
+    Returns current token as string
+  </dd>
+    <dt>
+    <a href="../Ganon/Tokenizer_Base.html#methodgetWhitespace">Tokenizer_Base::getWhitespace()</a>
+  </dt>
+  <dd>
+    Returns whitespace characters as string/array
+  </dd>
+    <dt>
+    <a href="../Ganon/Tokenizer_Base.html#methodmapChar">Tokenizer_Base::mapChar()</a>
+  </dt>
+  <dd>
+    Maps a custom character to a token/function
+  </dd>
+    <dt>
+    <a href="../Ganon/Tokenizer_Base.html#methodnext">Tokenizer_Base::next()</a>
+  </dt>
+  <dd>
+    Continues to the next token
+  </dd>
+    <dt>
+    <a href="../Ganon/Tokenizer_Base.html#methodnext_no_whitespace">Tokenizer_Base::next_no_whitespace()</a>
+  </dt>
+  <dd>
+    Finds the next token, but skips whitespace
+  </dd>
+    <dt>
+    <a href="../Ganon/Tokenizer_Base.html#methodnext_pos">Tokenizer_Base::next_pos()</a>
+  </dt>
+  <dd>
+    Finds the next token by searching for a string
+  </dd>
+    <dt>
+    <a href="../Ganon/Tokenizer_Base.html#methodnext_search">Tokenizer_Base::next_search()</a>
+  </dt>
+  <dd>
+    Finds the next token using stopcharacters
+  </dd>
+    <dt>
+    <a href="../Ganon/Tokenizer_Base.html#methodparse_identifier">Tokenizer_Base::parse_identifier()</a>
+  </dt>
+  <dd>
+    Parse identifiers
+  </dd>
+    <dt>
+    <a href="../Ganon/Tokenizer_Base.html#methodparse_whitespace">Tokenizer_Base::parse_whitespace()</a>
+  </dt>
+  <dd>
+    Parse whitespace
+  </dd>
+    <dt>
+    <a href="../Ganon/Tokenizer_Base.html#methodsetDoc">Tokenizer_Base::setDoc()</a>
+  </dt>
+  <dd>
+    Sets target document
+  </dd>
+    <dt>
+    <a href="../Ganon/Tokenizer_Base.html#methodsetIdentifiers">Tokenizer_Base::setIdentifiers()</a>
+  </dt>
+  <dd>
+    Sets characters to be recognized as identifier
+  </dd>
+    <dt>
+    <a href="../Ganon/Tokenizer_Base.html#methodsetPos">Tokenizer_Base::setPos()</a>
+  </dt>
+  <dd>
+    Sets position in document
+  </dd>
+    <dt>
+    <a href="../Ganon/Tokenizer_Base.html#methodsetWhitespace">Tokenizer_Base::setWhitespace()</a>
+  </dt>
+  <dd>
+    Sets characters to be recognized as whitespace
+  </dd>
+    <dt>
+    <a href="../Ganon/Tokenizer_Base.html#methodunmapChar">Tokenizer_Base::unmapChar()</a>
+  </dt>
+  <dd>
+    Removes a char mapped with <a href="../Ganon/Tokenizer_Base.html#methodmapChar">mapChar()</a>
+  </dd>
+  </dl>
+</div>
+</td>
+
+</tr></table>
+<hr />
+
+<a name="class_details"></a>
+<h3>Class Details</h3>
+<div class="tags">
+[line <a href="../__filesource/fsource_Ganon__gan_parser_html.php.html#a483">483</a>]<br />
+Parses a HTML document into a HTML DOM<br /><br /></div><br /><br />
+<div class="top">[ <a href="#top">Top</a> ]</div><br />
+
+<hr />
+<a name="class_vars"></a>
+<h3>Class Variables</h3>
+<div class="tags">
+	<a name="var$hierarchy"></a>
+	<p></p>
+	<h4>$hierarchy = <span class="value">array()</span></h4>
+	<p>[line <a href="../__filesource/fsource_Ganon__gan_parser_html.php.html#a498">498</a>]</p>
+  Current parsing hierarchy<br /><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>internal:</b>&nbsp;&nbsp;</td><td>Root is always at index 0, current tag is at the end of the array</td>
+  </tr>
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>private</td>
+  </tr>
+</table>
+</div>
+
+  <br />
+	<div class="tags">
+  <table border="0" cellspacing="0" cellpadding="0">
+    <tr>
+      <td><b>Type:</b>&nbsp;&nbsp;</td>
+      <td>array</td>
+    </tr>
+      </table>
+	</div><br /><br />
+	<div class="top">[ <a href="#top">Top</a> ]</div><br />
+	<a name="var$root"></a>
+	<p></p>
+	<h4>$root = <span class="value">&nbsp;'HTML_Node'</span></h4>
+	<p>[line <a href="../__filesource/fsource_Ganon__gan_parser_html.php.html#a490">490</a>]</p>
+  Root object<br /><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>internal:</b>&nbsp;&nbsp;</td><td>If string, then it will create a new instance as root</td>
+  </tr>
+</table>
+</div>
+
+  <br />
+	<div class="tags">
+  <table border="0" cellspacing="0" cellpadding="0">
+    <tr>
+      <td><b>Type:</b>&nbsp;&nbsp;</td>
+      <td><a href="../Ganon/HTML_Node.html">HTML_Node</a></td>
+    </tr>
+      </table>
+	</div><br /><br />
+	<div class="top">[ <a href="#top">Top</a> ]</div><br />
+	<a name="var$tags_selfclose"></a>
+	<p></p>
+	<h4>$tags_selfclose = <span class="value">array(<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'area'&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&gt;&nbsp;true,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'base'&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&gt;&nbsp;true,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'basefont'&nbsp;&nbsp;&nbsp;=&gt;&nbsp;true,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'br'&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&gt;&nbsp;true,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'col'&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&gt;&nbsp;true,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'command'&nbsp;&nbsp;&nbsp;=&gt;&nbsp;true,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'embed'&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&gt;&nbsp;true,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'frame'&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&gt;&nbsp;true,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'hr'&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&gt;&nbsp;true,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'img'&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&gt;&nbsp;true,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'input'&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&gt;&nbsp;true,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'ins'&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&gt;&nbsp;true,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'keygen'&nbsp;&nbsp;&nbsp;=&gt;&nbsp;true,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'link'&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&gt;&nbsp;true,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'meta'&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&gt;&nbsp;true,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'param'&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&gt;&nbsp;true,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'source'&nbsp;&nbsp;&nbsp;=&gt;&nbsp;true,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'track'&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&gt;&nbsp;true,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'wbr'&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&gt;&nbsp;true<br>
+&nbsp;&nbsp;&nbsp;)</span></h4>
+	<p>[line <a href="../__filesource/fsource_Ganon__gan_parser_html.php.html#a505">505</a>]</p>
+  Tags that don't need closing tags<br /><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>private</td>
+  </tr>
+</table>
+</div>
+
+  <br />
+	<div class="tags">
+  <table border="0" cellspacing="0" cellpadding="0">
+    <tr>
+      <td><b>Type:</b>&nbsp;&nbsp;</td>
+      <td>array</td>
+    </tr>
+      </table>
+	</div><br /><br />
+	<div class="top">[ <a href="#top">Top</a> ]</div><br />
+</div><br />
+
+<hr />
+<a name="class_methods"></a>
+<h3>Class Methods</h3>
+<div class="tags">
+
+  <hr />
+	<a name="method__construct"></a>
+	<h3>constructor __construct <span class="smalllinenumber">[line <a href="../__filesource/fsource_Ganon__gan_parser_html.php.html#a533">533</a>]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>HTML_Parser __construct(
+[string
+$doc = ''], [int
+$pos = 0], [<a href="../Ganon/HTML_Node.html">HTML_Node</a>
+$root = null])</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		Class constructor<br /><br /><br /><br />
+
+	Overrides <a href="../Ganon/HTML_Parser_Base.html#method__construct">HTML_Parser_Base::__construct()</a> (parent method not documented)<br /><br />
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$doc</b>&nbsp;&nbsp;</td>
+        <td>Document to be tokenized</td>
+      </tr>
+          <tr>
+        <td class="type">int&nbsp;&nbsp;</td>
+        <td><b>$pos</b>&nbsp;&nbsp;</td>
+        <td>Position to start parsing</td>
+      </tr>
+          <tr>
+        <td class="type"><a href="../Ganon/HTML_Node.html">HTML_Node</a>&nbsp;&nbsp;</td>
+        <td><b>$root</b>&nbsp;&nbsp;</td>
+        <td>Root node, null to auto create</td>
+      </tr>
+        </table>
+    </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="method__destruct"></a>
+	<h3>destructor __destruct <span class="smalllinenumber">[line <a href="../__filesource/fsource_Ganon__gan_parser_html.php.html#a550">550</a>]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>void __destruct(
+)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		Class destructor<br /><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>private</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodparse_all"></a>
+	<h3>method parse_all <span class="smalllinenumber">[line <a href="../__filesource/fsource_Ganon__gan_parser_html.php.html#a768">768</a>]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>void parse_all(
+)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		<br /><br />
+
+	Overrides <a href="../Ganon/HTML_Parser_Base.html#methodparse_all">HTML_Parser_Base::parse_all()</a> (Parse full document)<br /><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodparse_asp"></a>
+	<h3>method parse_asp <span class="smalllinenumber">[line <a href="../__filesource/fsource_Ganon__gan_parser_html.php.html#a717">717</a>]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>void parse_asp(
+)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		<br /><br />
+
+	Overrides <a href="../Ganon/HTML_Parser_Base.html#methodparse_asp">HTML_Parser_Base::parse_asp()</a> (Parse asp tags)<br /><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodparse_cdata"></a>
+	<h3>method parse_cdata <span class="smalllinenumber">[line <a href="../__filesource/fsource_Ganon__gan_parser_html.php.html#a657">657</a>]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>void parse_cdata(
+)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		<br /><br />
+
+	Overrides <a href="../Ganon/HTML_Parser_Base.html#methodparse_cdata">HTML_Parser_Base::parse_cdata()</a> (Parse cdata tag)<br /><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodparse_comment"></a>
+	<h3>method parse_comment <span class="smalllinenumber">[line <a href="../__filesource/fsource_Ganon__gan_parser_html.php.html#a666">666</a>]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>void parse_comment(
+)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		<br /><br />
+
+	Overrides <a href="../Ganon/HTML_Parser_Base.html#methodparse_comment">HTML_Parser_Base::parse_comment()</a> (Parse comment tags)<br /><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodparse_conditional"></a>
+	<h3>method parse_conditional <span class="smalllinenumber">[line <a href="../__filesource/fsource_Ganon__gan_parser_html.php.html#a675">675</a>]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>void parse_conditional(
+)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		<br /><br />
+
+	Overrides <a href="../Ganon/HTML_Parser_Base.html#methodparse_conditional">HTML_Parser_Base::parse_conditional()</a> (Parse conditional tags (+ all conditional tags inside))<br /><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodparse_doctype"></a>
+	<h3>method parse_doctype <span class="smalllinenumber">[line <a href="../__filesource/fsource_Ganon__gan_parser_html.php.html#a699">699</a>]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>void parse_doctype(
+)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		<br /><br />
+
+	Overrides <a href="../Ganon/HTML_Parser_Base.html#methodparse_doctype">HTML_Parser_Base::parse_doctype()</a> (Parse doctype tag)<br /><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodparse_hierarchy"></a>
+	<h3>method parse_hierarchy <span class="smalllinenumber">[line <a href="../__filesource/fsource_Ganon__gan_parser_html.php.html#a588">588</a>]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>void parse_hierarchy(
+[bool
+$self_close = null])</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		Updates the current hierarchy status and checks for<br /><br /><p>correct opening/closing of tags</p><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>internal:</b>&nbsp;&nbsp;</td><td>This is were most of the nodes get added</td>
+  </tr>
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>protected</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	<p>Overridden in child classes as:<br />
+		<dl>
+	<dt><a href="../Ganon/HTML_Parser_HTML5.html#methodparse_hierarchy">HTML_Parser_HTML5::parse_hierarchy()</a></dt>
+		<dd></dd>
+	</dl>
+	</p>
+	
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type">bool&nbsp;&nbsp;</td>
+        <td><b>$self_close</b>&nbsp;&nbsp;</td>
+        <td>Is current tag self closing? Null to use <a href="../Ganon/HTML_Parser.html#var$tags_selfclose">tags_selfclose</a></td>
+      </tr>
+        </table>
+    </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodparse_php"></a>
+	<h3>method parse_php <span class="smalllinenumber">[line <a href="../__filesource/fsource_Ganon__gan_parser_html.php.html#a708">708</a>]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>void parse_php(
+)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		<br /><br />
+
+	Overrides <a href="../Ganon/HTML_Parser_Base.html#methodparse_php">HTML_Parser_Base::parse_php()</a> (Parse php tags)<br /><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodparse_script"></a>
+	<h3>method parse_script <span class="smalllinenumber">[line <a href="../__filesource/fsource_Ganon__gan_parser_html.php.html#a726">726</a>]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>void parse_script(
+)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		<br /><br />
+
+	Overrides <a href="../Ganon/HTML_Parser_Base.html#methodparse_script">HTML_Parser_Base::parse_script()</a> (Parse script tags)<br /><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodparse_style"></a>
+	<h3>method parse_style <span class="smalllinenumber">[line <a href="../__filesource/fsource_Ganon__gan_parser_html.php.html#a739">739</a>]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>void parse_style(
+)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		<br /><br />
+
+	Overrides <a href="../Ganon/HTML_Parser_Base.html#methodparse_style">HTML_Parser_Base::parse_style()</a> (Parse style tags)<br /><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodparse_tag_default"></a>
+	<h3>method parse_tag_default <span class="smalllinenumber">[line <a href="../__filesource/fsource_Ganon__gan_parser_html.php.html#a752">752</a>]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>void parse_tag_default(
+)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		<br /><br />
+
+	Overrides <a href="../Ganon/HTML_Parser_Base.html#methodparse_tag_default">HTML_Parser_Base::parse_tag_default()</a> (Default callback for tags)<br /><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodparse_text"></a>
+	<h3>method parse_text <span class="smalllinenumber">[line <a href="../__filesource/fsource_Ganon__gan_parser_html.php.html#a759">759</a>]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>void parse_text(
+)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		<br /><br />
+
+	Overrides <a href="../Ganon/HTML_Parser_Base.html#methodparse_text">HTML_Parser_Base::parse_text()</a> (Parse text between tags)<br /><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodselect"></a>
+	<h3>method select <span class="smalllinenumber">[line <a href="../__filesource/fsource_Ganon__gan_parser_html.php.html#a577">577</a>]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>array select(
+[
+$query = '*'], [
+$index = false], [
+$recursive = true], [
+$check_self = false])</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		Performs a css select query on the root node<br /><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>see:</b>&nbsp;&nbsp;</td><td><a href="../Ganon/HTML_Node.html#methodselect">HTML_Node::select()</a></td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type">&nbsp;&nbsp;</td>
+        <td><b>$query</b>&nbsp;&nbsp;</td>
+        <td></td>
+      </tr>
+          <tr>
+        <td class="type">&nbsp;&nbsp;</td>
+        <td><b>$index</b>&nbsp;&nbsp;</td>
+        <td></td>
+      </tr>
+          <tr>
+        <td class="type">&nbsp;&nbsp;</td>
+        <td><b>$recursive</b>&nbsp;&nbsp;</td>
+        <td></td>
+      </tr>
+          <tr>
+        <td class="type">&nbsp;&nbsp;</td>
+        <td><b>$check_self</b>&nbsp;&nbsp;</td>
+        <td></td>
+      </tr>
+        </table>
+    </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="method__invoke"></a>
+	<h3>method __invoke <span class="smalllinenumber">[line <a href="../__filesource/fsource_Ganon__gan_parser_html.php.html#a559">559</a>]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>array __invoke(
+[
+$query = '*'])</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		Class magic invoke method, performs select()<br /><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>private</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type">&nbsp;&nbsp;</td>
+        <td><b>$query</b>&nbsp;&nbsp;</td>
+        <td></td>
+      </tr>
+        </table>
+    </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="method__toString"></a>
+	<h3>method __toString <span class="smalllinenumber">[line <a href="../__filesource/fsource_Ganon__gan_parser_html.php.html#a568">568</a>]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>string __toString(
+)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		Class magic toString method, performs <a href="../Ganon/HTML_Node.html#methodtoString">HTML_Node::toString()</a><br /><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>private</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+</div><br />
+
+
+        <div class="credit">
+		    <hr />
+		    Documentation generated on Thu, 31 Mar 2011 10:26:00 +0200 by <a href="http://www.phpdoc.org">phpDocumentor 1.4.3</a>
+	      </div>
+      </td></tr></table>
+    </td>
+  </tr>
+</table>
+
+</body>
+</html>

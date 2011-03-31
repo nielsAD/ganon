@@ -1,0 +1,888 @@
+<html>
+<head>
+<title>Docs For Class Tokenizer_CSSQuery</title>
+<link rel="stylesheet" type="text/css" href="../media/style.css">
+</head>
+<body>
+
+<table border="0" cellspacing="0" cellpadding="0" height="48" width="100%">
+  <tr>
+    <td class="header_top">Ganon</td>
+  </tr>
+  <tr><td class="header_line"><img src="../media/empty.png" width="1" height="1" border="0" alt=""  /></td></tr>
+  <tr>
+    <td class="header_menu">
+        
+                                    
+                              		  [ <a href="../classtrees_Ganon.html" class="menu">class tree: Ganon</a> ]
+		  [ <a href="../elementindex_Ganon.html" class="menu">index: Ganon</a> ]
+		  	    [ <a href="../elementindex.html" class="menu">all elements</a> ]
+    </td>
+  </tr>
+  <tr><td class="header_line"><img src="../media/empty.png" width="1" height="1" border="0" alt=""  /></td></tr>
+</table>
+
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="200" class="menu">
+      <b>Packages:</b><br />
+              <a href="../li_Ganon.html">Ganon</a><br />
+            <br /><br />
+                        <b>Files:</b><br />
+      	  <div class="package">
+			<a href="../Ganon/_ganon.php.html">		ganon.php
+		</a><br>
+			<a href="../Ganon/_gan_formatter.php.html">		gan_formatter.php
+		</a><br>
+			<a href="../Ganon/_gan_node_html.php.html">		gan_node_html.php
+		</a><br>
+			<a href="../Ganon/_gan_parser_html.php.html">		gan_parser_html.php
+		</a><br>
+			<a href="../Ganon/_gan_selector_html.php.html">		gan_selector_html.php
+		</a><br>
+			<a href="../Ganon/_gan_tokenizer.php.html">		gan_tokenizer.php
+		</a><br>
+			<a href="../Ganon/_gan_xml2array.php.html">		gan_xml2array.php
+		</a><br>
+	  </div><br />
+      
+      
+            <b>Classes:</b><br />
+        <div class="package">
+		    		<a href="../Ganon/HTML_Formatter.html">HTML_Formatter</a><br />
+	    		<a href="../Ganon/HTML_Node.html">HTML_Node</a><br />
+	    		<a href="../Ganon/HTML_NODE_ASP.html">HTML_NODE_ASP</a><br />
+	    		<a href="../Ganon/HTML_NODE_CDATA.html">HTML_NODE_CDATA</a><br />
+	    		<a href="../Ganon/HTML_NODE_COMMENT.html">HTML_NODE_COMMENT</a><br />
+	    		<a href="../Ganon/HTML_NODE_CONDITIONAL.html">HTML_NODE_CONDITIONAL</a><br />
+	    		<a href="../Ganon/HTML_NODE_DOCTYPE.html">HTML_NODE_DOCTYPE</a><br />
+	    		<a href="../Ganon/HTML_NODE_EMBEDDED.html">HTML_NODE_EMBEDDED</a><br />
+	    		<a href="../Ganon/HTML_NODE_TEXT.html">HTML_NODE_TEXT</a><br />
+	    		<a href="../Ganon/HTML_NODE_XML.html">HTML_NODE_XML</a><br />
+	    		<a href="../Ganon/HTML_Parser.html">HTML_Parser</a><br />
+	    		<a href="../Ganon/HTML_Parser_Base.html">HTML_Parser_Base</a><br />
+	    		<a href="../Ganon/HTML_Parser_HTML5.html">HTML_Parser_HTML5</a><br />
+	    		<a href="../Ganon/HTML_Selector.html">HTML_Selector</a><br />
+	    		<a href="../Ganon/Tokenizer_Base.html">Tokenizer_Base</a><br />
+	    		<a href="../Ganon/Tokenizer_CSSQuery.html">Tokenizer_CSSQuery</a><br />
+	    		<a href="../Ganon/XML_Parser_Array.html">XML_Parser_Array</a><br />
+	  </div>
+                </td>
+    <td>
+      <table cellpadding="10" cellspacing="0" width="100%" border="0"><tr><td valign="top">
+
+<h1>Class: Tokenizer_CSSQuery</h1>
+Source Location: /gan_selector_html.php<br /><br />
+
+
+<table width="100%" border="0">
+<tr><td valign="top">
+
+<h3><a href="#class_details">Class Overview</a></h3>
+<pre><a href="../Ganon/Tokenizer_Base.html">Tokenizer_Base</a>
+   |
+   --Tokenizer_CSSQuery</pre><br />
+<div class="description">Tokenizes a css selector query</div><br /><br />
+
+
+
+
+
+
+        
+</td>
+
+<td valign="top">
+<h3><a href="#class_vars">Variables</a></h3>
+<ul>
+    <li><a href="../Ganon/Tokenizer_CSSQuery.html#var$custom_char_map">$custom_char_map</a></li>
+    <li><a href="../Ganon/Tokenizer_CSSQuery.html#var$identifiers">$identifiers</a></li>
+  </ul>
+</td>
+
+<td valign="top">
+<h3><a href="#class_consts">Constants</a></h3>
+<ul>
+    <li><a href="../Ganon/Tokenizer_CSSQuery.html#constTOK_ALL">TOK_ALL</a></li>
+    <li><a href="../Ganon/Tokenizer_CSSQuery.html#constTOK_BRACE_CLOSE">TOK_BRACE_CLOSE</a></li>
+    <li><a href="../Ganon/Tokenizer_CSSQuery.html#constTOK_BRACE_OPEN">TOK_BRACE_OPEN</a></li>
+    <li><a href="../Ganon/Tokenizer_CSSQuery.html#constTOK_BRACKET_CLOSE">TOK_BRACKET_CLOSE</a></li>
+    <li><a href="../Ganon/Tokenizer_CSSQuery.html#constTOK_BRACKET_OPEN">TOK_BRACKET_OPEN</a></li>
+    <li><a href="../Ganon/Tokenizer_CSSQuery.html#constTOK_CHILD">TOK_CHILD</a></li>
+    <li><a href="../Ganon/Tokenizer_CSSQuery.html#constTOK_CLASS">TOK_CLASS</a></li>
+    <li><a href="../Ganon/Tokenizer_CSSQuery.html#constTOK_COLON">TOK_COLON</a></li>
+    <li><a href="../Ganon/Tokenizer_CSSQuery.html#constTOK_COMMA">TOK_COMMA</a></li>
+    <li><a href="../Ganon/Tokenizer_CSSQuery.html#constTOK_COMPARE_BIGGER_THAN">TOK_COMPARE_BIGGER_THAN</a></li>
+    <li><a href="../Ganon/Tokenizer_CSSQuery.html#constTOK_COMPARE_CONTAINS">TOK_COMPARE_CONTAINS</a></li>
+    <li><a href="../Ganon/Tokenizer_CSSQuery.html#constTOK_COMPARE_CONTAINS_WORD">TOK_COMPARE_CONTAINS_WORD</a></li>
+    <li><a href="../Ganon/Tokenizer_CSSQuery.html#constTOK_COMPARE_ENDS">TOK_COMPARE_ENDS</a></li>
+    <li><a href="../Ganon/Tokenizer_CSSQuery.html#constTOK_COMPARE_EQUALS">TOK_COMPARE_EQUALS</a></li>
+    <li><a href="../Ganon/Tokenizer_CSSQuery.html#constTOK_COMPARE_NOT_EQUAL">TOK_COMPARE_NOT_EQUAL</a></li>
+    <li><a href="../Ganon/Tokenizer_CSSQuery.html#constTOK_COMPARE_PREFIX">TOK_COMPARE_PREFIX</a></li>
+    <li><a href="../Ganon/Tokenizer_CSSQuery.html#constTOK_COMPARE_REGEX">TOK_COMPARE_REGEX</a></li>
+    <li><a href="../Ganon/Tokenizer_CSSQuery.html#constTOK_COMPARE_SMALLER_THAN">TOK_COMPARE_SMALLER_THAN</a></li>
+    <li><a href="../Ganon/Tokenizer_CSSQuery.html#constTOK_COMPARE_STARTS">TOK_COMPARE_STARTS</a></li>
+    <li><a href="../Ganon/Tokenizer_CSSQuery.html#constTOK_ID">TOK_ID</a></li>
+    <li><a href="../Ganon/Tokenizer_CSSQuery.html#constTOK_NOT">TOK_NOT</a></li>
+    <li><a href="../Ganon/Tokenizer_CSSQuery.html#constTOK_PIPE">TOK_PIPE</a></li>
+    <li><a href="../Ganon/Tokenizer_CSSQuery.html#constTOK_PLUS">TOK_PLUS</a></li>
+    <li><a href="../Ganon/Tokenizer_CSSQuery.html#constTOK_SIBLING">TOK_SIBLING</a></li>
+    <li><a href="../Ganon/Tokenizer_CSSQuery.html#constTOK_STRING">TOK_STRING</a></li>
+  </ul>
+</td>
+
+<td valign="top">
+<h3><a href="#class_methods">Methods</a></h3>
+<ul>
+    <li><a href="../Ganon/Tokenizer_CSSQuery.html#methodparse_compare">parse_compare</a></li>
+    <li><a href="../Ganon/Tokenizer_CSSQuery.html#methodparse_gt">parse_gt</a></li>
+    <li><a href="../Ganon/Tokenizer_CSSQuery.html#methodparse_not">parse_not</a></li>
+    <li><a href="../Ganon/Tokenizer_CSSQuery.html#methodparse_pipe">parse_pipe</a></li>
+    <li><a href="../Ganon/Tokenizer_CSSQuery.html#methodparse_sibling">parse_sibling</a></li>
+    <li><a href="../Ganon/Tokenizer_CSSQuery.html#methodparse_star">parse_star</a></li>
+    <li><a href="../Ganon/Tokenizer_CSSQuery.html#methodparse_string">parse_string</a></li>
+  </ul>
+</td>
+
+</tr></table>
+<hr />
+
+<table width="100%" border="0"><tr>
+
+
+
+<td valign="top">
+<h3>Inherited Constants</h3>
+<div class="tags">
+<h4>Class: <a href="../Ganon/Tokenizer_Base.html">Tokenizer_Base</a></h4>
+<dl>
+<dt>
+  <a href="../Ganon/Tokenizer_Base.html#constTOK_IDENTIFIER">Tokenizer_Base::TOK_IDENTIFIER</a>
+</dt>
+<dd>
+   
+</dd>
+<dt>
+  <a href="../Ganon/Tokenizer_Base.html#constTOK_NULL">Tokenizer_Base::TOK_NULL</a>
+</dt>
+<dd>
+   
+</dd>
+<dt>
+  <a href="../Ganon/Tokenizer_Base.html#constTOK_UNKNOWN">Tokenizer_Base::TOK_UNKNOWN</a>
+</dt>
+<dd>
+   
+</dd>
+<dt>
+  <a href="../Ganon/Tokenizer_Base.html#constTOK_WHITESPACE">Tokenizer_Base::TOK_WHITESPACE</a>
+</dt>
+<dd>
+   
+</dd>
+</dl>
+</div>
+</td>
+
+<td valign="top">
+<h3>Inherited Variables</h3>
+<div class="tags">
+<h4>Class: <a href="../Ganon/Tokenizer_Base.html">Tokenizer_Base</a></h4>
+<dl>
+<dt>
+  <a href="../Ganon/Tokenizer_Base.html#var$char_map">Tokenizer_Base::$char_map</a>
+  </dt>
+<dd>
+   
+</dd>
+<dt>
+  <a href="../Ganon/Tokenizer_Base.html#var$doc">Tokenizer_Base::$doc</a>
+  </dt>
+<dd>
+   
+</dd>
+<dt>
+  <a href="../Ganon/Tokenizer_Base.html#var$errors">Tokenizer_Base::$errors</a>
+  </dt>
+<dd>
+   
+</dd>
+<dt>
+  <a href="../Ganon/Tokenizer_Base.html#var$line_pos">Tokenizer_Base::$line_pos</a>
+  </dt>
+<dd>
+   
+</dd>
+<dt>
+  <a href="../Ganon/Tokenizer_Base.html#var$pos">Tokenizer_Base::$pos</a>
+  </dt>
+<dd>
+   
+</dd>
+<dt>
+  <a href="../Ganon/Tokenizer_Base.html#var$size">Tokenizer_Base::$size</a>
+  </dt>
+<dd>
+   
+</dd>
+<dt>
+  <a href="../Ganon/Tokenizer_Base.html#var$token">Tokenizer_Base::$token</a>
+  </dt>
+<dd>
+   
+</dd>
+<dt>
+  <a href="../Ganon/Tokenizer_Base.html#var$token_start">Tokenizer_Base::$token_start</a>
+  </dt>
+<dd>
+   
+</dd>
+<dt>
+  <a href="../Ganon/Tokenizer_Base.html#var$whitespace">Tokenizer_Base::$whitespace</a>
+  </dt>
+<dd>
+   
+</dd>
+</dl>
+</div>
+</td>
+
+<td valign="top">
+<h3>Inherited Methods</h3>
+<div class="tags">
+<h4>Class: <a href="../Ganon/Tokenizer_Base.html">Tokenizer_Base</a></h4>
+<dl>
+    <dt>
+    <a href="../Ganon/Tokenizer_Base.html#method__construct">Tokenizer_Base::__construct()</a>
+  </dt>
+  <dd>
+    Class constructor
+  </dd>
+    <dt>
+    <a href="../Ganon/Tokenizer_Base.html#methodaddError">Tokenizer_Base::addError()</a>
+  </dt>
+  <dd>
+    Add error to the array and appends current position
+  </dd>
+    <dt>
+    <a href="../Ganon/Tokenizer_Base.html#methodbuildCharMap">Tokenizer_Base::buildCharMap()</a>
+  </dt>
+  <dd>
+    Builds the $map_char array
+  </dd>
+    <dt>
+    <a href="../Ganon/Tokenizer_Base.html#methodexpect">Tokenizer_Base::expect()</a>
+  </dt>
+  <dd>
+    Expect a specific token or character. Adds error if token doesn't match.
+  </dd>
+    <dt>
+    <a href="../Ganon/Tokenizer_Base.html#methodgetDoc">Tokenizer_Base::getDoc()</a>
+  </dt>
+  <dd>
+    Returns target document
+  </dd>
+    <dt>
+    <a href="../Ganon/Tokenizer_Base.html#methodgetIdentifiers">Tokenizer_Base::getIdentifiers()</a>
+  </dt>
+  <dd>
+    Returns identifier characters as string/array
+  </dd>
+    <dt>
+    <a href="../Ganon/Tokenizer_Base.html#methodgetLinePos">Tokenizer_Base::getLinePos()</a>
+  </dt>
+  <dd>
+    Returns current position in document (Line/Char)
+  </dd>
+    <dt>
+    <a href="../Ganon/Tokenizer_Base.html#methodgetPos">Tokenizer_Base::getPos()</a>
+  </dt>
+  <dd>
+    Returns current position in document (Index)
+  </dd>
+    <dt>
+    <a href="../Ganon/Tokenizer_Base.html#methodgetToken">Tokenizer_Base::getToken()</a>
+  </dt>
+  <dd>
+    Returns current token
+  </dd>
+    <dt>
+    <a href="../Ganon/Tokenizer_Base.html#methodgetTokenString">Tokenizer_Base::getTokenString()</a>
+  </dt>
+  <dd>
+    Returns current token as string
+  </dd>
+    <dt>
+    <a href="../Ganon/Tokenizer_Base.html#methodgetWhitespace">Tokenizer_Base::getWhitespace()</a>
+  </dt>
+  <dd>
+    Returns whitespace characters as string/array
+  </dd>
+    <dt>
+    <a href="../Ganon/Tokenizer_Base.html#methodmapChar">Tokenizer_Base::mapChar()</a>
+  </dt>
+  <dd>
+    Maps a custom character to a token/function
+  </dd>
+    <dt>
+    <a href="../Ganon/Tokenizer_Base.html#methodnext">Tokenizer_Base::next()</a>
+  </dt>
+  <dd>
+    Continues to the next token
+  </dd>
+    <dt>
+    <a href="../Ganon/Tokenizer_Base.html#methodnext_no_whitespace">Tokenizer_Base::next_no_whitespace()</a>
+  </dt>
+  <dd>
+    Finds the next token, but skips whitespace
+  </dd>
+    <dt>
+    <a href="../Ganon/Tokenizer_Base.html#methodnext_pos">Tokenizer_Base::next_pos()</a>
+  </dt>
+  <dd>
+    Finds the next token by searching for a string
+  </dd>
+    <dt>
+    <a href="../Ganon/Tokenizer_Base.html#methodnext_search">Tokenizer_Base::next_search()</a>
+  </dt>
+  <dd>
+    Finds the next token using stopcharacters
+  </dd>
+    <dt>
+    <a href="../Ganon/Tokenizer_Base.html#methodparse_identifier">Tokenizer_Base::parse_identifier()</a>
+  </dt>
+  <dd>
+    Parse identifiers
+  </dd>
+    <dt>
+    <a href="../Ganon/Tokenizer_Base.html#methodparse_whitespace">Tokenizer_Base::parse_whitespace()</a>
+  </dt>
+  <dd>
+    Parse whitespace
+  </dd>
+    <dt>
+    <a href="../Ganon/Tokenizer_Base.html#methodsetDoc">Tokenizer_Base::setDoc()</a>
+  </dt>
+  <dd>
+    Sets target document
+  </dd>
+    <dt>
+    <a href="../Ganon/Tokenizer_Base.html#methodsetIdentifiers">Tokenizer_Base::setIdentifiers()</a>
+  </dt>
+  <dd>
+    Sets characters to be recognized as identifier
+  </dd>
+    <dt>
+    <a href="../Ganon/Tokenizer_Base.html#methodsetPos">Tokenizer_Base::setPos()</a>
+  </dt>
+  <dd>
+    Sets position in document
+  </dd>
+    <dt>
+    <a href="../Ganon/Tokenizer_Base.html#methodsetWhitespace">Tokenizer_Base::setWhitespace()</a>
+  </dt>
+  <dd>
+    Sets characters to be recognized as whitespace
+  </dd>
+    <dt>
+    <a href="../Ganon/Tokenizer_Base.html#methodunmapChar">Tokenizer_Base::unmapChar()</a>
+  </dt>
+  <dd>
+    Removes a char mapped with <a href="../Ganon/Tokenizer_Base.html#methodmapChar">mapChar()</a>
+  </dd>
+  </dl>
+</div>
+</td>
+
+</tr></table>
+<hr />
+
+<a name="class_details"></a>
+<h3>Class Details</h3>
+<div class="tags">
+[line <a href="../__filesource/fsource_Ganon__gan_selector_html.php.html#a18">18</a>]<br />
+Tokenizes a css selector query<br /><br /></div><br /><br />
+<div class="top">[ <a href="#top">Top</a> ]</div><br />
+
+<hr />
+<a name="class_vars"></a>
+<h3>Class Variables</h3>
+<div class="tags">
+	<a name="var$custom_char_map"></a>
+	<p></p>
+	<h4>$custom_char_map = <span class="value">array(<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'.'&nbsp;=&gt;&nbsp;self::TOK_CLASS,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'#'&nbsp;=&gt;&nbsp;self::TOK_ID,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;','&nbsp;=&gt;&nbsp;self::TOK_COMMA,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'&gt;'&nbsp;=&gt;&nbsp;'parse_gt',//self::TOK_CHILD,<br>
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'+'&nbsp;=&gt;&nbsp;self::TOK_PLUS,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'~'&nbsp;=&gt;&nbsp;'parse_sibling',<br>
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'|'&nbsp;=&gt;&nbsp;'parse_pipe',<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'*'&nbsp;=&gt;&nbsp;'parse_star',<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'$'&nbsp;=&gt;&nbsp;'parse_compare',<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'='&nbsp;=&gt;&nbsp;self::TOK_COMPARE_EQUALS,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'!'&nbsp;=&gt;&nbsp;'parse_not',<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'%'&nbsp;=&gt;&nbsp;'parse_compare',<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'^'&nbsp;=&gt;&nbsp;'parse_compare',<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'&lt;'&nbsp;=&gt;&nbsp;'parse_compare',<br>
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'&quot;'&nbsp;=&gt;&nbsp;'parse_string',<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;'&quot;&nbsp;=&gt;&nbsp;'parse_string',<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'('&nbsp;=&gt;&nbsp;self::TOK_BRACE_OPEN,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;')'&nbsp;=&gt;&nbsp;self::TOK_BRACE_CLOSE,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'['&nbsp;=&gt;&nbsp;self::TOK_BRACKET_OPEN,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;']'&nbsp;=&gt;&nbsp;self::TOK_BRACKET_CLOSE,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;':'&nbsp;=&gt;&nbsp;self::TOK_COLON<br>
+&nbsp;&nbsp;&nbsp;)</span></h4>
+	<p>[line <a href="../__filesource/fsource_Ganon__gan_selector_html.php.html#a135">135</a>]</p>
+  Map characters to match their tokens<br /><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>see:</b>&nbsp;&nbsp;</td><td><a href="../Ganon/Tokenizer_Base.html#var$custom_char_map">Tokenizer_Base::$custom_char_map</a></td>
+  </tr>
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>private</td>
+  </tr>
+</table>
+</div>
+
+  <br />
+	<div class="tags">
+  <table border="0" cellspacing="0" cellpadding="0">
+    <tr>
+      <td><b>Type:</b>&nbsp;&nbsp;</td>
+      <td>mixed</td>
+    </tr>
+        <tr>
+      <td><b>Overrides:</b>&nbsp;&nbsp;</td>
+      <td>Array</td>
+    </tr>
+      </table>
+	</div><br /><br />
+	<div class="top">[ <a href="#top">Top</a> ]</div><br />
+	<a name="var$identifiers"></a>
+	<p></p>
+	<h4>$identifiers = <span class="value">&nbsp;'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ01234567890_-?'</span></h4>
+	<p>[line <a href="../__filesource/fsource_Ganon__gan_selector_html.php.html#a128">128</a>]</p>
+  Sets query identifiers<br /><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>see:</b>&nbsp;&nbsp;</td><td><a href="../Ganon/Tokenizer_Base.html#var$identifiers">Tokenizer_Base::$identifiers</a></td>
+  </tr>
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>private</td>
+  </tr>
+</table>
+</div>
+
+  <br />
+	<div class="tags">
+  <table border="0" cellspacing="0" cellpadding="0">
+    <tr>
+      <td><b>Type:</b>&nbsp;&nbsp;</td>
+      <td>mixed</td>
+    </tr>
+        <tr>
+      <td><b>Overrides:</b>&nbsp;&nbsp;</td>
+      <td>Array</td>
+    </tr>
+      </table>
+	</div><br /><br />
+	<div class="top">[ <a href="#top">Top</a> ]</div><br />
+</div><br />
+
+<hr />
+<a name="class_methods"></a>
+<h3>Class Methods</h3>
+<div class="tags">
+
+  <hr />
+	<a name="methodparse_compare"></a>
+	<h3>method parse_compare <span class="smalllinenumber">[line <a href="../__filesource/fsource_Ganon__gan_selector_html.php.html#a236">236</a>]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>int parse_compare(
+)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		Parse several compare characters<br /><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>protected</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodparse_gt"></a>
+	<h3>method parse_gt <span class="smalllinenumber">[line <a href="../__filesource/fsource_Ganon__gan_selector_html.php.html#a167">167</a>]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>int parse_gt(
+)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		Parse &quot;&gt;&quot; character<br /><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>internal:</b>&nbsp;&nbsp;</td><td>Could be <a href="../Ganon/Tokenizer_CSSQuery.html#constTOK_CHILD">TOK_CHILD</a> or <a href="../Ganon/Tokenizer_CSSQuery.html#constTOK_COMPARE_BIGGER_THAN">TOK_COMPARE_BIGGER_THAN</a></td>
+  </tr>
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>protected</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodparse_not"></a>
+	<h3>method parse_not <span class="smalllinenumber">[line <a href="../__filesource/fsource_Ganon__gan_selector_html.php.html#a223">223</a>]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>int parse_not(
+)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		Parse &quot;!&quot; character<br /><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>internal:</b>&nbsp;&nbsp;</td><td>Could be <a href="../Ganon/Tokenizer_CSSQuery.html#constTOK_NOT">TOK_NOT</a> or <a href="../Ganon/Tokenizer_CSSQuery.html#constTOK_COMPARE_NOT_EQUAL">TOK_COMPARE_NOT_EQUAL</a></td>
+  </tr>
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>protected</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodparse_pipe"></a>
+	<h3>method parse_pipe <span class="smalllinenumber">[line <a href="../__filesource/fsource_Ganon__gan_selector_html.php.html#a195">195</a>]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>int parse_pipe(
+)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		Parse &quot;|&quot; character<br /><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>internal:</b>&nbsp;&nbsp;</td><td>Could be <a href="../Ganon/Tokenizer_CSSQuery.html#constTOK_PIPE">TOK_PIPE</a> or <a href="../Ganon/Tokenizer_CSSQuery.html#constTOK_COMPARE_PREFIX">TOK_COMPARE_PREFIX</a></td>
+  </tr>
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>protected</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodparse_sibling"></a>
+	<h3>method parse_sibling <span class="smalllinenumber">[line <a href="../__filesource/fsource_Ganon__gan_selector_html.php.html#a181">181</a>]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>int parse_sibling(
+)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		Parse &quot;~&quot; character<br /><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>internal:</b>&nbsp;&nbsp;</td><td>Could be <a href="../Ganon/Tokenizer_CSSQuery.html#constTOK_SIBLING">TOK_SIBLING</a> or <a href="../Ganon/Tokenizer_CSSQuery.html#constTOK_COMPARE_CONTAINS_WORD">TOK_COMPARE_CONTAINS_WORD</a></td>
+  </tr>
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>protected</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodparse_star"></a>
+	<h3>method parse_star <span class="smalllinenumber">[line <a href="../__filesource/fsource_Ganon__gan_selector_html.php.html#a209">209</a>]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>int parse_star(
+)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		Parse &quot;*&quot; character<br /><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>internal:</b>&nbsp;&nbsp;</td><td>Could be <a href="../Ganon/Tokenizer_CSSQuery.html#constTOK_ALL">TOK_ALL</a> or <a href="../Ganon/Tokenizer_CSSQuery.html#constTOK_COMPARE_CONTAINS">TOK_COMPARE_CONTAINS</a></td>
+  </tr>
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>protected</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodparse_string"></a>
+	<h3>method parse_string <span class="smalllinenumber">[line <a href="../__filesource/fsource_Ganon__gan_selector_html.php.html#a256">256</a>]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>int parse_string(
+)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		Parse strings (&quot; and ')<br /><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>protected</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+</div><br />
+
+<hr />
+<a name="class_consts"></a>
+<h3>Class Constants</h3>
+<div class="tags">
+	<a name="constTOK_ALL"></a>
+	<p></p>
+	<h4>TOK_ALL = <span class="value">&nbsp;108</span></h4>
+	<p>[line <a href="../__filesource/fsource_Ganon__gan_selector_html.php.html#a56">56</a>]</p>
+  &quot;All&quot; token, used for &quot;*&quot; in query<br /><br />
+  <br />
+	<div class="top">[ <a href="#top">Top</a> ]</div><br />
+	<a name="constTOK_BRACE_CLOSE"></a>
+	<p></p>
+	<h4>TOK_BRACE_CLOSE = <span class="value">&nbsp;103</span></h4>
+	<p>[line <a href="../__filesource/fsource_Ganon__gan_selector_html.php.html#a35">35</a>]</p>
+  Closing brace token, used for &quot;)&quot;<br /><br />
+  <br />
+	<div class="top">[ <a href="#top">Top</a> ]</div><br />
+	<a name="constTOK_BRACE_OPEN"></a>
+	<p></p>
+	<h4>TOK_BRACE_OPEN = <span class="value">&nbsp;102</span></h4>
+	<p>[line <a href="../__filesource/fsource_Ganon__gan_selector_html.php.html#a31">31</a>]</p>
+  Opening brace token, used for &quot;(&quot;<br /><br />
+  <br />
+	<div class="top">[ <a href="#top">Top</a> ]</div><br />
+	<a name="constTOK_BRACKET_CLOSE"></a>
+	<p></p>
+	<h4>TOK_BRACKET_CLOSE = <span class="value">&nbsp;101</span></h4>
+	<p>[line <a href="../__filesource/fsource_Ganon__gan_selector_html.php.html#a27">27</a>]</p>
+  Closing bracket token, used for &quot;]&quot;<br /><br />
+  <br />
+	<div class="top">[ <a href="#top">Top</a> ]</div><br />
+	<a name="constTOK_BRACKET_OPEN"></a>
+	<p></p>
+	<h4>TOK_BRACKET_OPEN = <span class="value">&nbsp;100</span></h4>
+	<p>[line <a href="../__filesource/fsource_Ganon__gan_selector_html.php.html#a23">23</a>]</p>
+  Opening bracket token, used for &quot;[&quot;<br /><br />
+  <br />
+	<div class="top">[ <a href="#top">Top</a> ]</div><br />
+	<a name="constTOK_CHILD"></a>
+	<p></p>
+	<h4>TOK_CHILD = <span class="value">&nbsp;114</span></h4>
+	<p>[line <a href="../__filesource/fsource_Ganon__gan_selector_html.php.html#a80">80</a>]</p>
+  Child token, used for &quot;&gt;&quot; in query<br /><br />
+  <br />
+	<div class="top">[ <a href="#top">Top</a> ]</div><br />
+	<a name="constTOK_CLASS"></a>
+	<p></p>
+	<h4>TOK_CLASS = <span class="value">&nbsp;112</span></h4>
+	<p>[line <a href="../__filesource/fsource_Ganon__gan_selector_html.php.html#a72">72</a>]</p>
+  Class token, used for &quot;.&quot; in query<br /><br />
+  <br />
+	<div class="top">[ <a href="#top">Top</a> ]</div><br />
+	<a name="constTOK_COLON"></a>
+	<p></p>
+	<h4>TOK_COLON = <span class="value">&nbsp;105</span></h4>
+	<p>[line <a href="../__filesource/fsource_Ganon__gan_selector_html.php.html#a43">43</a>]</p>
+  Colon token, used for &quot;:&quot;<br /><br />
+  <br />
+	<div class="top">[ <a href="#top">Top</a> ]</div><br />
+	<a name="constTOK_COMMA"></a>
+	<p></p>
+	<h4>TOK_COMMA = <span class="value">&nbsp;106</span></h4>
+	<p>[line <a href="../__filesource/fsource_Ganon__gan_selector_html.php.html#a47">47</a>]</p>
+  Comma token, used for &quot;,&quot;<br /><br />
+  <br />
+	<div class="top">[ <a href="#top">Top</a> ]</div><br />
+	<a name="constTOK_COMPARE_BIGGER_THAN"></a>
+	<p></p>
+	<h4>TOK_COMPARE_BIGGER_THAN = <span class="value">&nbsp;121</span></h4>
+	<p>[line <a href="../__filesource/fsource_Ganon__gan_selector_html.php.html#a109">109</a>]</p>
+  Attribute compare bigger than token, used for &quot;&gt;=&quot;<br /><br />
+  <br />
+	<div class="top">[ <a href="#top">Top</a> ]</div><br />
+	<a name="constTOK_COMPARE_CONTAINS"></a>
+	<p></p>
+	<h4>TOK_COMPARE_CONTAINS = <span class="value">&nbsp;116</span></h4>
+	<p>[line <a href="../__filesource/fsource_Ganon__gan_selector_html.php.html#a89">89</a>]</p>
+  Attribute contains token, used for &quot;*=&quot;<br /><br />
+  <br />
+	<div class="top">[ <a href="#top">Top</a> ]</div><br />
+	<a name="constTOK_COMPARE_CONTAINS_WORD"></a>
+	<p></p>
+	<h4>TOK_COMPARE_CONTAINS_WORD = <span class="value">&nbsp;117</span></h4>
+	<p>[line <a href="../__filesource/fsource_Ganon__gan_selector_html.php.html#a93">93</a>]</p>
+  Attribute contains word token, used for &quot;~=&quot;<br /><br />
+  <br />
+	<div class="top">[ <a href="#top">Top</a> ]</div><br />
+	<a name="constTOK_COMPARE_ENDS"></a>
+	<p></p>
+	<h4>TOK_COMPARE_ENDS = <span class="value">&nbsp;118</span></h4>
+	<p>[line <a href="../__filesource/fsource_Ganon__gan_selector_html.php.html#a97">97</a>]</p>
+  Attribute compare end token, used for &quot;$=&quot;<br /><br />
+  <br />
+	<div class="top">[ <a href="#top">Top</a> ]</div><br />
+	<a name="constTOK_COMPARE_EQUALS"></a>
+	<p></p>
+	<h4>TOK_COMPARE_EQUALS = <span class="value">&nbsp;119</span></h4>
+	<p>[line <a href="../__filesource/fsource_Ganon__gan_selector_html.php.html#a101">101</a>]</p>
+  Attribute equals token, used for &quot;=&quot;<br /><br />
+  <br />
+	<div class="top">[ <a href="#top">Top</a> ]</div><br />
+	<a name="constTOK_COMPARE_NOT_EQUAL"></a>
+	<p></p>
+	<h4>TOK_COMPARE_NOT_EQUAL = <span class="value">&nbsp;120</span></h4>
+	<p>[line <a href="../__filesource/fsource_Ganon__gan_selector_html.php.html#a105">105</a>]</p>
+  Attribute not equal token, used for &quot;!=&quot;<br /><br />
+  <br />
+	<div class="top">[ <a href="#top">Top</a> ]</div><br />
+	<a name="constTOK_COMPARE_PREFIX"></a>
+	<p></p>
+	<h4>TOK_COMPARE_PREFIX = <span class="value">&nbsp;115</span></h4>
+	<p>[line <a href="../__filesource/fsource_Ganon__gan_selector_html.php.html#a85">85</a>]</p>
+  Attribute compare prefix token, used for &quot;|=&quot;<br /><br />
+  <br />
+	<div class="top">[ <a href="#top">Top</a> ]</div><br />
+	<a name="constTOK_COMPARE_REGEX"></a>
+	<p></p>
+	<h4>TOK_COMPARE_REGEX = <span class="value">&nbsp;123</span></h4>
+	<p>[line <a href="../__filesource/fsource_Ganon__gan_selector_html.php.html#a117">117</a>]</p>
+  Attribute compare with regex, used for &quot;%=&quot;<br /><br />
+  <br />
+	<div class="top">[ <a href="#top">Top</a> ]</div><br />
+	<a name="constTOK_COMPARE_SMALLER_THAN"></a>
+	<p></p>
+	<h4>TOK_COMPARE_SMALLER_THAN = <span class="value">&nbsp;122</span></h4>
+	<p>[line <a href="../__filesource/fsource_Ganon__gan_selector_html.php.html#a113">113</a>]</p>
+  Attribute compare smaller than token, used for &quot;&lt;=&quot;<br /><br />
+  <br />
+	<div class="top">[ <a href="#top">Top</a> ]</div><br />
+	<a name="constTOK_COMPARE_STARTS"></a>
+	<p></p>
+	<h4>TOK_COMPARE_STARTS = <span class="value">&nbsp;124</span></h4>
+	<p>[line <a href="../__filesource/fsource_Ganon__gan_selector_html.php.html#a121">121</a>]</p>
+  Attribute compare start token, used for &quot;^=&quot;<br /><br />
+  <br />
+	<div class="top">[ <a href="#top">Top</a> ]</div><br />
+	<a name="constTOK_ID"></a>
+	<p></p>
+	<h4>TOK_ID = <span class="value">&nbsp;113</span></h4>
+	<p>[line <a href="../__filesource/fsource_Ganon__gan_selector_html.php.html#a76">76</a>]</p>
+  ID token, used for &quot;#&quot; in query<br /><br />
+  <br />
+	<div class="top">[ <a href="#top">Top</a> ]</div><br />
+	<a name="constTOK_NOT"></a>
+	<p></p>
+	<h4>TOK_NOT = <span class="value">&nbsp;107</span></h4>
+	<p>[line <a href="../__filesource/fsource_Ganon__gan_selector_html.php.html#a51">51</a>]</p>
+  &quot;Not&quot; token, used for &quot;!&quot;<br /><br />
+  <br />
+	<div class="top">[ <a href="#top">Top</a> ]</div><br />
+	<a name="constTOK_PIPE"></a>
+	<p></p>
+	<h4>TOK_PIPE = <span class="value">&nbsp;109</span></h4>
+	<p>[line <a href="../__filesource/fsource_Ganon__gan_selector_html.php.html#a60">60</a>]</p>
+  Pipe token, used for &quot;|&quot;<br /><br />
+  <br />
+	<div class="top">[ <a href="#top">Top</a> ]</div><br />
+	<a name="constTOK_PLUS"></a>
+	<p></p>
+	<h4>TOK_PLUS = <span class="value">&nbsp;110</span></h4>
+	<p>[line <a href="../__filesource/fsource_Ganon__gan_selector_html.php.html#a64">64</a>]</p>
+  Plus token, used for &quot;+&quot;<br /><br />
+  <br />
+	<div class="top">[ <a href="#top">Top</a> ]</div><br />
+	<a name="constTOK_SIBLING"></a>
+	<p></p>
+	<h4>TOK_SIBLING = <span class="value">&nbsp;111</span></h4>
+	<p>[line <a href="../__filesource/fsource_Ganon__gan_selector_html.php.html#a68">68</a>]</p>
+  &quot;Sibling&quot; token, used for &quot;~&quot; in query<br /><br />
+  <br />
+	<div class="top">[ <a href="#top">Top</a> ]</div><br />
+	<a name="constTOK_STRING"></a>
+	<p></p>
+	<h4>TOK_STRING = <span class="value">&nbsp;104</span></h4>
+	<p>[line <a href="../__filesource/fsource_Ganon__gan_selector_html.php.html#a39">39</a>]</p>
+  String token<br /><br />
+  <br />
+	<div class="top">[ <a href="#top">Top</a> ]</div><br />
+</div><br />
+
+        <div class="credit">
+		    <hr />
+		    Documentation generated on Thu, 31 Mar 2011 10:26:02 +0200 by <a href="http://www.phpdoc.org">phpDocumentor 1.4.3</a>
+	      </div>
+      </td></tr></table>
+    </td>
+  </tr>
+</table>
+
+</body>
+</html>

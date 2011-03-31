@@ -1,0 +1,548 @@
+<html>
+<head>
+<title>Docs For Class HTML_Formatter</title>
+<link rel="stylesheet" type="text/css" href="../media/style.css">
+</head>
+<body>
+
+<table border="0" cellspacing="0" cellpadding="0" height="48" width="100%">
+  <tr>
+    <td class="header_top">Ganon</td>
+  </tr>
+  <tr><td class="header_line"><img src="../media/empty.png" width="1" height="1" border="0" alt=""  /></td></tr>
+  <tr>
+    <td class="header_menu">
+        
+                                    
+                              		  [ <a href="../classtrees_Ganon.html" class="menu">class tree: Ganon</a> ]
+		  [ <a href="../elementindex_Ganon.html" class="menu">index: Ganon</a> ]
+		  	    [ <a href="../elementindex.html" class="menu">all elements</a> ]
+    </td>
+  </tr>
+  <tr><td class="header_line"><img src="../media/empty.png" width="1" height="1" border="0" alt=""  /></td></tr>
+</table>
+
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="200" class="menu">
+      <b>Packages:</b><br />
+              <a href="../li_Ganon.html">Ganon</a><br />
+            <br /><br />
+                        <b>Files:</b><br />
+      	  <div class="package">
+			<a href="../Ganon/_ganon.php.html">		ganon.php
+		</a><br>
+			<a href="../Ganon/_gan_formatter.php.html">		gan_formatter.php
+		</a><br>
+			<a href="../Ganon/_gan_node_html.php.html">		gan_node_html.php
+		</a><br>
+			<a href="../Ganon/_gan_parser_html.php.html">		gan_parser_html.php
+		</a><br>
+			<a href="../Ganon/_gan_selector_html.php.html">		gan_selector_html.php
+		</a><br>
+			<a href="../Ganon/_gan_tokenizer.php.html">		gan_tokenizer.php
+		</a><br>
+			<a href="../Ganon/_gan_xml2array.php.html">		gan_xml2array.php
+		</a><br>
+	  </div><br />
+      
+      
+            <b>Classes:</b><br />
+        <div class="package">
+		    		<a href="../Ganon/HTML_Formatter.html">HTML_Formatter</a><br />
+	    		<a href="../Ganon/HTML_Node.html">HTML_Node</a><br />
+	    		<a href="../Ganon/HTML_NODE_ASP.html">HTML_NODE_ASP</a><br />
+	    		<a href="../Ganon/HTML_NODE_CDATA.html">HTML_NODE_CDATA</a><br />
+	    		<a href="../Ganon/HTML_NODE_COMMENT.html">HTML_NODE_COMMENT</a><br />
+	    		<a href="../Ganon/HTML_NODE_CONDITIONAL.html">HTML_NODE_CONDITIONAL</a><br />
+	    		<a href="../Ganon/HTML_NODE_DOCTYPE.html">HTML_NODE_DOCTYPE</a><br />
+	    		<a href="../Ganon/HTML_NODE_EMBEDDED.html">HTML_NODE_EMBEDDED</a><br />
+	    		<a href="../Ganon/HTML_NODE_TEXT.html">HTML_NODE_TEXT</a><br />
+	    		<a href="../Ganon/HTML_NODE_XML.html">HTML_NODE_XML</a><br />
+	    		<a href="../Ganon/HTML_Parser.html">HTML_Parser</a><br />
+	    		<a href="../Ganon/HTML_Parser_Base.html">HTML_Parser_Base</a><br />
+	    		<a href="../Ganon/HTML_Parser_HTML5.html">HTML_Parser_HTML5</a><br />
+	    		<a href="../Ganon/HTML_Selector.html">HTML_Selector</a><br />
+	    		<a href="../Ganon/Tokenizer_Base.html">Tokenizer_Base</a><br />
+	    		<a href="../Ganon/Tokenizer_CSSQuery.html">Tokenizer_CSSQuery</a><br />
+	    		<a href="../Ganon/XML_Parser_Array.html">XML_Parser_Array</a><br />
+	  </div>
+                </td>
+    <td>
+      <table cellpadding="10" cellspacing="0" width="100%" border="0"><tr><td valign="top">
+
+<h1>Class: HTML_Formatter</h1>
+Source Location: /gan_formatter.php<br /><br />
+
+
+<table width="100%" border="0">
+<tr><td valign="top">
+
+<h3><a href="#class_details">Class Overview</a></h3>
+<pre></pre><br />
+<div class="description">Class used to format/minify HTML nodes</div><br /><br />
+
+
+
+
+
+
+        
+</td>
+
+<td valign="top">
+<h3><a href="#class_vars">Variables</a></h3>
+<ul>
+    <li><a href="../Ganon/HTML_Formatter.html#var$block_elements">$block_elements</a></li>
+    <li><a href="../Ganon/HTML_Formatter.html#var$errors">$errors</a></li>
+    <li><a href="../Ganon/HTML_Formatter.html#var$indent_string">$indent_string</a></li>
+    <li><a href="../Ganon/HTML_Formatter.html#var$linebreak_string">$linebreak_string</a></li>
+    <li><a href="../Ganon/HTML_Formatter.html#var$options">$options</a></li>
+    <li><a href="../Ganon/HTML_Formatter.html#var$whitespace">$whitespace</a></li>
+  </ul>
+</td>
+
+
+<td valign="top">
+<h3><a href="#class_methods">Methods</a></h3>
+<ul>
+    <li><a href="../Ganon/HTML_Formatter.html#method__construct">__construct</a></li>
+    <li><a href="../Ganon/HTML_Formatter.html#methodformat">format</a></li>
+    <li><a href="../Ganon/HTML_Formatter.html#methodformat_html">format_html</a></li>
+    <li><a href="../Ganon/HTML_Formatter.html#methodminify_html">minify_html</a></li>
+    <li><a href="../Ganon/HTML_Formatter.html#methodminify_javascript">minify_javascript</a></li>
+    <li><a href="../Ganon/HTML_Formatter.html#method__invoke">__invoke</a></li>
+  </ul>
+</td>
+
+</tr></table>
+<hr />
+
+<table width="100%" border="0"><tr>
+
+
+
+
+
+
+</tr></table>
+<hr />
+
+<a name="class_details"></a>
+<h3>Class Details</h3>
+<div class="tags">
+[line <a href="../__filesource/fsource_Ganon__gan_formatter.php.html#a35">35</a>]<br />
+Class used to format/minify HTML nodes<br /><br /><p>Used like:  <ol><li><div class="src-line">&nbsp;<span class="src-php">&lt;?php</span></div></li>
+<li><div class="src-line">&nbsp;&nbsp;&nbsp;<span class="src-var">$formatter&nbsp;</span>=&nbsp;<span class="src-key">new&nbsp;</span><span class="src-id"><a href="../Ganon/HTML_Formatter.html">HTML_Formatter</a></span><span class="src-sym">(</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line">&nbsp;&nbsp;&nbsp;<span class="src-var">$formatter</span><span class="src-sym">-&gt;</span><a href="../Ganon/HTML_Formatter.html#methodformat">format</a><span class="src-sym">(</span><span class="src-var">$root</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line">&nbsp;<span class="src-php">?&gt;</span></div></li>
+</ol></p><br /></div><br /><br />
+<div class="top">[ <a href="#top">Top</a> ]</div><br />
+
+<hr />
+<a name="class_vars"></a>
+<h3>Class Variables</h3>
+<div class="tags">
+	<a name="var$block_elements"></a>
+	<p></p>
+	<h4>$block_elements = <span class="value">array(<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'p'&nbsp;=&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;array('new_line'&nbsp;=&gt;&nbsp;true,&nbsp;&nbsp;'as_block'&nbsp;=&gt;&nbsp;true,&nbsp;&nbsp;'format_inside'&nbsp;=&gt;&nbsp;true),'h1'=&gt;array('new_line'=&gt;true,'as_block'=&gt;true,'format_inside'=&gt;true),'h2'=&gt;array('new_line'=&gt;true,'as_block'=&gt;true,'format_inside'=&gt;true),'h3'=&gt;array('new_line'=&gt;true,'as_block'=&gt;true,'format_inside'=&gt;true),'h4'=&gt;array('new_line'=&gt;true,'as_block'=&gt;true,'format_inside'=&gt;true),'h5'=&gt;array('new_line'=&gt;true,'as_block'=&gt;true,'format_inside'=&gt;true),'h6'=&gt;array('new_line'=&gt;true,'as_block'=&gt;true,'format_inside'=&gt;true),'form'=&gt;array('new_line'=&gt;true,'as_block'=&gt;true,'format_inside'=&gt;true),'fieldset'=&gt;array('new_line'=&gt;true,'as_block'=&gt;true,'format_inside'=&gt;true),'legend'=&gt;array('new_line'=&gt;true,'as_block'=&gt;false,'format_inside'=&gt;true),'dl'=&gt;array('new_line'=&gt;true,'as_block'=&gt;false,'format_inside'=&gt;true),'dt'=&gt;array('new_line'=&gt;true,'as_block'=&gt;false,'format_inside'=&gt;true),'dd'=&gt;array('new_line'=&gt;true,'as_block'=&gt;true,'format_inside'=&gt;true),'ol'=&gt;array('new_line'=&gt;true,'as_block'=&gt;true,'format_inside'=&gt;true),'ul'=&gt;array('new_line'=&gt;true,'as_block'=&gt;true,'format_inside'=&gt;true),'li'=&gt;array('new_line'=&gt;true,'as_block'=&gt;false,'format_inside'=&gt;true),'table'=&gt;array('new_line'=&gt;true,'as_block'=&gt;true,'format_inside'=&gt;true),'tr'=&gt;array('new_line'=&gt;true,'as_block'=&gt;true,'format_inside'=&gt;true),'dir'=&gt;array('new_line'=&gt;true,'as_block'=&gt;true,'format_inside'=&gt;true),'menu'=&gt;array('new_line'=&gt;true,'as_block'=&gt;true,'format_inside'=&gt;true),'address'=&gt;array('new_line'=&gt;true,'as_block'=&gt;true,'format_inside'=&gt;true),'blockquote'=&gt;array('new_line'=&gt;true,'as_block'=&gt;true,'format_inside'=&gt;true),'center'=&gt;array('new_line'=&gt;true,'as_block'=&gt;true,'format_inside'=&gt;true),'del'=&gt;array('new_line'=&gt;true,'as_block'=&gt;false,'format_inside'=&gt;true),//'div'&nbsp;=&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;array('new_line'&nbsp;=&gt;&nbsp;false,&nbsp;'as_block'&nbsp;=&gt;&nbsp;true,&nbsp;&nbsp;'format_inside'&nbsp;=&gt;&nbsp;true),<br>
+'hr'=&gt;array('new_line'=&gt;true,'as_block'=&gt;true,'format_inside'=&gt;true),'ins'=&gt;array('new_line'=&gt;true,'as_block'=&gt;true,'format_inside'=&gt;true),'noscript'=&gt;array('new_line'=&gt;true,'as_block'=&gt;true,'format_inside'=&gt;true),'pre'=&gt;array('new_line'=&gt;true,'as_block'=&gt;true,'format_inside'=&gt;false),'script'=&gt;array('new_line'=&gt;true,'as_block'=&gt;true,'format_inside'=&gt;true),'style'=&gt;array('new_line'=&gt;true,'as_block'=&gt;true,'format_inside'=&gt;true),'html'=&gt;array('new_line'=&gt;true,'as_block'=&gt;true,'format_inside'=&gt;true),'head'=&gt;array('new_line'=&gt;true,'as_block'=&gt;true,'format_inside'=&gt;true),'body'=&gt;array('new_line'=&gt;true,'as_block'=&gt;true,'format_inside'=&gt;true),'title'=&gt;array('new_line'=&gt;true,'as_block'=&gt;false,'format_inside'=&gt;false))</span></h4>
+	<p>[line <a href="../__filesource/fsource_Ganon__gan_formatter.php.html#a41">41</a>]</p>
+  Determines which elements start on a new line and which function as block<br /><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>var:</b>&nbsp;&nbsp;</td><td>=&gt; array('new_line' =&gt; true, 'as_block' =&gt; true, 'format_inside' =&gt; true))</td>
+  </tr>
+</table>
+</div>
+
+  <br />
+	<div class="tags">
+  <table border="0" cellspacing="0" cellpadding="0">
+    <tr>
+      <td><b>Type:</b>&nbsp;&nbsp;</td>
+      <td>array('element'</td>
+    </tr>
+      </table>
+	</div><br /><br />
+	<div class="top">[ <a href="#top">Top</a> ]</div><br />
+	<a name="var$errors"></a>
+	<p></p>
+	<h4>$errors = <span class="value">array()</span></h4>
+	<p>[line <a href="../__filesource/fsource_Ganon__gan_formatter.php.html#a125">125</a>]</p>
+  Errors found during formatting<br /><br />
+  <br />
+	<div class="tags">
+  <table border="0" cellspacing="0" cellpadding="0">
+    <tr>
+      <td><b>Type:</b>&nbsp;&nbsp;</td>
+      <td>array</td>
+    </tr>
+      </table>
+	</div><br /><br />
+	<div class="top">[ <a href="#top">Top</a> ]</div><br />
+	<a name="var$indent_string"></a>
+	<p></p>
+	<h4>$indent_string = <span class="value">&nbsp;'&nbsp;'</span></h4>
+	<p>[line <a href="../__filesource/fsource_Ganon__gan_formatter.php.html#a100">100</a>]</p>
+  String that is used to generate correct indenting<br /><br />
+  <br />
+	<div class="tags">
+  <table border="0" cellspacing="0" cellpadding="0">
+    <tr>
+      <td><b>Type:</b>&nbsp;&nbsp;</td>
+      <td>string</td>
+    </tr>
+      </table>
+	</div><br /><br />
+	<div class="top">[ <a href="#top">Top</a> ]</div><br />
+	<a name="var$linebreak_string"></a>
+	<p></p>
+	<h4>$linebreak_string = <span class="value">&nbsp;&quot;\n&quot;</span></h4>
+	<p>[line <a href="../__filesource/fsource_Ganon__gan_formatter.php.html#a106">106</a>]</p>
+  String that is used to break lines<br /><br />
+  <br />
+	<div class="tags">
+  <table border="0" cellspacing="0" cellpadding="0">
+    <tr>
+      <td><b>Type:</b>&nbsp;&nbsp;</td>
+      <td>string</td>
+    </tr>
+      </table>
+	</div><br /><br />
+	<div class="top">[ <a href="#top">Top</a> ]</div><br />
+	<a name="var$options"></a>
+	<p></p>
+	<h4>$options = <span class="value">array(<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'img_alt'&nbsp;=&gt;&nbsp;'',<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'self_close_str'&nbsp;=&gt;&nbsp;null,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'attribute_shorttag'&nbsp;=&gt;&nbsp;false,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'sort_attributes'&nbsp;=&gt;&nbsp;false,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'attributes_case'&nbsp;=&gt;&nbsp;CASE_LOWER,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'minify_script'&nbsp;=&gt;&nbsp;true<br>
+&nbsp;&nbsp;&nbsp;)</span></h4>
+	<p>[line <a href="../__filesource/fsource_Ganon__gan_formatter.php.html#a112">112</a>]</p>
+  Other formatting options<br /><br />
+  <br />
+	<div class="tags">
+  <table border="0" cellspacing="0" cellpadding="0">
+    <tr>
+      <td><b>Type:</b>&nbsp;&nbsp;</td>
+      <td>array</td>
+    </tr>
+      </table>
+	</div><br /><br />
+	<div class="top">[ <a href="#top">Top</a> ]</div><br />
+	<a name="var$whitespace"></a>
+	<p></p>
+	<h4>$whitespace = <span class="value">array(<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'&nbsp;'&nbsp;=&gt;&nbsp;false,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;\t&quot;&nbsp;=&gt;&nbsp;false,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;\x0B&quot;&nbsp;=&gt;&nbsp;false,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;\0&quot;&nbsp;=&gt;&nbsp;false,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;\n&quot;&nbsp;=&gt;&nbsp;true,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;\r&quot;&nbsp;=&gt;&nbsp;true<br>
+&nbsp;&nbsp;&nbsp;)</span></h4>
+	<p>[line <a href="../__filesource/fsource_Ganon__gan_formatter.php.html#a87">87</a>]</p>
+  Determines which characters are considered whitespace<br /><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>var:</b>&nbsp;&nbsp;</td><td>=&gt; true) True to recognize as new line</td>
+  </tr>
+</table>
+</div>
+
+  <br />
+	<div class="tags">
+  <table border="0" cellspacing="0" cellpadding="0">
+    <tr>
+      <td><b>Type:</b>&nbsp;&nbsp;</td>
+      <td>array("\t"</td>
+    </tr>
+      </table>
+	</div><br /><br />
+	<div class="top">[ <a href="#top">Top</a> ]</div><br />
+</div><br />
+
+<hr />
+<a name="class_methods"></a>
+<h3>Class Methods</h3>
+<div class="tags">
+  <hr />
+	<a name="methodminify_html"></a>
+	<h3>static method minify_html <span class="smalllinenumber">[line <a href="../__filesource/fsource_Ganon__gan_formatter.php.html#a154">154</a>]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>static void minify_html(
+
+&$root, [bool
+$strip_comments = true], [bool
+$recursive = true], <a href="../Ganon/HTML_Node.html">HTML_Node</a>
+$root)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		Minifies HTML / removes unneeded whitespace<br /><br /><br /><br />
+
+	
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type"><a href="../Ganon/HTML_Node.html">HTML_Node</a>&nbsp;&nbsp;</td>
+        <td><b>$root</b>&nbsp;&nbsp;</td>
+        <td></td>
+      </tr>
+          <tr>
+        <td class="type">bool&nbsp;&nbsp;</td>
+        <td><b>$strip_comments</b>&nbsp;&nbsp;</td>
+        <td></td>
+      </tr>
+          <tr>
+        <td class="type">bool&nbsp;&nbsp;</td>
+        <td><b>$recursive</b>&nbsp;&nbsp;</td>
+        <td></td>
+      </tr>
+          <tr>
+        <td class="type">&nbsp;&nbsp;</td>
+        <td><b>&$root</b>&nbsp;&nbsp;</td>
+        <td></td>
+      </tr>
+        </table>
+    </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodminify_javascript"></a>
+	<h3>static method minify_javascript <span class="smalllinenumber">[line <a href="../__filesource/fsource_Ganon__gan_formatter.php.html#a179">179</a>]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>static bool|array minify_javascript(
+
+&$root, [string
+$indent_string = ' '], [bool
+$wrap_comment = true], [bool
+$recursive = true], <a href="../Ganon/HTML_Node.html">HTML_Node</a>
+$root)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		Minifies javascript using JSMin+<br /><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>return:</b>&nbsp;&nbsp;</td><td>Array of errors on failure, true on succes</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type"><a href="../Ganon/HTML_Node.html">HTML_Node</a>&nbsp;&nbsp;</td>
+        <td><b>$root</b>&nbsp;&nbsp;</td>
+        <td></td>
+      </tr>
+          <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$indent_string</b>&nbsp;&nbsp;</td>
+        <td></td>
+      </tr>
+          <tr>
+        <td class="type">bool&nbsp;&nbsp;</td>
+        <td><b>$wrap_comment</b>&nbsp;&nbsp;</td>
+        <td>Wrap javascript in HTML comments (&lt;!-- ~text~ //--&gt;)</td>
+      </tr>
+          <tr>
+        <td class="type">bool&nbsp;&nbsp;</td>
+        <td><b>$recursive</b>&nbsp;&nbsp;</td>
+        <td></td>
+      </tr>
+          <tr>
+        <td class="type">&nbsp;&nbsp;</td>
+        <td><b>&$root</b>&nbsp;&nbsp;</td>
+        <td></td>
+      </tr>
+        </table>
+    </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+
+  <hr />
+	<a name="method__construct"></a>
+	<h3>constructor __construct <span class="smalllinenumber">[line <a href="../__filesource/fsource_Ganon__gan_formatter.php.html#a132">132</a>]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>HTML_Formatter __construct(
+[array
+$options = array()])</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		Class constructor<br /><br /><br /><br />
+
+	
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type">array&nbsp;&nbsp;</td>
+        <td><b>$options</b>&nbsp;&nbsp;</td>
+        <td><a href="../Ganon/HTML_Formatter.html#var$options">$options</a></td>
+      </tr>
+        </table>
+    </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodformat"></a>
+	<h3>method format <span class="smalllinenumber">[line <a href="../__filesource/fsource_Ganon__gan_formatter.php.html#a358">358</a>]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>void format(
+
+&$node, <a href="../Ganon/HTML_Node.html">HTML_Node</a>
+$root)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		Formats HTML/Javascript<br /><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>see:</b>&nbsp;&nbsp;</td><td><a href="../Ganon/HTML_Formatter.html#methodformat_html">HTML_Formatter::format_html()</a></td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type"><a href="../Ganon/HTML_Node.html">HTML_Node</a>&nbsp;&nbsp;</td>
+        <td><b>$root</b>&nbsp;&nbsp;</td>
+        <td></td>
+      </tr>
+          <tr>
+        <td class="type">&nbsp;&nbsp;</td>
+        <td><b>&$node</b>&nbsp;&nbsp;</td>
+        <td></td>
+      </tr>
+        </table>
+    </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodformat_html"></a>
+	<h3>method format_html <span class="smalllinenumber">[line <a href="../__filesource/fsource_Ganon__gan_formatter.php.html#a234">234</a>]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>void format_html(
+
+&$root, [bool
+$recursive = null], <a href="../Ganon/HTML_Node.html">HTML_Node</a>
+$root)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		Formats HTML<br /><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>private</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type"><a href="../Ganon/HTML_Node.html">HTML_Node</a>&nbsp;&nbsp;</td>
+        <td><b>$root</b>&nbsp;&nbsp;</td>
+        <td></td>
+      </tr>
+          <tr>
+        <td class="type">bool&nbsp;&nbsp;</td>
+        <td><b>$recursive</b>&nbsp;&nbsp;</td>
+        <td></td>
+      </tr>
+          <tr>
+        <td class="type">&nbsp;&nbsp;</td>
+        <td><b>&$root</b>&nbsp;&nbsp;</td>
+        <td></td>
+      </tr>
+        </table>
+    </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="method__invoke"></a>
+	<h3>method __invoke <span class="smalllinenumber">[line <a href="../__filesource/fsource_Ganon__gan_formatter.php.html#a144">144</a>]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>void __invoke(
+
+&$node)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		Class magic invoke method, performs format()<br /><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>private</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type">&nbsp;&nbsp;</td>
+        <td><b>&$node</b>&nbsp;&nbsp;</td>
+        <td></td>
+      </tr>
+        </table>
+    </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+</div><br />
+
+
+        <div class="credit">
+		    <hr />
+		    Documentation generated on Thu, 31 Mar 2011 10:25:52 +0200 by <a href="http://www.phpdoc.org">phpDocumentor 1.4.3</a>
+	      </div>
+      </td></tr></table>
+    </td>
+  </tr>
+</table>
+
+</body>
+</html>

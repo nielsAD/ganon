@@ -1,0 +1,1223 @@
+<html>
+<head>
+<title>Docs For Class HTML_NODE_COMMENT</title>
+<link rel="stylesheet" type="text/css" href="../media/style.css">
+</head>
+<body>
+
+<table border="0" cellspacing="0" cellpadding="0" height="48" width="100%">
+  <tr>
+    <td class="header_top">Ganon</td>
+  </tr>
+  <tr><td class="header_line"><img src="../media/empty.png" width="1" height="1" border="0" alt=""  /></td></tr>
+  <tr>
+    <td class="header_menu">
+        
+                                    
+                              		  [ <a href="../classtrees_Ganon.html" class="menu">class tree: Ganon</a> ]
+		  [ <a href="../elementindex_Ganon.html" class="menu">index: Ganon</a> ]
+		  	    [ <a href="../elementindex.html" class="menu">all elements</a> ]
+    </td>
+  </tr>
+  <tr><td class="header_line"><img src="../media/empty.png" width="1" height="1" border="0" alt=""  /></td></tr>
+</table>
+
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="200" class="menu">
+      <b>Packages:</b><br />
+              <a href="../li_Ganon.html">Ganon</a><br />
+            <br /><br />
+                        <b>Files:</b><br />
+      	  <div class="package">
+			<a href="../Ganon/_ganon.php.html">		ganon.php
+		</a><br>
+			<a href="../Ganon/_gan_formatter.php.html">		gan_formatter.php
+		</a><br>
+			<a href="../Ganon/_gan_node_html.php.html">		gan_node_html.php
+		</a><br>
+			<a href="../Ganon/_gan_parser_html.php.html">		gan_parser_html.php
+		</a><br>
+			<a href="../Ganon/_gan_selector_html.php.html">		gan_selector_html.php
+		</a><br>
+			<a href="../Ganon/_gan_tokenizer.php.html">		gan_tokenizer.php
+		</a><br>
+			<a href="../Ganon/_gan_xml2array.php.html">		gan_xml2array.php
+		</a><br>
+	  </div><br />
+      
+      
+            <b>Classes:</b><br />
+        <div class="package">
+		    		<a href="../Ganon/HTML_Formatter.html">HTML_Formatter</a><br />
+	    		<a href="../Ganon/HTML_Node.html">HTML_Node</a><br />
+	    		<a href="../Ganon/HTML_NODE_ASP.html">HTML_NODE_ASP</a><br />
+	    		<a href="../Ganon/HTML_NODE_CDATA.html">HTML_NODE_CDATA</a><br />
+	    		<a href="../Ganon/HTML_NODE_COMMENT.html">HTML_NODE_COMMENT</a><br />
+	    		<a href="../Ganon/HTML_NODE_CONDITIONAL.html">HTML_NODE_CONDITIONAL</a><br />
+	    		<a href="../Ganon/HTML_NODE_DOCTYPE.html">HTML_NODE_DOCTYPE</a><br />
+	    		<a href="../Ganon/HTML_NODE_EMBEDDED.html">HTML_NODE_EMBEDDED</a><br />
+	    		<a href="../Ganon/HTML_NODE_TEXT.html">HTML_NODE_TEXT</a><br />
+	    		<a href="../Ganon/HTML_NODE_XML.html">HTML_NODE_XML</a><br />
+	    		<a href="../Ganon/HTML_Parser.html">HTML_Parser</a><br />
+	    		<a href="../Ganon/HTML_Parser_Base.html">HTML_Parser_Base</a><br />
+	    		<a href="../Ganon/HTML_Parser_HTML5.html">HTML_Parser_HTML5</a><br />
+	    		<a href="../Ganon/HTML_Selector.html">HTML_Selector</a><br />
+	    		<a href="../Ganon/Tokenizer_Base.html">Tokenizer_Base</a><br />
+	    		<a href="../Ganon/Tokenizer_CSSQuery.html">Tokenizer_CSSQuery</a><br />
+	    		<a href="../Ganon/XML_Parser_Array.html">XML_Parser_Array</a><br />
+	  </div>
+                </td>
+    <td>
+      <table cellpadding="10" cellspacing="0" width="100%" border="0"><tr><td valign="top">
+
+<h1>Class: HTML_NODE_COMMENT</h1>
+Source Location: /gan_node_html.php<br /><br />
+
+
+<table width="100%" border="0">
+<tr><td valign="top">
+
+<h3><a href="#class_details">Class Overview</a></h3>
+<pre><a href="../Ganon/HTML_Node.html">HTML_Node</a>
+   |
+   --HTML_NODE_COMMENT</pre><br />
+<div class="description">Node subclass for comments</div><br /><br />
+
+
+
+
+
+
+        
+</td>
+
+<td valign="top">
+<h3><a href="#class_vars">Variables</a></h3>
+<ul>
+    <li><a href="../Ganon/HTML_NODE_COMMENT.html#var$tag">$tag</a></li>
+    <li><a href="../Ganon/HTML_NODE_COMMENT.html#var$text">$text</a></li>
+  </ul>
+</td>
+
+<td valign="top">
+<h3><a href="#class_consts">Constants</a></h3>
+<ul>
+    <li><a href="../Ganon/HTML_NODE_COMMENT.html#constNODE_TYPE">NODE_TYPE</a></li>
+  </ul>
+</td>
+
+<td valign="top">
+<h3><a href="#class_methods">Methods</a></h3>
+<ul>
+    <li><a href="../Ganon/HTML_NODE_COMMENT.html#method__construct">__construct</a></li>
+    <li><a href="../Ganon/HTML_NODE_COMMENT.html#methodfilter_comment">filter_comment</a></li>
+    <li><a href="../Ganon/HTML_NODE_COMMENT.html#methodfilter_element">filter_element</a></li>
+    <li><a href="../Ganon/HTML_NODE_COMMENT.html#methodisComment">isComment</a></li>
+    <li><a href="../Ganon/HTML_NODE_COMMENT.html#methodisTextOrComment">isTextOrComment</a></li>
+    <li><a href="../Ganon/HTML_NODE_COMMENT.html#methodtoString">toString</a></li>
+    <li><a href="../Ganon/HTML_NODE_COMMENT.html#methodtoString_attributes">toString_attributes</a></li>
+    <li><a href="../Ganon/HTML_NODE_COMMENT.html#methodtoString_content">toString_content</a></li>
+  </ul>
+</td>
+
+</tr></table>
+<hr />
+
+<table width="100%" border="0"><tr>
+
+
+
+<td valign="top">
+<h3>Inherited Constants</h3>
+<div class="tags">
+<h4>Class: <a href="../Ganon/HTML_Node.html">HTML_Node</a></h4>
+<dl>
+<dt>
+  <a href="../Ganon/HTML_Node.html#constNODE_ASP">HTML_Node::NODE_ASP</a>
+</dt>
+<dd>
+   
+</dd>
+<dt>
+  <a href="../Ganon/HTML_Node.html#constNODE_CDATA">HTML_Node::NODE_CDATA</a>
+</dt>
+<dd>
+   
+</dd>
+<dt>
+  <a href="../Ganon/HTML_Node.html#constNODE_COMMENT">HTML_Node::NODE_COMMENT</a>
+</dt>
+<dd>
+   
+</dd>
+<dt>
+  <a href="../Ganon/HTML_Node.html#constNODE_CONDITIONAL">HTML_Node::NODE_CONDITIONAL</a>
+</dt>
+<dd>
+   
+</dd>
+<dt>
+  <a href="../Ganon/HTML_Node.html#constNODE_DOCTYPE">HTML_Node::NODE_DOCTYPE</a>
+</dt>
+<dd>
+   
+</dd>
+<dt>
+  <a href="../Ganon/HTML_Node.html#constNODE_ELEMENT">HTML_Node::NODE_ELEMENT</a>
+</dt>
+<dd>
+   
+</dd>
+<dt>
+  <a href="../Ganon/HTML_Node.html#constNODE_TEXT">HTML_Node::NODE_TEXT</a>
+</dt>
+<dd>
+   
+</dd>
+<dt>
+  <a href="../Ganon/HTML_Node.html#constNODE_TYPE">HTML_Node::NODE_TYPE</a>
+</dt>
+<dd>
+   
+</dd>
+<dt>
+  <a href="../Ganon/HTML_Node.html#constNODE_XML">HTML_Node::NODE_XML</a>
+</dt>
+<dd>
+   
+</dd>
+</dl>
+</div>
+</td>
+
+<td valign="top">
+<h3>Inherited Variables</h3>
+<div class="tags">
+<h4>Class: <a href="../Ganon/HTML_Node.html">HTML_Node</a></h4>
+<dl>
+<dt>
+  <a href="../Ganon/HTML_Node.html#var$attributes">HTML_Node::$attributes</a>
+  </dt>
+<dd>
+   
+</dd>
+<dt>
+  <a href="../Ganon/HTML_Node.html#var$attributes_ns">HTML_Node::$attributes_ns</a>
+  </dt>
+<dd>
+   
+</dd>
+<dt>
+  <a href="../Ganon/HTML_Node.html#var$attribute_shorttag">HTML_Node::$attribute_shorttag</a>
+  </dt>
+<dd>
+   
+</dd>
+<dt>
+  <a href="../Ganon/HTML_Node.html#var$childClass">HTML_Node::$childClass</a>
+  </dt>
+<dd>
+   
+</dd>
+<dt>
+  <a href="../Ganon/HTML_Node.html#var$childClass_ASP">HTML_Node::$childClass_ASP</a>
+  </dt>
+<dd>
+   
+</dd>
+<dt>
+  <a href="../Ganon/HTML_Node.html#var$childClass_CDATA">HTML_Node::$childClass_CDATA</a>
+  </dt>
+<dd>
+   
+</dd>
+<dt>
+  <a href="../Ganon/HTML_Node.html#var$childClass_Comment">HTML_Node::$childClass_Comment</a>
+  </dt>
+<dd>
+   
+</dd>
+<dt>
+  <a href="../Ganon/HTML_Node.html#var$childClass_Conditional">HTML_Node::$childClass_Conditional</a>
+  </dt>
+<dd>
+   
+</dd>
+<dt>
+  <a href="../Ganon/HTML_Node.html#var$childClass_Doctype">HTML_Node::$childClass_Doctype</a>
+  </dt>
+<dd>
+   
+</dd>
+<dt>
+  <a href="../Ganon/HTML_Node.html#var$childClass_Text">HTML_Node::$childClass_Text</a>
+  </dt>
+<dd>
+   
+</dd>
+<dt>
+  <a href="../Ganon/HTML_Node.html#var$childClass_XML">HTML_Node::$childClass_XML</a>
+  </dt>
+<dd>
+   
+</dd>
+<dt>
+  <a href="../Ganon/HTML_Node.html#var$children">HTML_Node::$children</a>
+  </dt>
+<dd>
+   
+</dd>
+<dt>
+  <a href="../Ganon/HTML_Node.html#var$filter_map">HTML_Node::$filter_map</a>
+  </dt>
+<dd>
+   
+</dd>
+<dt>
+  <a href="../Ganon/HTML_Node.html#var$parent">HTML_Node::$parent</a>
+  </dt>
+<dd>
+   
+</dd>
+<dt>
+  <a href="../Ganon/HTML_Node.html#var$parserClass">HTML_Node::$parserClass</a>
+  </dt>
+<dd>
+   
+</dd>
+<dt>
+  <a href="../Ganon/HTML_Node.html#var$selectClass">HTML_Node::$selectClass</a>
+  </dt>
+<dd>
+   
+</dd>
+<dt>
+  <a href="../Ganon/HTML_Node.html#var$self_close">HTML_Node::$self_close</a>
+  </dt>
+<dd>
+   
+</dd>
+<dt>
+  <a href="../Ganon/HTML_Node.html#var$self_close_str">HTML_Node::$self_close_str</a>
+  </dt>
+<dd>
+   
+</dd>
+<dt>
+  <a href="../Ganon/HTML_Node.html#var$tag_ns">HTML_Node::$tag_ns</a>
+  </dt>
+<dd>
+   
+</dd>
+</dl>
+</div>
+</td>
+
+<td valign="top">
+<h3>Inherited Methods</h3>
+<div class="tags">
+<h4>Class: <a href="../Ganon/HTML_Node.html">HTML_Node</a></h4>
+<dl>
+    <dt>
+    <a href="../Ganon/HTML_Node.html#method__construct">HTML_Node::__construct()</a>
+  </dt>
+  <dd>
+    Class constructor
+  </dd>
+    <dt>
+    <a href="../Ganon/HTML_Node.html#methodaddASP">HTML_Node::addASP()</a>
+  </dt>
+  <dd>
+    Add ASP node
+  </dd>
+    <dt>
+    <a href="../Ganon/HTML_Node.html#methodaddAttribute">HTML_Node::addAttribute()</a>
+  </dt>
+  <dd>
+    Add new attribute
+  </dd>
+    <dt>
+    <a href="../Ganon/HTML_Node.html#methodaddCDATA">HTML_Node::addCDATA()</a>
+  </dt>
+  <dd>
+    Add CDATA node
+  </dd>
+    <dt>
+    <a href="../Ganon/HTML_Node.html#methodaddChild">HTML_Node::addChild()</a>
+  </dt>
+  <dd>
+    Add childnode
+  </dd>
+    <dt>
+    <a href="../Ganon/HTML_Node.html#methodaddClass">HTML_Node::addClass()</a>
+  </dt>
+  <dd>
+    Add new class(es)
+  </dd>
+    <dt>
+    <a href="../Ganon/HTML_Node.html#methodaddComment">HTML_Node::addComment()</a>
+  </dt>
+  <dd>
+    Add comment node
+  </dd>
+    <dt>
+    <a href="../Ganon/HTML_Node.html#methodaddConditional">HTML_Node::addConditional()</a>
+  </dt>
+  <dd>
+    Add conditional node
+  </dd>
+    <dt>
+    <a href="../Ganon/HTML_Node.html#methodaddDoctype">HTML_Node::addDoctype()</a>
+  </dt>
+  <dd>
+    Add doctype node
+  </dd>
+    <dt>
+    <a href="../Ganon/HTML_Node.html#methodaddText">HTML_Node::addText()</a>
+  </dt>
+  <dd>
+    Add textnode
+  </dd>
+    <dt>
+    <a href="../Ganon/HTML_Node.html#methodaddXML">HTML_Node::addXML()</a>
+  </dt>
+  <dd>
+    Add xml node
+  </dd>
+    <dt>
+    <a href="../Ganon/HTML_Node.html#methodattributeCount">HTML_Node::attributeCount()</a>
+  </dt>
+  <dd>
+    Number of attributes
+  </dd>
+    <dt>
+    <a href="../Ganon/HTML_Node.html#methodchangeParent">HTML_Node::changeParent()</a>
+  </dt>
+  <dd>
+    Change parent
+  </dd>
+    <dt>
+    <a href="../Ganon/HTML_Node.html#methodchildCount">HTML_Node::childCount()</a>
+  </dt>
+  <dd>
+    Number of children in node
+  </dd>
+    <dt>
+    <a href="../Ganon/HTML_Node.html#methodclear">HTML_Node::clear()</a>
+  </dt>
+  <dd>
+    Deletes all child nodes from node
+  </dd>
+    <dt>
+    <a href="../Ganon/HTML_Node.html#methoddelete">HTML_Node::delete()</a>
+  </dt>
+  <dd>
+    Delete node from parent and clear node
+  </dd>
+    <dt>
+    <a href="../Ganon/HTML_Node.html#methoddeleteAttribute">HTML_Node::deleteAttribute()</a>
+  </dt>
+  <dd>
+    Delete attribute(s)
+  </dd>
+    <dt>
+    <a href="../Ganon/HTML_Node.html#methoddeleteChild">HTML_Node::deleteChild()</a>
+  </dt>
+  <dd>
+    Delete a childnode
+  </dd>
+    <dt>
+    <a href="../Ganon/HTML_Node.html#methoddetach">HTML_Node::detach()</a>
+  </dt>
+  <dd>
+    Detach node from parent
+  </dd>
+    <dt>
+    <a href="../Ganon/HTML_Node.html#methoddumpLocation">HTML_Node::dumpLocation()</a>
+  </dt>
+  <dd>
+    Returns place in document
+  </dd>
+    <dt>
+    <a href="../Ganon/HTML_Node.html#methodfilter_comment">HTML_Node::filter_comment()</a>
+  </dt>
+  <dd>
+    Checks if node matches css query filter &quot;:comment&quot;
+  </dd>
+    <dt>
+    <a href="../Ganon/HTML_Node.html#methodfilter_contains">HTML_Node::filter_contains()</a>
+  </dt>
+  <dd>
+    Checks if node matches css query filter &quot;:contains(s)&quot;
+  </dd>
+    <dt>
+    <a href="../Ganon/HTML_Node.html#methodfilter_element">HTML_Node::filter_element()</a>
+  </dt>
+  <dd>
+    Checks if node matches css query filter &quot;:element&quot;
+  </dd>
+    <dt>
+    <a href="../Ganon/HTML_Node.html#methodfilter_empty">HTML_Node::filter_empty()</a>
+  </dt>
+  <dd>
+    Checks if node matches css query filter &quot;:empty&quot;
+  </dd>
+    <dt>
+    <a href="../Ganon/HTML_Node.html#methodfilter_even">HTML_Node::filter_even()</a>
+  </dt>
+  <dd>
+    Checks if node matches css query filter &quot;:even&quot;
+  </dd>
+    <dt>
+    <a href="../Ganon/HTML_Node.html#methodfilter_every">HTML_Node::filter_every()</a>
+  </dt>
+  <dd>
+    Checks if node matches css query filter &quot;:every(n)&quot;
+  </dd>
+    <dt>
+    <a href="../Ganon/HTML_Node.html#methodfilter_first">HTML_Node::filter_first()</a>
+  </dt>
+  <dd>
+    Checks if node matches css query filter &quot;:first&quot;
+  </dd>
+    <dt>
+    <a href="../Ganon/HTML_Node.html#methodfilter_firsttype">HTML_Node::filter_firsttype()</a>
+  </dt>
+  <dd>
+    Checks if node matches css query filter &quot;:first-of-type&quot;
+  </dd>
+    <dt>
+    <a href="../Ganon/HTML_Node.html#methodfilter_gt">HTML_Node::filter_gt()</a>
+  </dt>
+  <dd>
+    Checks if node matches css query filter &quot;:gt(n)&quot;
+  </dd>
+    <dt>
+    <a href="../Ganon/HTML_Node.html#methodfilter_has">HTML_Node::filter_has()</a>
+  </dt>
+  <dd>
+    Checks if node matches css query filter &quot;:has(s)&quot;
+  </dd>
+    <dt>
+    <a href="../Ganon/HTML_Node.html#methodfilter_hastext">HTML_Node::filter_hastext()</a>
+  </dt>
+  <dd>
+    Checks if node matches css query filter &quot;:has-text&quot;
+  </dd>
+    <dt>
+    <a href="../Ganon/HTML_Node.html#methodfilter_lang">HTML_Node::filter_lang()</a>
+  </dt>
+  <dd>
+    Checks if node matches css query filter &quot;:lang(s)&quot;
+  </dd>
+    <dt>
+    <a href="../Ganon/HTML_Node.html#methodfilter_last">HTML_Node::filter_last()</a>
+  </dt>
+  <dd>
+    Checks if node matches css query filter &quot;:last&quot;
+  </dd>
+    <dt>
+    <a href="../Ganon/HTML_Node.html#methodfilter_lasttype">HTML_Node::filter_lasttype()</a>
+  </dt>
+  <dd>
+    Checks if node matches css query filter &quot;:last-of-type&quot;
+  </dd>
+    <dt>
+    <a href="../Ganon/HTML_Node.html#methodfilter_lt">HTML_Node::filter_lt()</a>
+  </dt>
+  <dd>
+    Checks if node matches css query filter &quot;:lt(n)&quot;
+  </dd>
+    <dt>
+    <a href="../Ganon/HTML_Node.html#methodfilter_nchild">HTML_Node::filter_nchild()</a>
+  </dt>
+  <dd>
+    Checks if node matches css query filter &quot;:nth-child(n)&quot;
+  </dd>
+    <dt>
+    <a href="../Ganon/HTML_Node.html#methodfilter_nlastchild">HTML_Node::filter_nlastchild()</a>
+  </dt>
+  <dd>
+    Checks if node matches css query filter &quot;:nth-last-child(n)&quot;
+  </dd>
+    <dt>
+    <a href="../Ganon/HTML_Node.html#methodfilter_nlastype">HTML_Node::filter_nlastype()</a>
+  </dt>
+  <dd>
+    Checks if node matches css query filter &quot;:nth-;ast-of-type(n)&quot;
+  </dd>
+    <dt>
+    <a href="../Ganon/HTML_Node.html#methodfilter_not">HTML_Node::filter_not()</a>
+  </dt>
+  <dd>
+    Checks if node matches css query filter &quot;:not(s)&quot;
+  </dd>
+    <dt>
+    <a href="../Ganon/HTML_Node.html#methodfilter_notempty">HTML_Node::filter_notempty()</a>
+  </dt>
+  <dd>
+    Checks if node matches css query filter &quot;:not-empty&quot;
+  </dd>
+    <dt>
+    <a href="../Ganon/HTML_Node.html#methodfilter_notext">HTML_Node::filter_notext()</a>
+  </dt>
+  <dd>
+    Checks if node matches css query filter &quot;:no-text&quot;
+  </dd>
+    <dt>
+    <a href="../Ganon/HTML_Node.html#methodfilter_ntype">HTML_Node::filter_ntype()</a>
+  </dt>
+  <dd>
+    Checks if node matches css query filter &quot;:nth-of-type(n)&quot;
+  </dd>
+    <dt>
+    <a href="../Ganon/HTML_Node.html#methodfilter_odd">HTML_Node::filter_odd()</a>
+  </dt>
+  <dd>
+    Checks if node matches css query filter &quot;:odd&quot;
+  </dd>
+    <dt>
+    <a href="../Ganon/HTML_Node.html#methodfilter_onlychild">HTML_Node::filter_onlychild()</a>
+  </dt>
+  <dd>
+    Checks if node matches css query filter &quot;:only-child&quot;
+  </dd>
+    <dt>
+    <a href="../Ganon/HTML_Node.html#methodfilter_onlytype">HTML_Node::filter_onlytype()</a>
+  </dt>
+  <dd>
+    Checks if node matches css query filter &quot;:only-of-type&quot;
+  </dd>
+    <dt>
+    <a href="../Ganon/HTML_Node.html#methodfilter_root">HTML_Node::filter_root()</a>
+  </dt>
+  <dd>
+    Checks if node matches css query filter &quot;:root&quot;
+  </dd>
+    <dt>
+    <a href="../Ganon/HTML_Node.html#methodfilter_text">HTML_Node::filter_text()</a>
+  </dt>
+  <dd>
+    Checks if node matches css query filter &quot;:text&quot;
+  </dd>
+    <dt>
+    <a href="../Ganon/HTML_Node.html#methodfindAttribute">HTML_Node::findAttribute()</a>
+  </dt>
+  <dd>
+    Find attribute using namespace, name or both
+  </dd>
+    <dt>
+    <a href="../Ganon/HTML_Node.html#methodfindChild">HTML_Node::findChild()</a>
+  </dt>
+  <dd>
+    Find node in children
+  </dd>
+    <dt>
+    <a href="../Ganon/HTML_Node.html#methodfirstChild">HTML_Node::firstChild()</a>
+  </dt>
+  <dd>
+    First child node
+  </dd>
+    <dt>
+    <a href="../Ganon/HTML_Node.html#methodgetAttribute">HTML_Node::getAttribute()</a>
+  </dt>
+  <dd>
+    Gets value(s) of attribute(s)
+  </dd>
+    <dt>
+    <a href="../Ganon/HTML_Node.html#methodgetAttributeNS">HTML_Node::getAttributeNS()</a>
+  </dt>
+  <dd>
+    Gets namespace of attribute(s)
+  </dd>
+    <dt>
+    <a href="../Ganon/HTML_Node.html#methodgetChild">HTML_Node::getChild()</a>
+  </dt>
+  <dd>
+    Get childnode
+  </dd>
+    <dt>
+    <a href="../Ganon/HTML_Node.html#methodgetChildrenByAttribute">HTML_Node::getChildrenByAttribute()</a>
+  </dt>
+  <dd>
+    Finds children that match a certain attribute
+  </dd>
+    <dt>
+    <a href="../Ganon/HTML_Node.html#methodgetChildrenByCallback">HTML_Node::getChildrenByCallback()</a>
+  </dt>
+  <dd>
+    Finds children using a callback function
+  </dd>
+    <dt>
+    <a href="../Ganon/HTML_Node.html#methodgetChildrenByClass">HTML_Node::getChildrenByClass()</a>
+  </dt>
+  <dd>
+    Finds all children using class attribute
+  </dd>
+    <dt>
+    <a href="../Ganon/HTML_Node.html#methodgetChildrenByID">HTML_Node::getChildrenByID()</a>
+  </dt>
+  <dd>
+    Finds all children using ID attribute
+  </dd>
+    <dt>
+    <a href="../Ganon/HTML_Node.html#methodgetChildrenByName">HTML_Node::getChildrenByName()</a>
+  </dt>
+  <dd>
+    Finds all children using name attribute
+  </dd>
+    <dt>
+    <a href="../Ganon/HTML_Node.html#methodgetChildrenByTag">HTML_Node::getChildrenByTag()</a>
+  </dt>
+  <dd>
+    Finds children that match a certain tag
+  </dd>
+    <dt>
+    <a href="../Ganon/HTML_Node.html#methodgetInnerText">HTML_Node::getInnerText()</a>
+  </dt>
+  <dd>
+    Similar to JavaScript innerText, will return (html formatted) content
+  </dd>
+    <dt>
+    <a href="../Ganon/HTML_Node.html#methodgetNamespace">HTML_Node::getNamespace()</a>
+  </dt>
+  <dd>
+    Get namespace of node
+  </dd>
+    <dt>
+    <a href="../Ganon/HTML_Node.html#methodgetNextSibling">HTML_Node::getNextSibling()</a>
+  </dt>
+  <dd>
+    Get node next to current
+  </dd>
+    <dt>
+    <a href="../Ganon/HTML_Node.html#methodgetOuterText">HTML_Node::getOuterText()</a>
+  </dt>
+  <dd>
+    Similar to JavaScript outerText, will return full (html formatted) node
+  </dd>
+    <dt>
+    <a href="../Ganon/HTML_Node.html#methodgetPlainText">HTML_Node::getPlainText()</a>
+  </dt>
+  <dd>
+    Similar to JavaScript plainText, will return text in node (and subnodes)
+  </dd>
+    <dt>
+    <a href="../Ganon/HTML_Node.html#methodgetPreviousSibling">HTML_Node::getPreviousSibling()</a>
+  </dt>
+  <dd>
+    Get node previous to current
+  </dd>
+    <dt>
+    <a href="../Ganon/HTML_Node.html#methodgetSibling">HTML_Node::getSibling()</a>
+  </dt>
+  <dd>
+    Get sibling node
+  </dd>
+    <dt>
+    <a href="../Ganon/HTML_Node.html#methodgetTag">HTML_Node::getTag()</a>
+  </dt>
+  <dd>
+    Get tagname of node (without namespace)
+  </dd>
+    <dt>
+    <a href="../Ganon/HTML_Node.html#methodhasAttribute">HTML_Node::hasAttribute()</a>
+  </dt>
+  <dd>
+    Checks if node has attribute
+  </dd>
+    <dt>
+    <a href="../Ganon/HTML_Node.html#methodhasChild">HTML_Node::hasChild()</a>
+  </dt>
+  <dd>
+    Checks if node has another node as child
+  </dd>
+    <dt>
+    <a href="../Ganon/HTML_Node.html#methodhasClass">HTML_Node::hasClass()</a>
+  </dt>
+  <dd>
+    Determine if node has a certain class
+  </dd>
+    <dt>
+    <a href="../Ganon/HTML_Node.html#methodhasParent">HTML_Node::hasParent()</a>
+  </dt>
+  <dd>
+    Find out if node has (a certain) parent
+  </dd>
+    <dt>
+    <a href="../Ganon/HTML_Node.html#methodhtml">HTML_Node::html()</a>
+  </dt>
+  <dd>
+    Return html code of node
+  </dd>
+    <dt>
+    <a href="../Ganon/HTML_Node.html#methodindent">HTML_Node::indent()</a>
+  </dt>
+  <dd>
+    Calculate indent of node (number of parent tags - 1)
+  </dd>
+    <dt>
+    <a href="../Ganon/HTML_Node.html#methodindex">HTML_Node::index()</a>
+  </dt>
+  <dd>
+    Index of node in parent
+  </dd>
+    <dt>
+    <a href="../Ganon/HTML_Node.html#methodinsertChild">HTML_Node::insertChild()</a>
+  </dt>
+  <dd>
+    Insert childnode
+  </dd>
+    <dt>
+    <a href="../Ganon/HTML_Node.html#methodisComment">HTML_Node::isComment()</a>
+  </dt>
+  <dd>
+    Find out if node is comment
+  </dd>
+    <dt>
+    <a href="../Ganon/HTML_Node.html#methodisParent">HTML_Node::isParent()</a>
+  </dt>
+  <dd>
+    Find out if node has a certain parent
+  </dd>
+    <dt>
+    <a href="../Ganon/HTML_Node.html#methodisText">HTML_Node::isText()</a>
+  </dt>
+  <dd>
+    Find out if node is text
+  </dd>
+    <dt>
+    <a href="../Ganon/HTML_Node.html#methodisTextOrComment">HTML_Node::isTextOrComment()</a>
+  </dt>
+  <dd>
+    Find out if node is text or comment node
+  </dd>
+    <dt>
+    <a href="../Ganon/HTML_Node.html#methodlastChild">HTML_Node::lastChild()</a>
+  </dt>
+  <dd>
+    Last child node
+  </dd>
+    <dt>
+    <a href="../Ganon/HTML_Node.html#methodmatch">HTML_Node::match()</a>
+  </dt>
+  <dd>
+    Checks if node matches certain conditions
+  </dd>
+    <dt>
+    <a href="../Ganon/HTML_Node.html#methodmatch_attributes">HTML_Node::match_attributes()</a>
+  </dt>
+  <dd>
+    Checks if attributes match certain conditions
+  </dd>
+    <dt>
+    <a href="../Ganon/HTML_Node.html#methodmatch_filters">HTML_Node::match_filters()</a>
+  </dt>
+  <dd>
+    Checks if node matches certain filters
+  </dd>
+    <dt>
+    <a href="../Ganon/HTML_Node.html#methodmatch_tags">HTML_Node::match_tags()</a>
+  </dt>
+  <dd>
+    Checks if tag matches certain conditions
+  </dd>
+    <dt>
+    <a href="../Ganon/HTML_Node.html#methodmove">HTML_Node::move()</a>
+  </dt>
+  <dd>
+    Move node to other node
+  </dd>
+    <dt>
+    <a href="../Ganon/HTML_Node.html#methodmoveChildren">HTML_Node::moveChildren()</a>
+  </dt>
+  <dd>
+    Move childnodes to other node
+  </dd>
+    <dt>
+    <a href="../Ganon/HTML_Node.html#methodremoveClass">HTML_Node::removeClass()</a>
+  </dt>
+  <dd>
+    Remove clas(ses)
+  </dd>
+    <dt>
+    <a href="../Ganon/HTML_Node.html#methodselect">HTML_Node::select()</a>
+  </dt>
+  <dd>
+    Performs css query on node
+  </dd>
+    <dt>
+    <a href="../Ganon/HTML_Node.html#methodsetAttribute">HTML_Node::setAttribute()</a>
+  </dt>
+  <dd>
+    Sets value(s) of attribute(s)
+  </dd>
+    <dt>
+    <a href="../Ganon/HTML_Node.html#methodsetAttributeNS">HTML_Node::setAttributeNS()</a>
+  </dt>
+  <dd>
+    Sets namespace of attribute(s)
+  </dd>
+    <dt>
+    <a href="../Ganon/HTML_Node.html#methodsetIndex">HTML_Node::setIndex()</a>
+  </dt>
+  <dd>
+    Change index of node in parent
+  </dd>
+    <dt>
+    <a href="../Ganon/HTML_Node.html#methodsetInnerText">HTML_Node::setInnerText()</a>
+  </dt>
+  <dd>
+    Similar to JavaScript innerText, will replace childnodes with new text
+  </dd>
+    <dt>
+    <a href="../Ganon/HTML_Node.html#methodsetNamespace">HTML_Node::setNamespace()</a>
+  </dt>
+  <dd>
+    Set namespace of node
+  </dd>
+    <dt>
+    <a href="../Ganon/HTML_Node.html#methodsetOuterText">HTML_Node::setOuterText()</a>
+  </dt>
+  <dd>
+    Similar to JavaScript outerText, will replace node (and childnodes) with new text
+  </dd>
+    <dt>
+    <a href="../Ganon/HTML_Node.html#methodsetPlainText">HTML_Node::setPlainText()</a>
+  </dt>
+  <dd>
+    Similar to JavaScript plainText, will replace childnodes with new text (literal)
+  </dd>
+    <dt>
+    <a href="../Ganon/HTML_Node.html#methodsetTag">HTML_Node::setTag()</a>
+  </dt>
+  <dd>
+    Set tag (with or without namespace)
+  </dd>
+    <dt>
+    <a href="../Ganon/HTML_Node.html#methodtoString">HTML_Node::toString()</a>
+  </dt>
+  <dd>
+    Returns the node as string
+  </dd>
+    <dt>
+    <a href="../Ganon/HTML_Node.html#methodtoString_attributes">HTML_Node::toString_attributes()</a>
+  </dt>
+  <dd>
+    Returns all the attributes and their values
+  </dd>
+    <dt>
+    <a href="../Ganon/HTML_Node.html#methodtoString_content">HTML_Node::toString_content()</a>
+  </dt>
+  <dd>
+    Returns the content of the node (child tags and text)
+  </dd>
+    <dt>
+    <a href="../Ganon/HTML_Node.html#methodtypeIndex">HTML_Node::typeIndex()</a>
+  </dt>
+  <dd>
+    Index of all similar nodes in parent
+  </dd>
+    <dt>
+    <a href="../Ganon/HTML_Node.html#methodwrap">HTML_Node::wrap()</a>
+  </dt>
+  <dd>
+    Wrap node
+  </dd>
+    <dt>
+    <a href="../Ganon/HTML_Node.html#methodwrapInner">HTML_Node::wrapInner()</a>
+  </dt>
+  <dd>
+    Wrap childnodes
+  </dd>
+    <dt>
+    <a href="../Ganon/HTML_Node.html#method__destruct">HTML_Node::__destruct()</a>
+  </dt>
+  <dd>
+    Class destructor
+  </dd>
+    <dt>
+    <a href="../Ganon/HTML_Node.html#method__get">HTML_Node::__get()</a>
+  </dt>
+  <dd>
+    Class magic get method, outputs getAttribute()
+  </dd>
+    <dt>
+    <a href="../Ganon/HTML_Node.html#method__invoke">HTML_Node::__invoke()</a>
+  </dt>
+  <dd>
+    Class magic invoke method, performs select()
+  </dd>
+    <dt>
+    <a href="../Ganon/HTML_Node.html#method__isset">HTML_Node::__isset()</a>
+  </dt>
+  <dd>
+    Class magic isset method, returns hasAttribute()
+  </dd>
+    <dt>
+    <a href="../Ganon/HTML_Node.html#method__set">HTML_Node::__set()</a>
+  </dt>
+  <dd>
+    Class magic set method, performs setAttribute()
+  </dd>
+    <dt>
+    <a href="../Ganon/HTML_Node.html#method__toString">HTML_Node::__toString()</a>
+  </dt>
+  <dd>
+    Class toString, outputs (@link $tag)
+  </dd>
+    <dt>
+    <a href="../Ganon/HTML_Node.html#method__unset">HTML_Node::__unset()</a>
+  </dt>
+  <dd>
+    Class magic unset method, performs deleteAttribute()
+  </dd>
+  </dl>
+</div>
+</td>
+
+</tr></table>
+<hr />
+
+<a name="class_details"></a>
+<h3>Class Details</h3>
+<div class="tags">
+[line <a href="../__filesource/fsource_Ganon__gan_node_html.php.html#a2214">2214</a>]<br />
+Node subclass for comments<br /><br /></div><br /><br />
+<div class="top">[ <a href="#top">Top</a> ]</div><br />
+
+<hr />
+<a name="class_vars"></a>
+<h3>Class Variables</h3>
+<div class="tags">
+	<a name="var$tag"></a>
+	<p></p>
+	<h4>$tag = <span class="value">&nbsp;'~comment~'</span></h4>
+	<p>[line <a href="../__filesource/fsource_Ganon__gan_node_html.php.html#a2221">2221</a>]</p>
+  
+  <br />
+	<div class="tags">
+  <table border="0" cellspacing="0" cellpadding="0">
+    <tr>
+      <td><b>Type:</b>&nbsp;&nbsp;</td>
+      <td>mixed</td>
+    </tr>
+        <tr>
+      <td><b>Overrides:</b>&nbsp;&nbsp;</td>
+      <td>Array</td>
+    </tr>
+      </table>
+	</div><br /><br />
+	<div class="top">[ <a href="#top">Top</a> ]</div><br />
+	<a name="var$text"></a>
+	<p></p>
+	<h4>$text = <span class="value">&nbsp;''</span></h4>
+	<p>[line <a href="../__filesource/fsource_Ganon__gan_node_html.php.html#a2226">2226</a>]</p>
+  
+  <br />
+	<div class="tags">
+  <table border="0" cellspacing="0" cellpadding="0">
+    <tr>
+      <td><b>Type:</b>&nbsp;&nbsp;</td>
+      <td>string</td>
+    </tr>
+      </table>
+	</div><br /><br />
+	<div class="top">[ <a href="#top">Top</a> ]</div><br />
+</div><br />
+
+<hr />
+<a name="class_methods"></a>
+<h3>Class Methods</h3>
+<div class="tags">
+
+  <hr />
+	<a name="method__construct"></a>
+	<h3>constructor __construct <span class="smalllinenumber">[line <a href="../__filesource/fsource_Ganon__gan_node_html.php.html#a2233">2233</a>]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>HTML_NODE_COMMENT __construct(
+<a href="../Ganon/HTML_Node.html">HTML_Node</a>
+$parent, [string
+$text = ''])</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		Class constructor<br /><br /><br /><br />
+
+	Overrides <a href="../Ganon/HTML_Node.html#method__construct">HTML_Node::__construct()</a> (Class constructor)<br /><br />
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type"><a href="../Ganon/HTML_Node.html">HTML_Node</a>&nbsp;&nbsp;</td>
+        <td><b>$parent</b>&nbsp;&nbsp;</td>
+        <td></td>
+      </tr>
+          <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$text</b>&nbsp;&nbsp;</td>
+        <td></td>
+      </tr>
+        </table>
+    </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodfilter_comment"></a>
+	<h3>method filter_comment <span class="smalllinenumber">[line <a href="../__filesource/fsource_Ganon__gan_node_html.php.html#a2245">2245</a>]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>void filter_comment(
+)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		<br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>protected</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	Overrides <a href="../Ganon/HTML_Node.html#methodfilter_comment">HTML_Node::filter_comment()</a> (Checks if node matches css query filter &quot;:comment&quot;)<br /><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodfilter_element"></a>
+	<h3>method filter_element <span class="smalllinenumber">[line <a href="../__filesource/fsource_Ganon__gan_node_html.php.html#a2244">2244</a>]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>void filter_element(
+)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		<br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>protected</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	Overrides <a href="../Ganon/HTML_Node.html#methodfilter_element">HTML_Node::filter_element()</a> (Checks if node matches css query filter &quot;:element&quot;)<br /><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodisComment"></a>
+	<h3>method isComment <span class="smalllinenumber">[line <a href="../__filesource/fsource_Ganon__gan_node_html.php.html#a2242">2242</a>]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>void isComment(
+)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		<br /><br />
+
+	Overrides <a href="../Ganon/HTML_Node.html#methodisComment">HTML_Node::isComment()</a> (Find out if node is comment)<br /><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodisTextOrComment"></a>
+	<h3>method isTextOrComment <span class="smalllinenumber">[line <a href="../__filesource/fsource_Ganon__gan_node_html.php.html#a2243">2243</a>]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>void isTextOrComment(
+)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		<br /><br />
+
+	Overrides <a href="../Ganon/HTML_Node.html#methodisTextOrComment">HTML_Node::isTextOrComment()</a> (Find out if node is text or comment node)<br /><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodtoString"></a>
+	<h3>method toString <span class="smalllinenumber">[line <a href="../__filesource/fsource_Ganon__gan_node_html.php.html#a2248">2248</a>]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>void toString(
+)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		<br /><br />
+
+	Overrides <a href="../Ganon/HTML_Node.html#methodtoString">HTML_Node::toString()</a> (Returns the node as string)<br /><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodtoString_attributes"></a>
+	<h3>method toString_attributes <span class="smalllinenumber">[line <a href="../__filesource/fsource_Ganon__gan_node_html.php.html#a2246">2246</a>]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>void toString_attributes(
+)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		<br /><br />
+
+	Overrides <a href="../Ganon/HTML_Node.html#methodtoString_attributes">HTML_Node::toString_attributes()</a> (Returns all the attributes and their values)<br /><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodtoString_content"></a>
+	<h3>method toString_content <span class="smalllinenumber">[line <a href="../__filesource/fsource_Ganon__gan_node_html.php.html#a2247">2247</a>]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>void toString_content(
+)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		<br /><br />
+
+	Overrides <a href="../Ganon/HTML_Node.html#methodtoString_content">HTML_Node::toString_content()</a> (Returns the content of the node (child tags and text))<br /><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+</div><br />
+
+<hr />
+<a name="class_consts"></a>
+<h3>Class Constants</h3>
+<div class="tags">
+	<a name="constNODE_TYPE"></a>
+	<p></p>
+	<h4>NODE_TYPE = <span class="value">&nbsp;self::NODE_COMMENT</span></h4>
+	<p>[line <a href="../__filesource/fsource_Ganon__gan_node_html.php.html#a2219">2219</a>]</p>
+  
+  <br />
+	<div class="top">[ <a href="#top">Top</a> ]</div><br />
+</div><br />
+
+        <div class="credit">
+		    <hr />
+		    Documentation generated on Thu, 31 Mar 2011 10:25:56 +0200 by <a href="http://www.phpdoc.org">phpDocumentor 1.4.3</a>
+	      </div>
+      </td></tr></table>
+    </td>
+  </tr>
+</table>
+
+</body>
+</html>

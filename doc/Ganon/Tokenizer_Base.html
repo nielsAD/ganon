@@ -1,0 +1,1416 @@
+<html>
+<head>
+<title>Docs For Class Tokenizer_Base</title>
+<link rel="stylesheet" type="text/css" href="../media/style.css">
+</head>
+<body>
+
+<table border="0" cellspacing="0" cellpadding="0" height="48" width="100%">
+  <tr>
+    <td class="header_top">Ganon</td>
+  </tr>
+  <tr><td class="header_line"><img src="../media/empty.png" width="1" height="1" border="0" alt=""  /></td></tr>
+  <tr>
+    <td class="header_menu">
+        
+                                    
+                              		  [ <a href="../classtrees_Ganon.html" class="menu">class tree: Ganon</a> ]
+		  [ <a href="../elementindex_Ganon.html" class="menu">index: Ganon</a> ]
+		  	    [ <a href="../elementindex.html" class="menu">all elements</a> ]
+    </td>
+  </tr>
+  <tr><td class="header_line"><img src="../media/empty.png" width="1" height="1" border="0" alt=""  /></td></tr>
+</table>
+
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="200" class="menu">
+      <b>Packages:</b><br />
+              <a href="../li_Ganon.html">Ganon</a><br />
+            <br /><br />
+                        <b>Files:</b><br />
+      	  <div class="package">
+			<a href="../Ganon/_ganon.php.html">		ganon.php
+		</a><br>
+			<a href="../Ganon/_gan_formatter.php.html">		gan_formatter.php
+		</a><br>
+			<a href="../Ganon/_gan_node_html.php.html">		gan_node_html.php
+		</a><br>
+			<a href="../Ganon/_gan_parser_html.php.html">		gan_parser_html.php
+		</a><br>
+			<a href="../Ganon/_gan_selector_html.php.html">		gan_selector_html.php
+		</a><br>
+			<a href="../Ganon/_gan_tokenizer.php.html">		gan_tokenizer.php
+		</a><br>
+			<a href="../Ganon/_gan_xml2array.php.html">		gan_xml2array.php
+		</a><br>
+	  </div><br />
+      
+      
+            <b>Classes:</b><br />
+        <div class="package">
+		    		<a href="../Ganon/HTML_Formatter.html">HTML_Formatter</a><br />
+	    		<a href="../Ganon/HTML_Node.html">HTML_Node</a><br />
+	    		<a href="../Ganon/HTML_NODE_ASP.html">HTML_NODE_ASP</a><br />
+	    		<a href="../Ganon/HTML_NODE_CDATA.html">HTML_NODE_CDATA</a><br />
+	    		<a href="../Ganon/HTML_NODE_COMMENT.html">HTML_NODE_COMMENT</a><br />
+	    		<a href="../Ganon/HTML_NODE_CONDITIONAL.html">HTML_NODE_CONDITIONAL</a><br />
+	    		<a href="../Ganon/HTML_NODE_DOCTYPE.html">HTML_NODE_DOCTYPE</a><br />
+	    		<a href="../Ganon/HTML_NODE_EMBEDDED.html">HTML_NODE_EMBEDDED</a><br />
+	    		<a href="../Ganon/HTML_NODE_TEXT.html">HTML_NODE_TEXT</a><br />
+	    		<a href="../Ganon/HTML_NODE_XML.html">HTML_NODE_XML</a><br />
+	    		<a href="../Ganon/HTML_Parser.html">HTML_Parser</a><br />
+	    		<a href="../Ganon/HTML_Parser_Base.html">HTML_Parser_Base</a><br />
+	    		<a href="../Ganon/HTML_Parser_HTML5.html">HTML_Parser_HTML5</a><br />
+	    		<a href="../Ganon/HTML_Selector.html">HTML_Selector</a><br />
+	    		<a href="../Ganon/Tokenizer_Base.html">Tokenizer_Base</a><br />
+	    		<a href="../Ganon/Tokenizer_CSSQuery.html">Tokenizer_CSSQuery</a><br />
+	    		<a href="../Ganon/XML_Parser_Array.html">XML_Parser_Array</a><br />
+	  </div>
+                </td>
+    <td>
+      <table cellpadding="10" cellspacing="0" width="100%" border="0"><tr><td valign="top">
+
+<h1>Class: Tokenizer_Base</h1>
+Source Location: /gan_tokenizer.php<br /><br />
+
+
+<table width="100%" border="0">
+<tr><td valign="top">
+
+<h3><a href="#class_details">Class Overview</a></h3>
+<pre></pre><br />
+<div class="description">Converts a document into tokens</div><br /><br />
+<h4>Author(s):</h4>
+<ul>
+        </ul>
+
+
+
+
+    
+
+        
+</td>
+
+<td valign="top">
+<h3><a href="#class_vars">Variables</a></h3>
+<ul>
+    <li><a href="../Ganon/Tokenizer_Base.html#var$char_map">$char_map</a></li>
+    <li><a href="../Ganon/Tokenizer_Base.html#var$custom_char_map">$custom_char_map</a></li>
+    <li><a href="../Ganon/Tokenizer_Base.html#var$doc">$doc</a></li>
+    <li><a href="../Ganon/Tokenizer_Base.html#var$errors">$errors</a></li>
+    <li><a href="../Ganon/Tokenizer_Base.html#var$identifiers">$identifiers</a></li>
+    <li><a href="../Ganon/Tokenizer_Base.html#var$line_pos">$line_pos</a></li>
+    <li><a href="../Ganon/Tokenizer_Base.html#var$pos">$pos</a></li>
+    <li><a href="../Ganon/Tokenizer_Base.html#var$size">$size</a></li>
+    <li><a href="../Ganon/Tokenizer_Base.html#var$token">$token</a></li>
+    <li><a href="../Ganon/Tokenizer_Base.html#var$token_start">$token_start</a></li>
+    <li><a href="../Ganon/Tokenizer_Base.html#var$whitespace">$whitespace</a></li>
+  </ul>
+</td>
+
+<td valign="top">
+<h3><a href="#class_consts">Constants</a></h3>
+<ul>
+    <li><a href="../Ganon/Tokenizer_Base.html#constTOK_IDENTIFIER">TOK_IDENTIFIER</a></li>
+    <li><a href="../Ganon/Tokenizer_Base.html#constTOK_NULL">TOK_NULL</a></li>
+    <li><a href="../Ganon/Tokenizer_Base.html#constTOK_UNKNOWN">TOK_UNKNOWN</a></li>
+    <li><a href="../Ganon/Tokenizer_Base.html#constTOK_WHITESPACE">TOK_WHITESPACE</a></li>
+  </ul>
+</td>
+
+<td valign="top">
+<h3><a href="#class_methods">Methods</a></h3>
+<ul>
+    <li><a href="../Ganon/Tokenizer_Base.html#method__construct">__construct</a></li>
+    <li><a href="../Ganon/Tokenizer_Base.html#methodaddError">addError</a></li>
+    <li><a href="../Ganon/Tokenizer_Base.html#methodbuildCharMap">buildCharMap</a></li>
+    <li><a href="../Ganon/Tokenizer_Base.html#methodexpect">expect</a></li>
+    <li><a href="../Ganon/Tokenizer_Base.html#methodgetDoc">getDoc</a></li>
+    <li><a href="../Ganon/Tokenizer_Base.html#methodgetIdentifiers">getIdentifiers</a></li>
+    <li><a href="../Ganon/Tokenizer_Base.html#methodgetLinePos">getLinePos</a></li>
+    <li><a href="../Ganon/Tokenizer_Base.html#methodgetPos">getPos</a></li>
+    <li><a href="../Ganon/Tokenizer_Base.html#methodgetToken">getToken</a></li>
+    <li><a href="../Ganon/Tokenizer_Base.html#methodgetTokenString">getTokenString</a></li>
+    <li><a href="../Ganon/Tokenizer_Base.html#methodgetWhitespace">getWhitespace</a></li>
+    <li><a href="../Ganon/Tokenizer_Base.html#methodmapChar">mapChar</a></li>
+    <li><a href="../Ganon/Tokenizer_Base.html#methodnext">next</a></li>
+    <li><a href="../Ganon/Tokenizer_Base.html#methodnext_no_whitespace">next_no_whitespace</a></li>
+    <li><a href="../Ganon/Tokenizer_Base.html#methodnext_pos">next_pos</a></li>
+    <li><a href="../Ganon/Tokenizer_Base.html#methodnext_search">next_search</a></li>
+    <li><a href="../Ganon/Tokenizer_Base.html#methodparse_identifier">parse_identifier</a></li>
+    <li><a href="../Ganon/Tokenizer_Base.html#methodparse_whitespace">parse_whitespace</a></li>
+    <li><a href="../Ganon/Tokenizer_Base.html#methodsetDoc">setDoc</a></li>
+    <li><a href="../Ganon/Tokenizer_Base.html#methodsetIdentifiers">setIdentifiers</a></li>
+    <li><a href="../Ganon/Tokenizer_Base.html#methodsetPos">setPos</a></li>
+    <li><a href="../Ganon/Tokenizer_Base.html#methodsetWhitespace">setWhitespace</a></li>
+    <li><a href="../Ganon/Tokenizer_Base.html#methodunmapChar">unmapChar</a></li>
+  </ul>
+</td>
+
+</tr></table>
+<hr />
+
+<table width="100%" border="0"><tr>
+
+
+<td valign="top">
+<h3>Child classes:</h3>
+<div class="tags">
+<dl>
+<dt><a href="../Ganon/HTML_Parser_Base.html">HTML_Parser_Base</a></dt>
+	<dd>Parses a HTML document</dd>
+</dl>
+<dl>
+<dt><a href="../Ganon/Tokenizer_CSSQuery.html">Tokenizer_CSSQuery</a></dt>
+	<dd>Tokenizes a css selector query</dd>
+</dl>
+</div>
+</td>
+
+
+
+
+</tr></table>
+<hr />
+
+<a name="class_details"></a>
+<h3>Class Details</h3>
+<div class="tags">
+[line <a href="../__filesource/fsource_Ganon__gan_tokenizer.php.html#a29">29</a>]<br />
+Converts a document into tokens<br /><br /><p>Can convert any string into tokens. The base class only supports  identifier/whitespace tokens. For more tokens, the class can be  easily extended.</p><p>Use like:  <ol><li><div class="src-line">&nbsp;<span class="src-php">&lt;?php</span></div></li>
+<li><div class="src-line">&nbsp;&nbsp;<span class="src-var">$a&nbsp;</span>=&nbsp;<span class="src-key">new&nbsp;</span><span class="src-id"><a href="../Ganon/Tokenizer_Base.html">Tokenizer_Base</a></span><span class="src-sym">(</span><span class="src-str">'hello&nbsp;word'</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line">&nbsp;&nbsp;<span class="src-key">while&nbsp;</span><span class="src-sym">(</span><span class="src-var">$a</span><span class="src-sym">-&gt;</span><a href="../Ganon/Tokenizer_Base.html#methodnext">next</a><span class="src-sym">(</span><span class="src-sym">)&nbsp;</span>!==&nbsp;<span class="src-var">$a</span><span class="src-sym">::</span><span class="src-id">TOK_NULL</span><span class="src-sym">)&nbsp;</span><span class="src-sym">{</span></div></li>
+<li><div class="src-line">&nbsp;&nbsp;&nbsp;&nbsp;echo&nbsp;<span class="src-var">$a</span><span class="src-sym">-&gt;</span><span class="src-id"><a href="../Ganon/Tokenizer_Base.html#var$token">token</a></span><span class="src-sym">,&nbsp;</span><span class="src-str">':&nbsp;'</span><span class="src-sym">,</span><span class="src-var">$a</span><span class="src-sym">-&gt;</span><a href="../Ganon/Tokenizer_Base.html#methodgetTokenString">getTokenString</a><span class="src-sym">(</span><span class="src-sym">)</span><span class="src-sym">,&nbsp;</span><span class="src-str">&quot;&lt;br&gt;\n&quot;</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line">&nbsp;&nbsp;<span class="src-sym">}</span></div></li>
+<li><div class="src-line">&nbsp;<span class="src-php">?&gt;</span></div></li>
+</ol></p><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>internal:</b>&nbsp;&nbsp;</td><td>The tokenizer works with a character map that connects a certain  character to a certain function/token. This class is build with speed in mind.</td>
+  </tr>
+</table>
+</div>
+</div><br /><br />
+<div class="top">[ <a href="#top">Top</a> ]</div><br />
+
+<hr />
+<a name="class_vars"></a>
+<h3>Class Variables</h3>
+<div class="tags">
+	<a name="var$char_map"></a>
+	<p></p>
+	<h4>$char_map = <span class="value">array()</span></h4>
+	<p>[line <a href="../__filesource/fsource_Ganon__gan_tokenizer.php.html#a148">148</a>]</p>
+  Automaticly built character map. Built using <a href="../Ganon/HTML_Parser_Base.html#var$identifiers">$identifiers</a>, <a href="../Ganon/Tokenizer_Base.html#var$whitespace">$whitespace</a> and <a href="../Ganon/HTML_Parser_Base.html#var$custom_char_map">$custom_char_map</a><br /><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>internal:</b>&nbsp;&nbsp;</td><td>Public for faster access!</td>
+  </tr>
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>private</td>
+  </tr>
+</table>
+</div>
+
+  <br />
+	<div class="tags">
+  <table border="0" cellspacing="0" cellpadding="0">
+    <tr>
+      <td><b>Type:</b>&nbsp;&nbsp;</td>
+      <td>array</td>
+    </tr>
+      </table>
+	</div><br /><br />
+	<div class="top">[ <a href="#top">Top</a> ]</div><br />
+	<a name="var$custom_char_map"></a>
+	<p></p>
+	<h4>$custom_char_map = <span class="value">array()</span></h4>
+	<p>[line <a href="../__filesource/fsource_Ganon__gan_tokenizer.php.html#a140">140</a>]</p>
+  All characters that should be mapped to a token/function that cannot be considered as whitespace or identifier<br /><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>see:</b>&nbsp;&nbsp;</td><td><a href="../Ganon/Tokenizer_Base.html#methodunmapChar">Tokenizer_Base::unmapChar()</a></td>
+  </tr>
+  <tr>
+    <td><b>see:</b>&nbsp;&nbsp;</td><td><a href="../Ganon/Tokenizer_Base.html#methodmapChar">Tokenizer_Base::mapChar()</a></td>
+  </tr>
+  <tr>
+    <td><b>internal:</b>&nbsp;&nbsp;</td><td>Variable is public + asscociated array for faster access!</td>
+  </tr>
+  <tr>
+    <td><b>internal:</b>&nbsp;&nbsp;</td><td>array('a' =&gt; self::TOK_A) will set token to TOK_A if it matches the character 'a'</td>
+  </tr>
+  <tr>
+    <td><b>internal:</b>&nbsp;&nbsp;</td><td>array('a' =&gt; 'parse_a') will call $this-&gt;parse_a() if it matches the character 'a'</td>
+  </tr>
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>private</td>
+  </tr>
+</table>
+</div>
+
+  <br />
+	<div class="tags">
+  <table border="0" cellspacing="0" cellpadding="0">
+    <tr>
+      <td><b>Type:</b>&nbsp;&nbsp;</td>
+      <td>array</td>
+    </tr>
+      </table>
+	</div><br /><br />
+	<div class="top">[ <a href="#top">Top</a> ]</div><br />
+	<a name="var$doc"></a>
+	<p></p>
+	<h4>$doc = <span class="value">&nbsp;''</span></h4>
+	<p>[line <a href="../__filesource/fsource_Ganon__gan_tokenizer.php.html#a56">56</a>]</p>
+  The document that is being tokenized<br /><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>see:</b>&nbsp;&nbsp;</td><td><a href="../Ganon/Tokenizer_Base.html#methodgetDoc">Tokenizer_Base::getDoc()</a></td>
+  </tr>
+  <tr>
+    <td><b>see:</b>&nbsp;&nbsp;</td><td><a href="../Ganon/Tokenizer_Base.html#methodsetDoc">Tokenizer_Base::setDoc()</a></td>
+  </tr>
+  <tr>
+    <td><b>internal:</b>&nbsp;&nbsp;</td><td>Public for faster access!</td>
+  </tr>
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>private</td>
+  </tr>
+</table>
+</div>
+
+  <br />
+	<div class="tags">
+  <table border="0" cellspacing="0" cellpadding="0">
+    <tr>
+      <td><b>Type:</b>&nbsp;&nbsp;</td>
+      <td>string</td>
+    </tr>
+      </table>
+	</div><br /><br />
+	<div class="top">[ <a href="#top">Top</a> ]</div><br />
+	<a name="var$errors"></a>
+	<p></p>
+	<h4>$errors = <span class="value">array()</span></h4>
+	<p>[line <a href="../__filesource/fsource_Ganon__gan_tokenizer.php.html#a155">155</a>]</p>
+  All errors found while parsing the document<br /><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>see:</b>&nbsp;&nbsp;</td><td><a href="../Ganon/Tokenizer_Base.html#methodaddError">Tokenizer_Base::addError()</a></td>
+  </tr>
+</table>
+</div>
+
+  <br />
+	<div class="tags">
+  <table border="0" cellspacing="0" cellpadding="0">
+    <tr>
+      <td><b>Type:</b>&nbsp;&nbsp;</td>
+      <td>array</td>
+    </tr>
+      </table>
+	</div><br /><br />
+	<div class="top">[ <a href="#top">Top</a> ]</div><br />
+	<a name="var$identifiers"></a>
+	<p></p>
+	<h4>$identifiers = <span class="value">&nbsp;'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ01234567890_'</span></h4>
+	<p>[line <a href="../__filesource/fsource_Ganon__gan_tokenizer.php.html#a128">128</a>]</p>
+  List with all the character that can be considered as identifier<br /><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>see:</b>&nbsp;&nbsp;</td><td><a href="../Ganon/Tokenizer_Base.html#methodsetIdentifiers">Tokenizer_Base::setIdentifiers()</a></td>
+  </tr>
+  <tr>
+    <td><b>see:</b>&nbsp;&nbsp;</td><td><a href="../Ganon/Tokenizer_Base.html#methodgetIdentifiers">Tokenizer_Base::getIdentifiers()</a></td>
+  </tr>
+  <tr>
+    <td><b>internal:</b>&nbsp;&nbsp;</td><td>Result token will be self::TOK_IDENTIFIER;</td>
+  </tr>
+  <tr>
+    <td><b>internal:</b>&nbsp;&nbsp;</td><td>Variable is public + asscociated array for faster access!</td>
+  </tr>
+  <tr>
+    <td><b>internal:</b>&nbsp;&nbsp;</td><td>array('a' =&gt; true) will recognize 'a' as identifer</td>
+  </tr>
+  <tr>
+    <td><b>internal:</b>&nbsp;&nbsp;</td><td>String will be converted to array in constructor</td>
+  </tr>
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>private</td>
+  </tr>
+</table>
+</div>
+
+  <br />
+	<div class="tags">
+  <table border="0" cellspacing="0" cellpadding="0">
+    <tr>
+      <td><b>Type:</b>&nbsp;&nbsp;</td>
+      <td>array|string</td>
+    </tr>
+      </table>
+	</div><br /><br />
+	<div class="top">[ <a href="#top">Top</a> ]</div><br />
+	<a name="var$line_pos"></a>
+	<p></p>
+	<h4>$line_pos = <span class="value">array(0,&nbsp;0)</span></h4>
+	<p>[line <a href="../__filesource/fsource_Ganon__gan_tokenizer.php.html#a84">84</a>]</p>
+  Current (Line/Column) position in document<br /><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>var:</b>&nbsp;&nbsp;</td><td>(Current_Line, Line_Starting_Pos)</td>
+  </tr>
+  <tr>
+    <td><b>see:</b>&nbsp;&nbsp;</td><td><a href="../Ganon/Tokenizer_Base.html#methodgetLinePos">Tokenizer_Base::getLinePos()</a></td>
+  </tr>
+  <tr>
+    <td><b>internal:</b>&nbsp;&nbsp;</td><td>Public for faster access!</td>
+  </tr>
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>private</td>
+  </tr>
+</table>
+</div>
+
+  <br />
+	<div class="tags">
+  <table border="0" cellspacing="0" cellpadding="0">
+    <tr>
+      <td><b>Type:</b>&nbsp;&nbsp;</td>
+      <td>array</td>
+    </tr>
+      </table>
+	</div><br /><br />
+	<div class="top">[ <a href="#top">Top</a> ]</div><br />
+	<a name="var$pos"></a>
+	<p></p>
+	<h4>$pos = <span class="value">&nbsp;0</span></h4>
+	<p>[line <a href="../__filesource/fsource_Ganon__gan_tokenizer.php.html#a75">75</a>]</p>
+  Current (character) position in the document<br /><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>see:</b>&nbsp;&nbsp;</td><td><a href="../Ganon/Tokenizer_Base.html#methodgetPos">Tokenizer_Base::getPos()</a></td>
+  </tr>
+  <tr>
+    <td><b>see:</b>&nbsp;&nbsp;</td><td><a href="../Ganon/Tokenizer_Base.html#methodsetPos">Tokenizer_Base::setPos()</a></td>
+  </tr>
+  <tr>
+    <td><b>internal:</b>&nbsp;&nbsp;</td><td>Public for faster access!</td>
+  </tr>
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>private</td>
+  </tr>
+</table>
+</div>
+
+  <br />
+	<div class="tags">
+  <table border="0" cellspacing="0" cellpadding="0">
+    <tr>
+      <td><b>Type:</b>&nbsp;&nbsp;</td>
+      <td>int</td>
+    </tr>
+      </table>
+	</div><br /><br />
+	<div class="top">[ <a href="#top">Top</a> ]</div><br />
+	<a name="var$size"></a>
+	<p></p>
+	<h4>$size = <span class="value">&nbsp;0</span></h4>
+	<p>[line <a href="../__filesource/fsource_Ganon__gan_tokenizer.php.html#a65">65</a>]</p>
+  The size of the document (length of string)<br /><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>see:</b>&nbsp;&nbsp;</td><td><a href="../Ganon/Tokenizer_Base.html#var$doc">Tokenizer_Base::$doc</a></td>
+  </tr>
+  <tr>
+    <td><b>internal:</b>&nbsp;&nbsp;</td><td>Public for faster access!</td>
+  </tr>
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>private</td>
+  </tr>
+</table>
+</div>
+
+  <br />
+	<div class="tags">
+  <table border="0" cellspacing="0" cellpadding="0">
+    <tr>
+      <td><b>Type:</b>&nbsp;&nbsp;</td>
+      <td>int</td>
+    </tr>
+      </table>
+	</div><br /><br />
+	<div class="top">[ <a href="#top">Top</a> ]</div><br />
+	<a name="var$token"></a>
+	<p></p>
+	<h4>$token = <span class="value">&nbsp;self::TOK_NULL</span></h4>
+	<p>[line <a href="../__filesource/fsource_Ganon__gan_tokenizer.php.html#a93">93</a>]</p>
+  Current token<br /><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>see:</b>&nbsp;&nbsp;</td><td><a href="../Ganon/Tokenizer_Base.html#methodgetToken">Tokenizer_Base::getToken()</a></td>
+  </tr>
+  <tr>
+    <td><b>internal:</b>&nbsp;&nbsp;</td><td>Public for faster access!</td>
+  </tr>
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>private</td>
+  </tr>
+</table>
+</div>
+
+  <br />
+	<div class="tags">
+  <table border="0" cellspacing="0" cellpadding="0">
+    <tr>
+      <td><b>Type:</b>&nbsp;&nbsp;</td>
+      <td>int</td>
+    </tr>
+      </table>
+	</div><br /><br />
+	<div class="top">[ <a href="#top">Top</a> ]</div><br />
+	<a name="var$token_start"></a>
+	<p></p>
+	<h4>$token_start = <span class="value">&nbsp;null</span></h4>
+	<p>[line <a href="../__filesource/fsource_Ganon__gan_tokenizer.php.html#a102">102</a>]</p>
+  Startposition of token. If NULL, then current position is used.<br /><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>see:</b>&nbsp;&nbsp;</td><td><a href="../Ganon/Tokenizer_Base.html#methodgetTokenString">Tokenizer_Base::getTokenString()</a></td>
+  </tr>
+  <tr>
+    <td><b>internal:</b>&nbsp;&nbsp;</td><td>Public for faster access!</td>
+  </tr>
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>private</td>
+  </tr>
+</table>
+</div>
+
+  <br />
+	<div class="tags">
+  <table border="0" cellspacing="0" cellpadding="0">
+    <tr>
+      <td><b>Type:</b>&nbsp;&nbsp;</td>
+      <td>int</td>
+    </tr>
+      </table>
+	</div><br /><br />
+	<div class="top">[ <a href="#top">Top</a> ]</div><br />
+	<a name="var$whitespace"></a>
+	<p></p>
+	<h4>$whitespace = <span class="value">&nbsp;&quot;&nbsp;\t\n\r\0\x0B&quot;</span></h4>
+	<p>[line <a href="../__filesource/fsource_Ganon__gan_tokenizer.php.html#a115">115</a>]</p>
+  List with all the character that can be considered as whitespace<br /><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>see:</b>&nbsp;&nbsp;</td><td><a href="../Ganon/Tokenizer_Base.html#methodsetWhitespace">Tokenizer_Base::setWhitespace()</a></td>
+  </tr>
+  <tr>
+    <td><b>see:</b>&nbsp;&nbsp;</td><td><a href="../Ganon/Tokenizer_Base.html#methodgetWhitespace">Tokenizer_Base::getWhitespace()</a></td>
+  </tr>
+  <tr>
+    <td><b>internal:</b>&nbsp;&nbsp;</td><td>Result token will be self::TOK_WHITESPACE;</td>
+  </tr>
+  <tr>
+    <td><b>internal:</b>&nbsp;&nbsp;</td><td>Variable is public + asscociated array for faster access!</td>
+  </tr>
+  <tr>
+    <td><b>internal:</b>&nbsp;&nbsp;</td><td>array(' ' =&gt; true) will recognize space (' ') as whitespace</td>
+  </tr>
+  <tr>
+    <td><b>internal:</b>&nbsp;&nbsp;</td><td>String will be converted to array in constructor</td>
+  </tr>
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>private</td>
+  </tr>
+</table>
+</div>
+
+  <br />
+	<div class="tags">
+  <table border="0" cellspacing="0" cellpadding="0">
+    <tr>
+      <td><b>Type:</b>&nbsp;&nbsp;</td>
+      <td>array|string</td>
+    </tr>
+      </table>
+	</div><br /><br />
+	<div class="top">[ <a href="#top">Top</a> ]</div><br />
+</div><br />
+
+<hr />
+<a name="class_methods"></a>
+<h3>Class Methods</h3>
+<div class="tags">
+
+  <hr />
+	<a name="method__construct"></a>
+	<h3>constructor __construct <span class="smalllinenumber">[line <a href="../__filesource/fsource_Ganon__gan_tokenizer.php.html#a164">164</a>]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>Tokenizer_Base __construct(
+[string
+$doc = ''], [int
+$pos = 0])</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		Class constructor<br /><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>see:</b>&nbsp;&nbsp;</td><td><a href="../Ganon/Tokenizer_Base.html#methodsetPos">Tokenizer_Base::setPos()</a></td>
+  </tr>
+  <tr>
+    <td><b>see:</b>&nbsp;&nbsp;</td><td><a href="../Ganon/Tokenizer_Base.html#methodsetDoc">Tokenizer_Base::setDoc()</a></td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	<p>Overridden in child classes as:<br />
+		<dl>
+	<dt><a href="../Ganon/HTML_Parser_Base.html#method__construct">HTML_Parser_Base::__construct()</a></dt>
+		<dd></dd>
+	</dl>
+		<dl>
+	<dt><a href="../Ganon/HTML_Parser.html#method__construct">HTML_Parser::__construct()</a></dt>
+		<dd>Class constructor</dd>
+	</dl>
+	</p>
+	
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$doc</b>&nbsp;&nbsp;</td>
+        <td>Document to be tokenized</td>
+      </tr>
+          <tr>
+        <td class="type">int&nbsp;&nbsp;</td>
+        <td><b>$pos</b>&nbsp;&nbsp;</td>
+        <td>Position to start parsing</td>
+      </tr>
+        </table>
+    </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodaddError"></a>
+	<h3>method addError <span class="smalllinenumber">[line <a href="../__filesource/fsource_Ganon__gan_tokenizer.php.html#a345">345</a>]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>void addError(
+string
+$error)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		Add error to the array and appends current position<br /><br /><br /><br />
+
+	
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$error</b>&nbsp;&nbsp;</td>
+        <td></td>
+      </tr>
+        </table>
+    </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodbuildCharMap"></a>
+	<h3>method buildCharMap <span class="smalllinenumber">[line <a href="../__filesource/fsource_Ganon__gan_tokenizer.php.html#a327">327</a>]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>void buildCharMap(
+)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		Builds the $map_char array<br /><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>internal:</b>&nbsp;&nbsp;</td><td>Builds single array that maps all characters. Gets called if <a href="../Ganon/Tokenizer_Base.html#var$whitespace">$whitespace</a>, <a href="../Ganon/Tokenizer_Base.html#var$identifiers">$identifiers</a> or <a href="../Ganon/Tokenizer_Base.html#var$custom_char_map">$custom_char_map</a> get modified</td>
+  </tr>
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>protected</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodexpect"></a>
+	<h3>method expect <span class="smalllinenumber">[line <a href="../__filesource/fsource_Ganon__gan_tokenizer.php.html#a535">535</a>]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>bool expect(
+string|int
+$token, [bool|int
+$do_next = true], [bool|int
+$try_next = false], [bool|int
+$next_on_match = 1])</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		Expect a specific token or character. Adds error if token doesn't match.<br /><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>protected</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type">string|int&nbsp;&nbsp;</td>
+        <td><b>$token</b>&nbsp;&nbsp;</td>
+        <td>Character or token to expect</td>
+      </tr>
+          <tr>
+        <td class="type">bool|int&nbsp;&nbsp;</td>
+        <td><b>$do_next</b>&nbsp;&nbsp;</td>
+        <td>Go to next character before evaluating. 1 for next char, true to ignore whitespace</td>
+      </tr>
+          <tr>
+        <td class="type">bool|int&nbsp;&nbsp;</td>
+        <td><b>$try_next</b>&nbsp;&nbsp;</td>
+        <td>Try next character if current doesn't match. 1 for next char, true to ignore whitespace</td>
+      </tr>
+          <tr>
+        <td class="type">bool|int&nbsp;&nbsp;</td>
+        <td><b>$next_on_match</b>&nbsp;&nbsp;</td>
+        <td>Go to next character after evaluating. 1 for next char, true to ignore whitespace</td>
+      </tr>
+        </table>
+    </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodgetDoc"></a>
+	<h3>method getDoc <span class="smalllinenumber">[line <a href="../__filesource/fsource_Ganon__gan_tokenizer.php.html#a193">193</a>]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>string getDoc(
+)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		Returns target document<br /><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>see:</b>&nbsp;&nbsp;</td><td><a href="../Ganon/Tokenizer_Base.html#methodsetDoc">Tokenizer_Base::setDoc()</a></td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodgetIdentifiers"></a>
+	<h3>method getIdentifiers <span class="smalllinenumber">[line <a href="../__filesource/fsource_Ganon__gan_tokenizer.php.html#a295">295</a>]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>string|array getIdentifiers(
+[bool
+$as_string = true])</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		Returns identifier characters as string/array<br /><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>see:</b>&nbsp;&nbsp;</td><td><a href="../Ganon/Tokenizer_Base.html#methodsetIdentifiers">Tokenizer_Base::setIdentifiers()</a></td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type">bool&nbsp;&nbsp;</td>
+        <td><b>$as_string</b>&nbsp;&nbsp;</td>
+        <td>Should the result be a string or an array?</td>
+      </tr>
+        </table>
+    </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodgetLinePos"></a>
+	<h3>method getLinePos <span class="smalllinenumber">[line <a href="../__filesource/fsource_Ganon__gan_tokenizer.php.html#a221">221</a>]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>array getLinePos(
+)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		Returns current position in document (Line/Char)<br /><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>return:</b>&nbsp;&nbsp;</td><td>array(Line, Column)</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodgetPos"></a>
+	<h3>method getPos <span class="smalllinenumber">[line <a href="../__filesource/fsource_Ganon__gan_tokenizer.php.html#a213">213</a>]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>int getPos(
+)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		Returns current position in document (Index)<br /><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>see:</b>&nbsp;&nbsp;</td><td><a href="../Ganon/Tokenizer_Base.html#methodsetPos">Tokenizer_Base::setPos()</a></td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodgetToken"></a>
+	<h3>method getToken <span class="smalllinenumber">[line <a href="../__filesource/fsource_Ganon__gan_tokenizer.php.html#a230">230</a>]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>int getToken(
+)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		Returns current token<br /><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>see:</b>&nbsp;&nbsp;</td><td><a href="../Ganon/Tokenizer_Base.html#var$token">Tokenizer_Base::$token</a></td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodgetTokenString"></a>
+	<h3>method getTokenString <span class="smalllinenumber">[line <a href="../__filesource/fsource_Ganon__gan_tokenizer.php.html#a240">240</a>]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>string getTokenString(
+[int
+$start_offset = 0], [int
+$end_offset = 0])</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		Returns current token as string<br /><br /><br /><br />
+
+	
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type">int&nbsp;&nbsp;</td>
+        <td><b>$start_offset</b>&nbsp;&nbsp;</td>
+        <td>Offset from token start</td>
+      </tr>
+          <tr>
+        <td class="type">int&nbsp;&nbsp;</td>
+        <td><b>$end_offset</b>&nbsp;&nbsp;</td>
+        <td>Offset from token end</td>
+      </tr>
+        </table>
+    </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodgetWhitespace"></a>
+	<h3>method getWhitespace <span class="smalllinenumber">[line <a href="../__filesource/fsource_Ganon__gan_tokenizer.php.html#a268">268</a>]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>string|array getWhitespace(
+[bool
+$as_string = true])</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		Returns whitespace characters as string/array<br /><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>see:</b>&nbsp;&nbsp;</td><td><a href="../Ganon/Tokenizer_Base.html#methodsetWhitespace">Tokenizer_Base::setWhitespace()</a></td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type">bool&nbsp;&nbsp;</td>
+        <td><b>$as_string</b>&nbsp;&nbsp;</td>
+        <td>Should the result be a string or an array?</td>
+      </tr>
+        </table>
+    </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodmapChar"></a>
+	<h3>method mapChar <span class="smalllinenumber">[line <a href="../__filesource/fsource_Ganon__gan_tokenizer.php.html#a308">308</a>]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>void mapChar(
+string
+$char, int|string
+$map)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		Maps a custom character to a token/function<br /><br /><p>Used like: mapChar('a', self::<a href="../Ganon/Tokenizer_Base.html#constTOK_IDENTIFIER">TOK_IDENTIFIER</a>) or mapChar('a', 'parse_identifier');</p><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>see:</b>&nbsp;&nbsp;</td><td><a href="../Ganon/Tokenizer_Base.html#methodunmapChar">Tokenizer_Base::unmapChar()</a></td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$char</b>&nbsp;&nbsp;</td>
+        <td>Character that should be mapped. If set, it will be overriden</td>
+      </tr>
+          <tr>
+        <td class="type">int|string&nbsp;&nbsp;</td>
+        <td><b>$map</b>&nbsp;&nbsp;</td>
+        <td>If function name, then $this-&gt;function will be called, otherwise token is set to $map</td>
+      </tr>
+        </table>
+    </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodnext"></a>
+	<h3>method next <span class="smalllinenumber">[line <a href="../__filesource/fsource_Ganon__gan_tokenizer.php.html#a394">394</a>]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>int next(
+)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		Continues to the next token<br /><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>return:</b>&nbsp;&nbsp;</td><td>Next token (<a href="../Ganon/Tokenizer_Base.html#constTOK_NULL">TOK_NULL</a> if none)</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodnext_no_whitespace"></a>
+	<h3>method next_no_whitespace <span class="smalllinenumber">[line <a href="../__filesource/fsource_Ganon__gan_tokenizer.php.html#a416">416</a>]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>int next_no_whitespace(
+)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		Finds the next token, but skips whitespace<br /><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>return:</b>&nbsp;&nbsp;</td><td>Next token (<a href="../Ganon/Tokenizer_Base.html#constTOK_NULL">TOK_NULL</a> if none)</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodnext_pos"></a>
+	<h3>method next_pos <span class="smalllinenumber">[line <a href="../__filesource/fsource_Ganon__gan_tokenizer.php.html#a491">491</a>]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>int next_pos(
+string
+$needle, [bool
+$callback = true])</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		Finds the next token by searching for a string<br /><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>return:</b>&nbsp;&nbsp;</td><td>Next token (<a href="../Ganon/Tokenizer_Base.html#constTOK_NULL">TOK_NULL</a> if none)</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$needle</b>&nbsp;&nbsp;</td>
+        <td>The needle that's being searched for</td>
+      </tr>
+          <tr>
+        <td class="type">bool&nbsp;&nbsp;</td>
+        <td><b>$callback</b>&nbsp;&nbsp;</td>
+        <td>Should the function check the charmap after finding the needle?</td>
+      </tr>
+        </table>
+    </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodnext_search"></a>
+	<h3>method next_search <span class="smalllinenumber">[line <a href="../__filesource/fsource_Ganon__gan_tokenizer.php.html#a453">453</a>]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>int next_search(
+string|array
+$characters, [bool
+$callback = true])</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		Finds the next token using stopcharacters<br /><br /><p>Used like: next_search('abc') or next_seach(array('a' =&gt; true, 'b' =&gt; true, 'c' =&gt; true));</p><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>return:</b>&nbsp;&nbsp;</td><td>Next token (<a href="../Ganon/Tokenizer_Base.html#constTOK_NULL">TOK_NULL</a> if none)</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type">string|array&nbsp;&nbsp;</td>
+        <td><b>$characters</b>&nbsp;&nbsp;</td>
+        <td>Characters to search for</td>
+      </tr>
+          <tr>
+        <td class="type">bool&nbsp;&nbsp;</td>
+        <td><b>$callback</b>&nbsp;&nbsp;</td>
+        <td>Should the function check the charmap after finding a character?</td>
+      </tr>
+        </table>
+    </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodparse_identifier"></a>
+	<h3>method parse_identifier <span class="smalllinenumber">[line <a href="../__filesource/fsource_Ganon__gan_tokenizer.php.html#a381">381</a>]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>int parse_identifier(
+)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		Parse identifiers<br /><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>return:</b>&nbsp;&nbsp;</td><td>Token</td>
+  </tr>
+  <tr>
+    <td><b>internal:</b>&nbsp;&nbsp;</td><td>Gets called with <a href="../Ganon/Tokenizer_Base.html#var$identifiers">$identifiers</a> characters</td>
+  </tr>
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>protected</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodparse_whitespace"></a>
+	<h3>method parse_whitespace <span class="smalllinenumber">[line <a href="../__filesource/fsource_Ganon__gan_tokenizer.php.html#a354">354</a>]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>int parse_whitespace(
+)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		Parse whitespace<br /><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>return:</b>&nbsp;&nbsp;</td><td>Token</td>
+  </tr>
+  <tr>
+    <td><b>internal:</b>&nbsp;&nbsp;</td><td>Gets called with <a href="../Ganon/Tokenizer_Base.html#var$whitespace">$whitespace</a> characters</td>
+  </tr>
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>protected</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodsetDoc"></a>
+	<h3>method setDoc <span class="smalllinenumber">[line <a href="../__filesource/fsource_Ganon__gan_tokenizer.php.html#a182">182</a>]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>void setDoc(
+string
+$doc, [int
+$pos = 0])</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		Sets target document<br /><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>see:</b>&nbsp;&nbsp;</td><td><a href="../Ganon/Tokenizer_Base.html#methodsetPos">Tokenizer_Base::setPos()</a></td>
+  </tr>
+  <tr>
+    <td><b>see:</b>&nbsp;&nbsp;</td><td><a href="../Ganon/Tokenizer_Base.html#methodgetDoc">Tokenizer_Base::getDoc()</a></td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$doc</b>&nbsp;&nbsp;</td>
+        <td>Document to be tokenized</td>
+      </tr>
+          <tr>
+        <td class="type">int&nbsp;&nbsp;</td>
+        <td><b>$pos</b>&nbsp;&nbsp;</td>
+        <td>Position to start parsing</td>
+      </tr>
+        </table>
+    </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodsetIdentifiers"></a>
+	<h3>method setIdentifiers <span class="smalllinenumber">[line <a href="../__filesource/fsource_Ganon__gan_tokenizer.php.html#a280">280</a>]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>void setIdentifiers(
+string|array
+$ident)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		Sets characters to be recognized as identifier<br /><br /><p>Used like: setIdentifiers('ab') or setIdentifiers(array('a' =&gt; true, 'b', 'c'));</p><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>see:</b>&nbsp;&nbsp;</td><td>getIdentifiers();</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type">string|array&nbsp;&nbsp;</td>
+        <td><b>$ident</b>&nbsp;&nbsp;</td>
+        <td></td>
+      </tr>
+        </table>
+    </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodsetPos"></a>
+	<h3>method setPos <span class="smalllinenumber">[line <a href="../__filesource/fsource_Ganon__gan_tokenizer.php.html#a202">202</a>]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>void setPos(
+[int
+$pos = 0])</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		Sets position in document<br /><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>see:</b>&nbsp;&nbsp;</td><td><a href="../Ganon/Tokenizer_Base.html#methodgetPos">Tokenizer_Base::getPos()</a></td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type">int&nbsp;&nbsp;</td>
+        <td><b>$pos</b>&nbsp;&nbsp;</td>
+        <td></td>
+      </tr>
+        </table>
+    </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodsetWhitespace"></a>
+	<h3>method setWhitespace <span class="smalllinenumber">[line <a href="../__filesource/fsource_Ganon__gan_tokenizer.php.html#a253">253</a>]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>void setWhitespace(
+string|array
+$ws)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		Sets characters to be recognized as whitespace<br /><br /><p>Used like: setWhitespace('ab') or setWhitespace(array('a' =&gt; true, 'b', 'c'));</p><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>see:</b>&nbsp;&nbsp;</td><td>getWhitespace();</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type">string|array&nbsp;&nbsp;</td>
+        <td><b>$ws</b>&nbsp;&nbsp;</td>
+        <td></td>
+      </tr>
+        </table>
+    </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodunmapChar"></a>
+	<h3>method unmapChar <span class="smalllinenumber">[line <a href="../__filesource/fsource_Ganon__gan_tokenizer.php.html#a318">318</a>]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>void unmapChar(
+string
+$char)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		Removes a char mapped with <a href="../Ganon/Tokenizer_Base.html#methodmapChar">mapChar()</a><br /><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>see:</b>&nbsp;&nbsp;</td><td><a href="../Ganon/Tokenizer_Base.html#methodmapChar">Tokenizer_Base::mapChar()</a></td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$char</b>&nbsp;&nbsp;</td>
+        <td>Character that should be unmapped</td>
+      </tr>
+        </table>
+    </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+</div><br />
+
+<hr />
+<a name="class_consts"></a>
+<h3>Class Constants</h3>
+<div class="tags">
+	<a name="constTOK_IDENTIFIER"></a>
+	<p></p>
+	<h4>TOK_IDENTIFIER = <span class="value">&nbsp;3</span></h4>
+	<p>[line <a href="../__filesource/fsource_Ganon__gan_tokenizer.php.html#a46">46</a>]</p>
+  Identifier token, used with identifiers<br /><br />
+  <br />
+	<div class="top">[ <a href="#top">Top</a> ]</div><br />
+	<a name="constTOK_NULL"></a>
+	<p></p>
+	<h4>TOK_NULL = <span class="value">&nbsp;0</span></h4>
+	<p>[line <a href="../__filesource/fsource_Ganon__gan_tokenizer.php.html#a34">34</a>]</p>
+  NULL Token, used at end of document (parsing should stop after this token)<br /><br />
+  <br />
+	<div class="top">[ <a href="#top">Top</a> ]</div><br />
+	<a name="constTOK_UNKNOWN"></a>
+	<p></p>
+	<h4>TOK_UNKNOWN = <span class="value">&nbsp;1</span></h4>
+	<p>[line <a href="../__filesource/fsource_Ganon__gan_tokenizer.php.html#a38">38</a>]</p>
+  Unknown token, used at unidentified character<br /><br />
+  <br />
+	<div class="top">[ <a href="#top">Top</a> ]</div><br />
+	<a name="constTOK_WHITESPACE"></a>
+	<p></p>
+	<h4>TOK_WHITESPACE = <span class="value">&nbsp;2</span></h4>
+	<p>[line <a href="../__filesource/fsource_Ganon__gan_tokenizer.php.html#a42">42</a>]</p>
+  Whitespace token, used with whitespace<br /><br />
+  <br />
+	<div class="top">[ <a href="#top">Top</a> ]</div><br />
+</div><br />
+
+        <div class="credit">
+		    <hr />
+		    Documentation generated on Thu, 31 Mar 2011 10:26:03 +0200 by <a href="http://www.phpdoc.org">phpDocumentor 1.4.3</a>
+	      </div>
+      </td></tr></table>
+    </td>
+  </tr>
+</table>
+
+</body>
+</html>
