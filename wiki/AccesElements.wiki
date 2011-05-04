@@ -5,7 +5,7 @@
 
 Ganon has a powerful set of tools to access the DOM elements. The most important one, and the one you will probably use the most, is the CSS Selector support. Ganon can "select" nodes using CSS3 compliant queries. Ganon can also iterate over all childnodes and attributes, gives easy access to the parent/siblings and it gives easy access to the HTML code, inner text and plain text.
 
-_*NOTE*: If you are using the PHP4 version of Ganon, please read [PHP4 this] first!_
+_*NOTE*: Ganon is written in PHP version 5.3.1, if you are using a previous version of PHP5, please read [PHP4 this] first!_
 
 <br><br>
 
