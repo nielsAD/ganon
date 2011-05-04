@@ -5,7 +5,7 @@
 
 Ganon has a powerful set of tools to modify the DOM elements. It gives easy access to the namespace/tag, attributes, index, etc.
 
-_*NOTE*: Ganon is written in PHP version 5.3.1, if you are using a previous version of PHP5, please read [PHP4 this] first!_
+_*NOTE*: Ganon is written in PHP version 5.3.1. If you are using a previous version of PHP5, please read [PHP4 this] first!_
 
 <br><br>
 
