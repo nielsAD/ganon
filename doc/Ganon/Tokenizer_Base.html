@@ -140,6 +140,7 @@ Source Location: /gan_tokenizer.php<br /><br />
     <li><a href="../Ganon/Tokenizer_Base.html#methodnext_pos">next_pos</a></li>
     <li><a href="../Ganon/Tokenizer_Base.html#methodnext_search">next_search</a></li>
     <li><a href="../Ganon/Tokenizer_Base.html#methodparse_identifier">parse_identifier</a></li>
+    <li><a href="../Ganon/Tokenizer_Base.html#methodparse_linebreak">parse_linebreak</a></li>
     <li><a href="../Ganon/Tokenizer_Base.html#methodparse_whitespace">parse_whitespace</a></li>
     <li><a href="../Ganon/Tokenizer_Base.html#methodsetDoc">setDoc</a></li>
     <li><a href="../Ganon/Tokenizer_Base.html#methodsetIdentifiers">setIdentifiers</a></li>
@@ -683,7 +684,7 @@ $error)</code>
   </div>
   <hr />
 	<a name="methodexpect"></a>
-	<h3>method expect <span class="smalllinenumber">[line <a href="../__filesource/fsource_Ganon__gan_tokenizer.php.html#a535">535</a>]</span></h3>
+	<h3>method expect <span class="smalllinenumber">[line <a href="../__filesource/fsource_Ganon__gan_tokenizer.php.html#a531">531</a>]</span></h3>
 	<div class="function">
     <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
     <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
@@ -984,7 +985,7 @@ $map)</code>
   </div>
   <hr />
 	<a name="methodnext"></a>
-	<h3>method next <span class="smalllinenumber">[line <a href="../__filesource/fsource_Ganon__gan_tokenizer.php.html#a394">394</a>]</span></h3>
+	<h3>method next <span class="smalllinenumber">[line <a href="../__filesource/fsource_Ganon__gan_tokenizer.php.html#a404">404</a>]</span></h3>
 	<div class="function">
     <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
     <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
@@ -1009,7 +1010,7 @@ $map)</code>
   </div>
   <hr />
 	<a name="methodnext_no_whitespace"></a>
-	<h3>method next_no_whitespace <span class="smalllinenumber">[line <a href="../__filesource/fsource_Ganon__gan_tokenizer.php.html#a416">416</a>]</span></h3>
+	<h3>method next_no_whitespace <span class="smalllinenumber">[line <a href="../__filesource/fsource_Ganon__gan_tokenizer.php.html#a426">426</a>]</span></h3>
 	<div class="function">
     <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
     <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
@@ -1034,7 +1035,7 @@ $map)</code>
   </div>
   <hr />
 	<a name="methodnext_pos"></a>
-	<h3>method next_pos <span class="smalllinenumber">[line <a href="../__filesource/fsource_Ganon__gan_tokenizer.php.html#a491">491</a>]</span></h3>
+	<h3>method next_pos <span class="smalllinenumber">[line <a href="../__filesource/fsource_Ganon__gan_tokenizer.php.html#a487">487</a>]</span></h3>
 	<div class="function">
     <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
     <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
@@ -1076,7 +1077,7 @@ $callback = true])</code>
   </div>
   <hr />
 	<a name="methodnext_search"></a>
-	<h3>method next_search <span class="smalllinenumber">[line <a href="../__filesource/fsource_Ganon__gan_tokenizer.php.html#a453">453</a>]</span></h3>
+	<h3>method next_search <span class="smalllinenumber">[line <a href="../__filesource/fsource_Ganon__gan_tokenizer.php.html#a456">456</a>]</span></h3>
 	<div class="function">
     <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
     <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
@@ -1118,7 +1119,7 @@ $callback = true])</code>
   </div>
   <hr />
 	<a name="methodparse_identifier"></a>
-	<h3>method parse_identifier <span class="smalllinenumber">[line <a href="../__filesource/fsource_Ganon__gan_tokenizer.php.html#a381">381</a>]</span></h3>
+	<h3>method parse_identifier <span class="smalllinenumber">[line <a href="../__filesource/fsource_Ganon__gan_tokenizer.php.html#a391">391</a>]</span></h3>
 	<div class="function">
     <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
     <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
@@ -1148,8 +1149,36 @@ $callback = true])</code>
         <div class="top">[ <a href="#top">Top</a> ]</div>
   </div>
   <hr />
+	<a name="methodparse_linebreak"></a>
+	<h3>method parse_linebreak <span class="smalllinenumber">[line <a href="../__filesource/fsource_Ganon__gan_tokenizer.php.html#a353">353</a>]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>void parse_linebreak(
+)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		Parse line breaks and increase line number<br /><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>internal:</b>&nbsp;&nbsp;</td><td>Gets called to process line breaks</td>
+  </tr>
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>protected</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
 	<a name="methodparse_whitespace"></a>
-	<h3>method parse_whitespace <span class="smalllinenumber">[line <a href="../__filesource/fsource_Ganon__gan_tokenizer.php.html#a354">354</a>]</span></h3>
+	<h3>method parse_whitespace <span class="smalllinenumber">[line <a href="../__filesource/fsource_Ganon__gan_tokenizer.php.html#a371">371</a>]</span></h3>
 	<div class="function">
     <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
     <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
@@ -1405,7 +1434,7 @@ $char)</code>
 
         <div class="credit">
 		    <hr />
-		    Documentation generated on Thu, 31 Mar 2011 10:26:03 +0200 by <a href="http://www.phpdoc.org">phpDocumentor 1.4.3</a>
+		    Documentation generated on Sat, 20 Oct 2012 13:44:25 +0200 by <a href="http://www.phpdoc.org">phpDocumentor 1.4.3</a>
 	      </div>
       </td></tr></table>
     </td>

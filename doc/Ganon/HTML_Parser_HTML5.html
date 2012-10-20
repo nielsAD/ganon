@@ -397,12 +397,6 @@ Source Location: /gan_parser_html.php<br /><br />
     Performs a css select query on the root node
   </dd>
     <dt>
-    <a href="../Ganon/HTML_Parser.html#method__destruct">HTML_Parser::__destruct()</a>
-  </dt>
-  <dd>
-    Class destructor
-  </dd>
-    <dt>
     <a href="../Ganon/HTML_Parser.html#method__invoke">HTML_Parser::__invoke()</a>
   </dt>
   <dd>
@@ -613,6 +607,12 @@ Source Location: /gan_parser_html.php<br /><br />
     Parse identifiers
   </dd>
     <dt>
+    <a href="../Ganon/Tokenizer_Base.html#methodparse_linebreak">Tokenizer_Base::parse_linebreak()</a>
+  </dt>
+  <dd>
+    Parse line breaks and increase line number
+  </dd>
+    <dt>
     <a href="../Ganon/Tokenizer_Base.html#methodparse_whitespace">Tokenizer_Base::parse_whitespace()</a>
   </dt>
   <dd>
@@ -658,7 +658,7 @@ Source Location: /gan_parser_html.php<br /><br />
 <a name="class_details"></a>
 <h3>Class Details</h3>
 <div class="tags">
-[line <a href="../__filesource/fsource_Ganon__gan_parser_html.php.html#a777">777</a>]<br />
+[line <a href="../__filesource/fsource_Ganon__gan_parser_html.php.html#a771">771</a>]<br />
 HTML5 specific parser (adds support for omittable closing tags)<br /><br /></div><br /><br />
 <div class="top">[ <a href="#top">Top</a> ]</div><br />
 
@@ -671,7 +671,7 @@ HTML5 specific parser (adds support for omittable closing tags)<br /><br /></div
 	<h4>$tags_optional_close = <span class="value">array(<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//Current&nbsp;tag&nbsp;&nbsp;&nbsp;=&gt;&nbsp;Previous&nbsp;tag<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'li'&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&gt;&nbsp;array('li'&nbsp;=&gt;&nbsp;true),'dt'=&gt;array('dt'=&gt;true,'dd'=&gt;true),'dd'=&gt;array('dt'=&gt;true,'dd'=&gt;true),'address'=&gt;array('p'=&gt;true),'article'=&gt;array('p'=&gt;true),'aside'=&gt;array('p'=&gt;true),'blockquote'=&gt;array('p'=&gt;true),'dir'=&gt;array('p'=&gt;true),'div'=&gt;array('p'=&gt;true),'dl'=&gt;array('p'=&gt;true),'fieldset'=&gt;array('p'=&gt;true),'footer'=&gt;array('p'=&gt;true),'form'=&gt;array('p'=&gt;true),'h1'=&gt;array('p'=&gt;true),'h2'=&gt;array('p'=&gt;true),'h3'=&gt;array('p'=&gt;true),'h4'=&gt;array('p'=&gt;true),'h5'=&gt;array('p'=&gt;true),'h6'=&gt;array('p'=&gt;true),'header'=&gt;array('p'=&gt;true),'hgroup'=&gt;array('p'=&gt;true),'hr'=&gt;array('p'=&gt;true),'menu'=&gt;array('p'=&gt;true),'nav'=&gt;array('p'=&gt;true),'ol'=&gt;array('p'=&gt;true),'p'=&gt;array('p'=&gt;true),'pre'=&gt;array('p'=&gt;true),'section'=&gt;array('p'=&gt;true),'table'=&gt;array('p'=&gt;true),'ul'=&gt;array('p'=&gt;true),'rt'=&gt;array('rt'=&gt;true,'rp'=&gt;true),'rp'=&gt;array('rt'=&gt;true,'rp'=&gt;true),'optgroup'=&gt;array('optgroup'=&gt;true,'option'=&gt;true),'option'=&gt;array('option'),'tbody'=&gt;array('thread'=&gt;true,'tbody'=&gt;true,'tfoot'=&gt;true),'tfoot'=&gt;array('thread'=&gt;true,'tbody'=&gt;true),'tr'=&gt;array('tr'=&gt;true),'td'=&gt;array('td'=&gt;true,'th'=&gt;true),'th'=&gt;array('td'=&gt;true,'th'=&gt;true),'body'=&gt;array('head'=&gt;true))</span></h4>
-	<p>[line <a href="../__filesource/fsource_Ganon__gan_parser_html.php.html#a784">784</a>]</p>
+	<p>[line <a href="../__filesource/fsource_Ganon__gan_parser_html.php.html#a778">778</a>]</p>
   Tags with ommitable closing tags<br /><br /><br /><br />
 <h4>Tags:</h4>
 <div class="tags">
@@ -704,7 +704,7 @@ HTML5 specific parser (adds support for omittable closing tags)<br /><br /></div
 
   <hr />
 	<a name="methodparse_hierarchy"></a>
-	<h3>method parse_hierarchy <span class="smalllinenumber">[line <a href="../__filesource/fsource_Ganon__gan_parser_html.php.html#a828">828</a>]</span></h3>
+	<h3>method parse_hierarchy <span class="smalllinenumber">[line <a href="../__filesource/fsource_Ganon__gan_parser_html.php.html#a822">822</a>]</span></h3>
 	<div class="function">
     <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
     <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
@@ -743,7 +743,7 @@ $self_close = null])</code>
 
         <div class="credit">
 		    <hr />
-		    Documentation generated on Thu, 31 Mar 2011 10:26:00 +0200 by <a href="http://www.phpdoc.org">phpDocumentor 1.4.3</a>
+		    Documentation generated on Sat, 20 Oct 2012 13:44:22 +0200 by <a href="http://www.phpdoc.org">phpDocumentor 1.4.3</a>
 	      </div>
       </td></tr></table>
     </td>

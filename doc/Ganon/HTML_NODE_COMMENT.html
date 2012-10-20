@@ -662,6 +662,12 @@ Source Location: /gan_node_html.php<br /><br />
     Finds all children using ID attribute
   </dd>
     <dt>
+    <a href="../Ganon/HTML_Node.html#methodgetChildrenByMatch">HTML_Node::getChildrenByMatch()</a>
+  </dt>
+  <dd>
+    Finds children using the {$link match()} function
+  </dd>
+    <dt>
     <a href="../Ganon/HTML_Node.html#methodgetChildrenByName">HTML_Node::getChildrenByName()</a>
   </dt>
   <dd>
@@ -672,6 +678,12 @@ Source Location: /gan_node_html.php<br /><br />
   </dt>
   <dd>
     Finds children that match a certain tag
+  </dd>
+    <dt>
+    <a href="../Ganon/HTML_Node.html#methodgetEncoding">HTML_Node::getEncoding()</a>
+  </dt>
+  <dd>
+    Try to determine the encoding of the current tag
   </dd>
     <dt>
     <a href="../Ganon/HTML_Node.html#methodgetInnerText">HTML_Node::getInnerText()</a>
@@ -704,10 +716,22 @@ Source Location: /gan_node_html.php<br /><br />
     Similar to JavaScript plainText, will return text in node (and subnodes)
   </dd>
     <dt>
+    <a href="../Ganon/HTML_Node.html#methodgetPlainTextUTF8">HTML_Node::getPlainTextUTF8()</a>
+  </dt>
+  <dd>
+    Return plaintext taking document encoding into account
+  </dd>
+    <dt>
     <a href="../Ganon/HTML_Node.html#methodgetPreviousSibling">HTML_Node::getPreviousSibling()</a>
   </dt>
   <dd>
     Get node previous to current
+  </dd>
+    <dt>
+    <a href="../Ganon/HTML_Node.html#methodgetRoot">HTML_Node::getRoot()</a>
+  </dt>
+  <dd>
+    Get top parent
   </dd>
     <dt>
     <a href="../Ganon/HTML_Node.html#methodgetSibling">HTML_Node::getSibling()</a>
@@ -779,7 +803,7 @@ Source Location: /gan_node_html.php<br /><br />
     <a href="../Ganon/HTML_Node.html#methodisParent">HTML_Node::isParent()</a>
   </dt>
   <dd>
-    Find out if node has a certain parent
+    Find out if node is parent of a certain tag
   </dd>
     <dt>
     <a href="../Ganon/HTML_Node.html#methodisText">HTML_Node::isText()</a>
@@ -965,7 +989,7 @@ Source Location: /gan_node_html.php<br /><br />
     <a href="../Ganon/HTML_Node.html#method__toString">HTML_Node::__toString()</a>
   </dt>
   <dd>
-    Class toString, outputs (@link $tag)
+    Class toString, outputs $tag
   </dd>
     <dt>
     <a href="../Ganon/HTML_Node.html#method__unset">HTML_Node::__unset()</a>
@@ -983,7 +1007,7 @@ Source Location: /gan_node_html.php<br /><br />
 <a name="class_details"></a>
 <h3>Class Details</h3>
 <div class="tags">
-[line <a href="../__filesource/fsource_Ganon__gan_node_html.php.html#a2214">2214</a>]<br />
+[line <a href="../__filesource/fsource_Ganon__gan_node_html.php.html#a2278">2278</a>]<br />
 Node subclass for comments<br /><br /></div><br /><br />
 <div class="top">[ <a href="#top">Top</a> ]</div><br />
 
@@ -994,7 +1018,7 @@ Node subclass for comments<br /><br /></div><br /><br />
 	<a name="var$tag"></a>
 	<p></p>
 	<h4>$tag = <span class="value">&nbsp;'~comment~'</span></h4>
-	<p>[line <a href="../__filesource/fsource_Ganon__gan_node_html.php.html#a2221">2221</a>]</p>
+	<p>[line <a href="../__filesource/fsource_Ganon__gan_node_html.php.html#a2285">2285</a>]</p>
   
   <br />
 	<div class="tags">
@@ -1013,7 +1037,7 @@ Node subclass for comments<br /><br /></div><br /><br />
 	<a name="var$text"></a>
 	<p></p>
 	<h4>$text = <span class="value">&nbsp;''</span></h4>
-	<p>[line <a href="../__filesource/fsource_Ganon__gan_node_html.php.html#a2226">2226</a>]</p>
+	<p>[line <a href="../__filesource/fsource_Ganon__gan_node_html.php.html#a2290">2290</a>]</p>
   
   <br />
 	<div class="tags">
@@ -1034,7 +1058,7 @@ Node subclass for comments<br /><br /></div><br /><br />
 
   <hr />
 	<a name="method__construct"></a>
-	<h3>constructor __construct <span class="smalllinenumber">[line <a href="../__filesource/fsource_Ganon__gan_node_html.php.html#a2233">2233</a>]</span></h3>
+	<h3>constructor __construct <span class="smalllinenumber">[line <a href="../__filesource/fsource_Ganon__gan_node_html.php.html#a2297">2297</a>]</span></h3>
 	<div class="function">
     <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
     <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
@@ -1067,7 +1091,7 @@ $text = ''])</code>
   </div>
   <hr />
 	<a name="methodfilter_comment"></a>
-	<h3>method filter_comment <span class="smalllinenumber">[line <a href="../__filesource/fsource_Ganon__gan_node_html.php.html#a2245">2245</a>]</span></h3>
+	<h3>method filter_comment <span class="smalllinenumber">[line <a href="../__filesource/fsource_Ganon__gan_node_html.php.html#a2309">2309</a>]</span></h3>
 	<div class="function">
     <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
     <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
@@ -1092,7 +1116,7 @@ $text = ''])</code>
   </div>
   <hr />
 	<a name="methodfilter_element"></a>
-	<h3>method filter_element <span class="smalllinenumber">[line <a href="../__filesource/fsource_Ganon__gan_node_html.php.html#a2244">2244</a>]</span></h3>
+	<h3>method filter_element <span class="smalllinenumber">[line <a href="../__filesource/fsource_Ganon__gan_node_html.php.html#a2308">2308</a>]</span></h3>
 	<div class="function">
     <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
     <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
@@ -1117,7 +1141,7 @@ $text = ''])</code>
   </div>
   <hr />
 	<a name="methodisComment"></a>
-	<h3>method isComment <span class="smalllinenumber">[line <a href="../__filesource/fsource_Ganon__gan_node_html.php.html#a2242">2242</a>]</span></h3>
+	<h3>method isComment <span class="smalllinenumber">[line <a href="../__filesource/fsource_Ganon__gan_node_html.php.html#a2306">2306</a>]</span></h3>
 	<div class="function">
     <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
     <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
@@ -1133,7 +1157,7 @@ $text = ''])</code>
   </div>
   <hr />
 	<a name="methodisTextOrComment"></a>
-	<h3>method isTextOrComment <span class="smalllinenumber">[line <a href="../__filesource/fsource_Ganon__gan_node_html.php.html#a2243">2243</a>]</span></h3>
+	<h3>method isTextOrComment <span class="smalllinenumber">[line <a href="../__filesource/fsource_Ganon__gan_node_html.php.html#a2307">2307</a>]</span></h3>
 	<div class="function">
     <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
     <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
@@ -1149,23 +1173,46 @@ $text = ''])</code>
   </div>
   <hr />
 	<a name="methodtoString"></a>
-	<h3>method toString <span class="smalllinenumber">[line <a href="../__filesource/fsource_Ganon__gan_node_html.php.html#a2248">2248</a>]</span></h3>
+	<h3>method toString <span class="smalllinenumber">[line <a href="../__filesource/fsource_Ganon__gan_node_html.php.html#a2312">2312</a>]</span></h3>
 	<div class="function">
     <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
     <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
 		<code>void toString(
-)</code>
+[
+$attributes = true], [
+$recursive = true], [
+$content_only = false])</code>
     </td></tr></table>
     </td></tr></table><br />
 	
 		<br /><br />
 
 	Overrides <a href="../Ganon/HTML_Node.html#methodtoString">HTML_Node::toString()</a> (Returns the node as string)<br /><br />
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type">&nbsp;&nbsp;</td>
+        <td><b>$attributes</b>&nbsp;&nbsp;</td>
+        <td></td>
+      </tr>
+          <tr>
+        <td class="type">&nbsp;&nbsp;</td>
+        <td><b>$recursive</b>&nbsp;&nbsp;</td>
+        <td></td>
+      </tr>
+          <tr>
+        <td class="type">&nbsp;&nbsp;</td>
+        <td><b>$content_only</b>&nbsp;&nbsp;</td>
+        <td></td>
+      </tr>
+        </table>
+    </div><br />
         <div class="top">[ <a href="#top">Top</a> ]</div>
   </div>
   <hr />
 	<a name="methodtoString_attributes"></a>
-	<h3>method toString_attributes <span class="smalllinenumber">[line <a href="../__filesource/fsource_Ganon__gan_node_html.php.html#a2246">2246</a>]</span></h3>
+	<h3>method toString_attributes <span class="smalllinenumber">[line <a href="../__filesource/fsource_Ganon__gan_node_html.php.html#a2310">2310</a>]</span></h3>
 	<div class="function">
     <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
     <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
@@ -1181,18 +1228,41 @@ $text = ''])</code>
   </div>
   <hr />
 	<a name="methodtoString_content"></a>
-	<h3>method toString_content <span class="smalllinenumber">[line <a href="../__filesource/fsource_Ganon__gan_node_html.php.html#a2247">2247</a>]</span></h3>
+	<h3>method toString_content <span class="smalllinenumber">[line <a href="../__filesource/fsource_Ganon__gan_node_html.php.html#a2311">2311</a>]</span></h3>
 	<div class="function">
     <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
     <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
 		<code>void toString_content(
-)</code>
+[
+$attributes = true], [
+$recursive = true], [
+$content_only = false])</code>
     </td></tr></table>
     </td></tr></table><br />
 	
 		<br /><br />
 
 	Overrides <a href="../Ganon/HTML_Node.html#methodtoString_content">HTML_Node::toString_content()</a> (Returns the content of the node (child tags and text))<br /><br />
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type">&nbsp;&nbsp;</td>
+        <td><b>$attributes</b>&nbsp;&nbsp;</td>
+        <td></td>
+      </tr>
+          <tr>
+        <td class="type">&nbsp;&nbsp;</td>
+        <td><b>$recursive</b>&nbsp;&nbsp;</td>
+        <td></td>
+      </tr>
+          <tr>
+        <td class="type">&nbsp;&nbsp;</td>
+        <td><b>$content_only</b>&nbsp;&nbsp;</td>
+        <td></td>
+      </tr>
+        </table>
+    </div><br />
         <div class="top">[ <a href="#top">Top</a> ]</div>
   </div>
 </div><br />
@@ -1204,7 +1274,7 @@ $text = ''])</code>
 	<a name="constNODE_TYPE"></a>
 	<p></p>
 	<h4>NODE_TYPE = <span class="value">&nbsp;self::NODE_COMMENT</span></h4>
-	<p>[line <a href="../__filesource/fsource_Ganon__gan_node_html.php.html#a2219">2219</a>]</p>
+	<p>[line <a href="../__filesource/fsource_Ganon__gan_node_html.php.html#a2283">2283</a>]</p>
   
   <br />
 	<div class="top">[ <a href="#top">Top</a> ]</div><br />
@@ -1212,7 +1282,7 @@ $text = ''])</code>
 
         <div class="credit">
 		    <hr />
-		    Documentation generated on Thu, 31 Mar 2011 10:25:56 +0200 by <a href="http://www.phpdoc.org">phpDocumentor 1.4.3</a>
+		    Documentation generated on Sat, 20 Oct 2012 13:44:17 +0200 by <a href="http://www.phpdoc.org">phpDocumentor 1.4.3</a>
 	      </div>
       </td></tr></table>
     </td>

@@ -100,17 +100,17 @@ Source Location: /ganon.php<br /><br />
 <br /><br />
 <h4>Includes:</h4>
 <div class="tags">
-include_once(<a href="../Ganon/_gan_selector_html.php.html">'gan_selector_html.php'</a>) [line <a href="../__filesource/fsource_Ganon__ganon.php.html#a82">82</a>]<br />
-include_once(<a href="../Ganon/_gan_formatter.php.html">'gan_formatter.php'</a>) [line <a href="../__filesource/fsource_Ganon__ganon.php.html#a83">83</a>]<br />
-include_once(<a href="../Ganon/_gan_tokenizer.php.html">'gan_tokenizer.php'</a>) [line <a href="../__filesource/fsource_Ganon__ganon.php.html#a79">79</a>]<br />
-include_once(<a href="../Ganon/_gan_parser_html.php.html">'gan_parser_html.php'</a>) [line <a href="../__filesource/fsource_Ganon__ganon.php.html#a80">80</a>]<br />
-include_once(<a href="../Ganon/_gan_node_html.php.html">'gan_node_html.php'</a>) [line <a href="../__filesource/fsource_Ganon__ganon.php.html#a81">81</a>]<br />
+include_once(<a href="../Ganon/_gan_selector_html.php.html">'gan_selector_html.php'</a>) [line <a href="../__filesource/fsource_Ganon__ganon.php.html#a91">91</a>]<br />
+include_once(<a href="../Ganon/_gan_formatter.php.html">'gan_formatter.php'</a>) [line <a href="../__filesource/fsource_Ganon__ganon.php.html#a92">92</a>]<br />
+include_once(<a href="../Ganon/_gan_tokenizer.php.html">'gan_tokenizer.php'</a>) [line <a href="../__filesource/fsource_Ganon__ganon.php.html#a88">88</a>]<br />
+include_once(<a href="../Ganon/_gan_parser_html.php.html">'gan_parser_html.php'</a>) [line <a href="../__filesource/fsource_Ganon__ganon.php.html#a89">89</a>]<br />
+include_once(<a href="../Ganon/_gan_node_html.php.html">'gan_node_html.php'</a>) [line <a href="../__filesource/fsource_Ganon__ganon.php.html#a90">90</a>]<br />
 </div>
 <br /><br />
 <br /><br />
   <hr />
 	<a name="defineGANON_NO_INCLUDES"></a>
-	<h3>GANON_NO_INCLUDES <span class="smalllinenumber">[line <a href="../__filesource/fsource_Ganon__ganon.php.html#a78">78</a>]</span></h3>
+	<h3>GANON_NO_INCLUDES <span class="smalllinenumber">[line <a href="../__filesource/fsource_Ganon__ganon.php.html#a87">87</a>]</span></h3>
 	<div class="tags">
     <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
     <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
@@ -124,7 +124,7 @@ include_once(<a href="../Ganon/_gan_node_html.php.html">'gan_node_html.php'</a>)
 <br />
   <hr />
 	<a name="functionarray_fill_keys"></a>
-	<h3>array_fill_keys <span class="smalllinenumber">[line <a href="../__filesource/fsource_Ganon__ganon.php.html#a66">66</a>]</span></h3>
+	<h3>array_fill_keys <span class="smalllinenumber">[line <a href="../__filesource/fsource_Ganon__ganon.php.html#a75">75</a>]</span></h3>
 	<div class="function">
     <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
     <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
@@ -152,7 +152,7 @@ array $keys, mixed $value)</code>
 	</div>
   <hr />
 	<a name="functiondom_format"></a>
-	<h3>dom_format <span class="smalllinenumber">[line <a href="../__filesource/fsource_Ganon__ganon.php.html#a37">37</a>]</span></h3>
+	<h3>dom_format <span class="smalllinenumber">[line <a href="../__filesource/fsource_Ganon__ganon.php.html#a46">46</a>]</span></h3>
 	<div class="function">
     <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
     <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
@@ -185,12 +185,12 @@ array $keys, mixed $value)</code>
 	</div>
   <hr />
 	<a name="functionfile_get_dom"></a>
-	<h3>file_get_dom <span class="smalllinenumber">[line <a href="../__filesource/fsource_Ganon__ganon.php.html#a26">26</a>]</span></h3>
+	<h3>file_get_dom <span class="smalllinenumber">[line <a href="../__filesource/fsource_Ganon__ganon.php.html#a28">28</a>]</span></h3>
 	<div class="function">
     <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
     <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
 		<code><a href="../Ganon/HTML_Parser_HTML5.html">HTML_Parser_HTML5</a>|<a href="../Ganon/HTML_Node.html">HTML_Node</a> file_get_dom(
- $file, [bool $return_root = true], string $str)</code>
+ $file, [bool $return_root = true], [bool $use_include_path = false], [resource $context = null], string $str)</code>
     </td></tr></table>
     </td></tr></table><br />
 
@@ -207,6 +207,16 @@ array $keys, mixed $value)</code>
         <td class="type">bool&nbsp;&nbsp;</td>
         <td><b>$return_root</b>&nbsp;&nbsp;</td>
         <td>Return root node or return parser object</td>
+      </tr>
+		      <tr>
+        <td class="type">bool&nbsp;&nbsp;</td>
+        <td><b>$use_include_path</b>&nbsp;&nbsp;</td>
+        <td>Use include path search in file_get_contents</td>
+      </tr>
+		      <tr>
+        <td class="type">resource&nbsp;&nbsp;</td>
+        <td><b>$context</b>&nbsp;&nbsp;</td>
+        <td>Context resource used in file_get_contents (PHP &gt;= 5.0.0)</td>
       </tr>
 		      <tr>
         <td class="type">&nbsp;&nbsp;</td>
@@ -246,7 +256,7 @@ string $str, [bool $return_root = true])</code>
 	</div>
   <hr />
 	<a name="functionstr_split"></a>
-	<h3>str_split <span class="smalllinenumber">[line <a href="../__filesource/fsource_Ganon__ganon.php.html#a48">48</a>]</span></h3>
+	<h3>str_split <span class="smalllinenumber">[line <a href="../__filesource/fsource_Ganon__ganon.php.html#a57">57</a>]</span></h3>
 	<div class="function">
     <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
     <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
@@ -270,7 +280,7 @@ string $string)</code>
 
         <div class="credit">
 		    <hr />
-		    Documentation generated on Thu, 31 Mar 2011 10:25:51 +0200 by <a href="http://www.phpdoc.org">phpDocumentor 1.4.3</a>
+		    Documentation generated on Sat, 20 Oct 2012 13:44:11 +0200 by <a href="http://www.phpdoc.org">phpDocumentor 1.4.3</a>
 	      </div>
       </td></tr></table>
     </td>

@@ -108,7 +108,6 @@ Source Location: /gan_parser_html.php<br /><br />
 <h3><a href="#class_methods">Methods</a></h3>
 <ul>
     <li><a href="../Ganon/HTML_Parser.html#method__construct">__construct</a></li>
-    <li><a href="../Ganon/HTML_Parser.html#method__destruct">__destruct</a></li>
     <li><a href="../Ganon/HTML_Parser.html#methodparse_all">parse_all</a></li>
     <li><a href="../Ganon/HTML_Parser.html#methodparse_asp">parse_asp</a></li>
     <li><a href="../Ganon/HTML_Parser.html#methodparse_cdata">parse_cdata</a></li>
@@ -510,6 +509,12 @@ Source Location: /gan_parser_html.php<br /><br />
     Parse identifiers
   </dd>
     <dt>
+    <a href="../Ganon/Tokenizer_Base.html#methodparse_linebreak">Tokenizer_Base::parse_linebreak()</a>
+  </dt>
+  <dd>
+    Parse line breaks and increase line number
+  </dd>
+    <dt>
     <a href="../Ganon/Tokenizer_Base.html#methodparse_whitespace">Tokenizer_Base::parse_whitespace()</a>
   </dt>
   <dd>
@@ -555,7 +560,7 @@ Source Location: /gan_parser_html.php<br /><br />
 <a name="class_details"></a>
 <h3>Class Details</h3>
 <div class="tags">
-[line <a href="../__filesource/fsource_Ganon__gan_parser_html.php.html#a483">483</a>]<br />
+[line <a href="../__filesource/fsource_Ganon__gan_parser_html.php.html#a485">485</a>]<br />
 Parses a HTML document into a HTML DOM<br /><br /></div><br /><br />
 <div class="top">[ <a href="#top">Top</a> ]</div><br />
 
@@ -566,7 +571,7 @@ Parses a HTML document into a HTML DOM<br /><br /></div><br /><br />
 	<a name="var$hierarchy"></a>
 	<p></p>
 	<h4>$hierarchy = <span class="value">array()</span></h4>
-	<p>[line <a href="../__filesource/fsource_Ganon__gan_parser_html.php.html#a498">498</a>]</p>
+	<p>[line <a href="../__filesource/fsource_Ganon__gan_parser_html.php.html#a500">500</a>]</p>
   Current parsing hierarchy<br /><br /><br /><br />
 <h4>Tags:</h4>
 <div class="tags">
@@ -593,7 +598,7 @@ Parses a HTML document into a HTML DOM<br /><br /></div><br /><br />
 	<a name="var$root"></a>
 	<p></p>
 	<h4>$root = <span class="value">&nbsp;'HTML_Node'</span></h4>
-	<p>[line <a href="../__filesource/fsource_Ganon__gan_parser_html.php.html#a490">490</a>]</p>
+	<p>[line <a href="../__filesource/fsource_Ganon__gan_parser_html.php.html#a492">492</a>]</p>
   Root object<br /><br /><br /><br />
 <h4>Tags:</h4>
 <div class="tags">
@@ -637,7 +642,7 @@ Parses a HTML document into a HTML DOM<br /><br /></div><br /><br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'track'&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&gt;&nbsp;true,<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'wbr'&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&gt;&nbsp;true<br>
 &nbsp;&nbsp;&nbsp;)</span></h4>
-	<p>[line <a href="../__filesource/fsource_Ganon__gan_parser_html.php.html#a505">505</a>]</p>
+	<p>[line <a href="../__filesource/fsource_Ganon__gan_parser_html.php.html#a507">507</a>]</p>
   Tags that don't need closing tags<br /><br /><br /><br />
 <h4>Tags:</h4>
 <div class="tags">
@@ -667,7 +672,7 @@ Parses a HTML document into a HTML DOM<br /><br /></div><br /><br />
 
   <hr />
 	<a name="method__construct"></a>
-	<h3>constructor __construct <span class="smalllinenumber">[line <a href="../__filesource/fsource_Ganon__gan_parser_html.php.html#a533">533</a>]</span></h3>
+	<h3>constructor __construct <span class="smalllinenumber">[line <a href="../__filesource/fsource_Ganon__gan_parser_html.php.html#a535">535</a>]</span></h3>
 	<div class="function">
     <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
     <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
@@ -705,33 +710,8 @@ $root = null])</code>
         <div class="top">[ <a href="#top">Top</a> ]</div>
   </div>
   <hr />
-	<a name="method__destruct"></a>
-	<h3>destructor __destruct <span class="smalllinenumber">[line <a href="../__filesource/fsource_Ganon__gan_parser_html.php.html#a550">550</a>]</span></h3>
-	<div class="function">
-    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
-    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
-		<code>void __destruct(
-)</code>
-    </td></tr></table>
-    </td></tr></table><br />
-	
-		Class destructor<br /><br /><br /><br />
-<h4>Tags:</h4>
-<div class="tags">
-<table border="0" cellspacing="0" cellpadding="0">
-  <tr>
-    <td><b>access:</b>&nbsp;&nbsp;</td><td>private</td>
-  </tr>
-</table>
-</div>
-<br /><br />
-
-	
-        <div class="top">[ <a href="#top">Top</a> ]</div>
-  </div>
-  <hr />
 	<a name="methodparse_all"></a>
-	<h3>method parse_all <span class="smalllinenumber">[line <a href="../__filesource/fsource_Ganon__gan_parser_html.php.html#a768">768</a>]</span></h3>
+	<h3>method parse_all <span class="smalllinenumber">[line <a href="../__filesource/fsource_Ganon__gan_parser_html.php.html#a762">762</a>]</span></h3>
 	<div class="function">
     <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
     <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
@@ -747,7 +727,7 @@ $root = null])</code>
   </div>
   <hr />
 	<a name="methodparse_asp"></a>
-	<h3>method parse_asp <span class="smalllinenumber">[line <a href="../__filesource/fsource_Ganon__gan_parser_html.php.html#a717">717</a>]</span></h3>
+	<h3>method parse_asp <span class="smalllinenumber">[line <a href="../__filesource/fsource_Ganon__gan_parser_html.php.html#a711">711</a>]</span></h3>
 	<div class="function">
     <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
     <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
@@ -763,7 +743,7 @@ $root = null])</code>
   </div>
   <hr />
 	<a name="methodparse_cdata"></a>
-	<h3>method parse_cdata <span class="smalllinenumber">[line <a href="../__filesource/fsource_Ganon__gan_parser_html.php.html#a657">657</a>]</span></h3>
+	<h3>method parse_cdata <span class="smalllinenumber">[line <a href="../__filesource/fsource_Ganon__gan_parser_html.php.html#a651">651</a>]</span></h3>
 	<div class="function">
     <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
     <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
@@ -779,7 +759,7 @@ $root = null])</code>
   </div>
   <hr />
 	<a name="methodparse_comment"></a>
-	<h3>method parse_comment <span class="smalllinenumber">[line <a href="../__filesource/fsource_Ganon__gan_parser_html.php.html#a666">666</a>]</span></h3>
+	<h3>method parse_comment <span class="smalllinenumber">[line <a href="../__filesource/fsource_Ganon__gan_parser_html.php.html#a660">660</a>]</span></h3>
 	<div class="function">
     <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
     <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
@@ -795,7 +775,7 @@ $root = null])</code>
   </div>
   <hr />
 	<a name="methodparse_conditional"></a>
-	<h3>method parse_conditional <span class="smalllinenumber">[line <a href="../__filesource/fsource_Ganon__gan_parser_html.php.html#a675">675</a>]</span></h3>
+	<h3>method parse_conditional <span class="smalllinenumber">[line <a href="../__filesource/fsource_Ganon__gan_parser_html.php.html#a669">669</a>]</span></h3>
 	<div class="function">
     <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
     <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
@@ -811,7 +791,7 @@ $root = null])</code>
   </div>
   <hr />
 	<a name="methodparse_doctype"></a>
-	<h3>method parse_doctype <span class="smalllinenumber">[line <a href="../__filesource/fsource_Ganon__gan_parser_html.php.html#a699">699</a>]</span></h3>
+	<h3>method parse_doctype <span class="smalllinenumber">[line <a href="../__filesource/fsource_Ganon__gan_parser_html.php.html#a693">693</a>]</span></h3>
 	<div class="function">
     <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
     <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
@@ -827,7 +807,7 @@ $root = null])</code>
   </div>
   <hr />
 	<a name="methodparse_hierarchy"></a>
-	<h3>method parse_hierarchy <span class="smalllinenumber">[line <a href="../__filesource/fsource_Ganon__gan_parser_html.php.html#a588">588</a>]</span></h3>
+	<h3>method parse_hierarchy <span class="smalllinenumber">[line <a href="../__filesource/fsource_Ganon__gan_parser_html.php.html#a582">582</a>]</span></h3>
 	<div class="function">
     <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
     <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
@@ -872,7 +852,7 @@ $self_close = null])</code>
   </div>
   <hr />
 	<a name="methodparse_php"></a>
-	<h3>method parse_php <span class="smalllinenumber">[line <a href="../__filesource/fsource_Ganon__gan_parser_html.php.html#a708">708</a>]</span></h3>
+	<h3>method parse_php <span class="smalllinenumber">[line <a href="../__filesource/fsource_Ganon__gan_parser_html.php.html#a702">702</a>]</span></h3>
 	<div class="function">
     <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
     <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
@@ -888,7 +868,7 @@ $self_close = null])</code>
   </div>
   <hr />
 	<a name="methodparse_script"></a>
-	<h3>method parse_script <span class="smalllinenumber">[line <a href="../__filesource/fsource_Ganon__gan_parser_html.php.html#a726">726</a>]</span></h3>
+	<h3>method parse_script <span class="smalllinenumber">[line <a href="../__filesource/fsource_Ganon__gan_parser_html.php.html#a720">720</a>]</span></h3>
 	<div class="function">
     <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
     <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
@@ -904,7 +884,7 @@ $self_close = null])</code>
   </div>
   <hr />
 	<a name="methodparse_style"></a>
-	<h3>method parse_style <span class="smalllinenumber">[line <a href="../__filesource/fsource_Ganon__gan_parser_html.php.html#a739">739</a>]</span></h3>
+	<h3>method parse_style <span class="smalllinenumber">[line <a href="../__filesource/fsource_Ganon__gan_parser_html.php.html#a733">733</a>]</span></h3>
 	<div class="function">
     <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
     <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
@@ -920,7 +900,7 @@ $self_close = null])</code>
   </div>
   <hr />
 	<a name="methodparse_tag_default"></a>
-	<h3>method parse_tag_default <span class="smalllinenumber">[line <a href="../__filesource/fsource_Ganon__gan_parser_html.php.html#a752">752</a>]</span></h3>
+	<h3>method parse_tag_default <span class="smalllinenumber">[line <a href="../__filesource/fsource_Ganon__gan_parser_html.php.html#a746">746</a>]</span></h3>
 	<div class="function">
     <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
     <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
@@ -936,7 +916,7 @@ $self_close = null])</code>
   </div>
   <hr />
 	<a name="methodparse_text"></a>
-	<h3>method parse_text <span class="smalllinenumber">[line <a href="../__filesource/fsource_Ganon__gan_parser_html.php.html#a759">759</a>]</span></h3>
+	<h3>method parse_text <span class="smalllinenumber">[line <a href="../__filesource/fsource_Ganon__gan_parser_html.php.html#a753">753</a>]</span></h3>
 	<div class="function">
     <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
     <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
@@ -952,7 +932,7 @@ $self_close = null])</code>
   </div>
   <hr />
 	<a name="methodselect"></a>
-	<h3>method select <span class="smalllinenumber">[line <a href="../__filesource/fsource_Ganon__gan_parser_html.php.html#a577">577</a>]</span></h3>
+	<h3>method select <span class="smalllinenumber">[line <a href="../__filesource/fsource_Ganon__gan_parser_html.php.html#a571">571</a>]</span></h3>
 	<div class="function">
     <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
     <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
@@ -1006,7 +986,7 @@ $check_self = false])</code>
   </div>
   <hr />
 	<a name="method__invoke"></a>
-	<h3>method __invoke <span class="smalllinenumber">[line <a href="../__filesource/fsource_Ganon__gan_parser_html.php.html#a559">559</a>]</span></h3>
+	<h3>method __invoke <span class="smalllinenumber">[line <a href="../__filesource/fsource_Ganon__gan_parser_html.php.html#a553">553</a>]</span></h3>
 	<div class="function">
     <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
     <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
@@ -1042,7 +1022,7 @@ $query = '*'])</code>
   </div>
   <hr />
 	<a name="method__toString"></a>
-	<h3>method __toString <span class="smalllinenumber">[line <a href="../__filesource/fsource_Ganon__gan_parser_html.php.html#a568">568</a>]</span></h3>
+	<h3>method __toString <span class="smalllinenumber">[line <a href="../__filesource/fsource_Ganon__gan_parser_html.php.html#a562">562</a>]</span></h3>
 	<div class="function">
     <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
     <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
@@ -1070,7 +1050,7 @@ $query = '*'])</code>
 
         <div class="credit">
 		    <hr />
-		    Documentation generated on Thu, 31 Mar 2011 10:26:00 +0200 by <a href="http://www.phpdoc.org">phpDocumentor 1.4.3</a>
+		    Documentation generated on Sat, 20 Oct 2012 13:44:21 +0200 by <a href="http://www.phpdoc.org">phpDocumentor 1.4.3</a>
 	      </div>
       </td></tr></table>
     </td>

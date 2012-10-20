@@ -694,6 +694,12 @@ Source Location: /gan_node_html.php<br /><br />
     Finds all children using ID attribute
   </dd>
     <dt>
+    <a href="../Ganon/HTML_Node.html#methodgetChildrenByMatch">HTML_Node::getChildrenByMatch()</a>
+  </dt>
+  <dd>
+    Finds children using the {$link match()} function
+  </dd>
+    <dt>
     <a href="../Ganon/HTML_Node.html#methodgetChildrenByName">HTML_Node::getChildrenByName()</a>
   </dt>
   <dd>
@@ -704,6 +710,12 @@ Source Location: /gan_node_html.php<br /><br />
   </dt>
   <dd>
     Finds children that match a certain tag
+  </dd>
+    <dt>
+    <a href="../Ganon/HTML_Node.html#methodgetEncoding">HTML_Node::getEncoding()</a>
+  </dt>
+  <dd>
+    Try to determine the encoding of the current tag
   </dd>
     <dt>
     <a href="../Ganon/HTML_Node.html#methodgetInnerText">HTML_Node::getInnerText()</a>
@@ -736,10 +748,22 @@ Source Location: /gan_node_html.php<br /><br />
     Similar to JavaScript plainText, will return text in node (and subnodes)
   </dd>
     <dt>
+    <a href="../Ganon/HTML_Node.html#methodgetPlainTextUTF8">HTML_Node::getPlainTextUTF8()</a>
+  </dt>
+  <dd>
+    Return plaintext taking document encoding into account
+  </dd>
+    <dt>
     <a href="../Ganon/HTML_Node.html#methodgetPreviousSibling">HTML_Node::getPreviousSibling()</a>
   </dt>
   <dd>
     Get node previous to current
+  </dd>
+    <dt>
+    <a href="../Ganon/HTML_Node.html#methodgetRoot">HTML_Node::getRoot()</a>
+  </dt>
+  <dd>
+    Get top parent
   </dd>
     <dt>
     <a href="../Ganon/HTML_Node.html#methodgetSibling">HTML_Node::getSibling()</a>
@@ -811,7 +835,7 @@ Source Location: /gan_node_html.php<br /><br />
     <a href="../Ganon/HTML_Node.html#methodisParent">HTML_Node::isParent()</a>
   </dt>
   <dd>
-    Find out if node has a certain parent
+    Find out if node is parent of a certain tag
   </dd>
     <dt>
     <a href="../Ganon/HTML_Node.html#methodisText">HTML_Node::isText()</a>
@@ -997,7 +1021,7 @@ Source Location: /gan_node_html.php<br /><br />
     <a href="../Ganon/HTML_Node.html#method__toString">HTML_Node::__toString()</a>
   </dt>
   <dd>
-    Class toString, outputs (@link $tag)
+    Class toString, outputs $tag
   </dd>
     <dt>
     <a href="../Ganon/HTML_Node.html#method__unset">HTML_Node::__unset()</a>
@@ -1015,7 +1039,7 @@ Source Location: /gan_node_html.php<br /><br />
 <a name="class_details"></a>
 <h3>Class Details</h3>
 <div class="tags">
-[line <a href="../__filesource/fsource_Ganon__gan_node_html.php.html#a2459">2459</a>]<br />
+[line <a href="../__filesource/fsource_Ganon__gan_node_html.php.html#a2523">2523</a>]<br />
 Node subclass for asp tags<br /><br /></div><br /><br />
 <div class="top">[ <a href="#top">Top</a> ]</div><br />
 
@@ -1027,7 +1051,7 @@ Node subclass for asp tags<br /><br /></div><br /><br />
 
   <hr />
 	<a name="method__construct"></a>
-	<h3>constructor __construct <span class="smalllinenumber">[line <a href="../__filesource/fsource_Ganon__gan_node_html.php.html#a2474">2474</a>]</span></h3>
+	<h3>constructor __construct <span class="smalllinenumber">[line <a href="../__filesource/fsource_Ganon__gan_node_html.php.html#a2538">2538</a>]</span></h3>
 	<div class="function">
     <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
     <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
@@ -1079,7 +1103,7 @@ $attributes = array()])</code>
 	<a name="constNODE_TYPE"></a>
 	<p></p>
 	<h4>NODE_TYPE = <span class="value">&nbsp;self::NODE_ASP</span></h4>
-	<p>[line <a href="../__filesource/fsource_Ganon__gan_node_html.php.html#a2464">2464</a>]</p>
+	<p>[line <a href="../__filesource/fsource_Ganon__gan_node_html.php.html#a2528">2528</a>]</p>
   
   <br />
 	<div class="top">[ <a href="#top">Top</a> ]</div><br />
@@ -1087,7 +1111,7 @@ $attributes = array()])</code>
 
         <div class="credit">
 		    <hr />
-		    Documentation generated on Thu, 31 Mar 2011 10:25:55 +0200 by <a href="http://www.phpdoc.org">phpDocumentor 1.4.3</a>
+		    Documentation generated on Sat, 20 Oct 2012 13:44:16 +0200 by <a href="http://www.phpdoc.org">phpDocumentor 1.4.3</a>
 	      </div>
       </td></tr></table>
     </td>
